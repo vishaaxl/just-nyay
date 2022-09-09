@@ -1,0 +1,22 @@
+.main_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.75rem;
+
+  color: var(--accent-primary);
+}
+
+.ham_icon {
+}
+
+@media (min-width: 425px) {
+  .main_menu {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,45 @@
+.how_it_works {
+  padding: 2rem 0 0 0;
+  background: var(--background-fade);
+}
+
+.how_it_works h1 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+.how_it_works p {
+  line-height: 1.4;
+}
+
+.lines_wrapper {
+  padding: 1.75rem 0;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  padding-left: 2rem;
+  line-height: 1.4;
+}
+
+.content h3 {
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.content p {
+  opacity: 0.8;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .lines_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

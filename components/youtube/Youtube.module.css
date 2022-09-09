@@ -1,0 +1,26 @@
+.youtube {
+  padding: 2rem 0;
+}
+
+.title {
+  opacity: 0.9;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.iframe {
+  height: 200px;
+  width: 100%;
+}
+
+@media (min-width: 425px) {
+  .iframe {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .iframe {
+    height: 600px;
+  }
+}
