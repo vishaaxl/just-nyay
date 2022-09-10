@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "embla-carousel-react": "^7.0.2",
     "formik": "^2.2.9",
     "framer-motion": "^7.3.2",
     "next": "12.2.5",

@@ -9,6 +9,7 @@ import Youtube from "components/youtube/Youtube";
 import Footer from "components/footer/Footer";
 import FAQs from "components/faqs/FAQs";
 import ContactForm from "components/contact/ContactForm";
+import Testimonials from "components/testimonials/Testimonials";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
 
       <HowItWorks />
       <ContactForm />
+      <Testimonials />
       <FAQs />
       <Footer />
     </>

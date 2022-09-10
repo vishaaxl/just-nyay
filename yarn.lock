@@ -559,6 +559,18 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+embla-carousel-react@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.0.2.tgz#82e48d8fb14adfe6d4ea415cd1ec8a1de40129f8"
+  integrity sha512-x+/8SbytmhY5K7TrVaZ+NWpGfkI2NaOBgdEseExedwTAOW7MQDoo1lE0yEJz0RHwvTLFBupfbbgL/GxMlhWVHA==
+  dependencies:
+    embla-carousel "7.0.2"
+
+embla-carousel@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-7.0.2.tgz#49660d75d26604de1ca1bb0c0be13e7cae65b0ff"
+  integrity sha512-6SHKbLJRvcjunb0VT1Aw7YwK0Dw8ecqEa+ppT1j+kHGEg5I4WvUd8SjRkc1NAuQK0PTBD0d567UCmzEAngeAxw==
+
 emoji-regex@^9.2.2:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"

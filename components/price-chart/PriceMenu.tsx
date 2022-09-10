@@ -89,6 +89,7 @@ const PriceChart: React.FC<Props> = () => {
             </div>
           ))}
         </div>
+        <div className={styles.buy_now}>Buy Now</div>
       </div>
     </section>
   );

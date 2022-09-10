@@ -130,6 +130,23 @@
   color: #55b72e;
 }
 
+.buy_now {
+  cursor: pointer;
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  padding: 0.75rem;
+  background: var(--accent-blue);
+  color: var(--primary);
+  border-radius: 10px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.buy_now:hover {
+  transform: scale(1.0325);
+}
+
 @media (min-width: 425px) {
   .price_chart {
     margin-top: 75vh;

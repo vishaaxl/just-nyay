@@ -15,12 +15,14 @@
 
 @media (min-width: 425px) {
   .iframe {
-    height: 300px;
+    height: 300;
+    max-height: 300px;
   }
 }
 
 @media (min-width: 768px) {
   .iframe {
-    height: 600px;
+    height: 400px;
+    max-height: 600px;
   }
 }
