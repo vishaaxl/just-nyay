@@ -1,52 +1,77 @@
 import styles from "./Hero.module.css";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 interface Props {}
 
-const heroImages = ["hero-1", "hero-2", "hero-3"];
-
 const Hero: React.FC<Props> = () => {
-  const [currentImage, setCurrentImage] = useState("hero-1");
-  const [index, setIndex] = useState(0);
+  const router = useRouter();
+  const [emblaRef, embla] = useEmblaCarousel({
+    dragFree: true,
+    containScroll: "trimSnaps",
+    loop: true,
+  });
 
   useEffect(() => {
-    const fade = setInterval(() => {
-      setIndex((prev) => (prev >= 2 ? 0 : prev + 1));
-      setCurrentImage(heroImages[index]);
-    }, 10000);
+    const temp = setInterval(() => {
+      embla?.scrollNext();
+    }, 5000);
 
     return () => {
-      clearInterval(fade);
+      clearInterval(temp);
     };
-  }, [index, currentImage]);
+  }, [embla]);
 
   return (
     <div className={styles.hero}>
-      <div className={styles.image}>
-        <Image
-          priority
-          src={`/images/${currentImage}.jpg`}
-          alt="Image of library filled with law books"
-          layout="fill"
-          objectFit="cover"
-        />
+      <div className={styles.embla} ref={emblaRef}>
+        <div className={styles.embla__container}>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-1.jpg"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-2.jpg"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-3.jpg"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+        </div>
       </div>
       <div className={styles.screen} />
-
-      <div className="container">
-        <div className={styles.hero_content}>
-          <p className={styles.sub_heading}>Most Successful Law firm</p>
-          <h1 className={styles.main_heading}>
-            Effective legal <br />
-            solutions
-          </h1>
-          <p className={styles.sub_heading_two}>
-            Quick and Instant Consultation.
-            <br /> On phone Instant Legal consultation from top Lawyers.
-          </p>
-          <div className="primary-btn hover">Consult a justNyay lawyer</div>
+      <div className={styles.hero_content}>
+        <div className="container">
+          <div className={styles.content_wrapper}>
+            <span>Most Successful Law firm</span>
+            <h1>
+              Effective Legal <br />
+              Solutions
+            </h1>
+            <p>
+              Quick and Instant Consultation.
+              <br />
+              On phone Instant Legal consultation from top Lawyers.
+            </p>
+            <div
+              className="primary-btn"
+              onClick={() => router.push("/contact")}
+            >
+              consult a justnyay lawyer
+            </div>
+          </div>
         </div>
       </div>
     </div>

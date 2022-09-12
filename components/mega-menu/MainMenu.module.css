@@ -8,18 +8,19 @@
 }
 
 .logo {
+  cursor: pointer;
   font-weight: 700;
   font-size: 1.75rem;
 
   color: var(--accent-primary);
 }
 
-.ham_icon {
+.ham_icon:checked ~ .mobile_menu {
+  background: red;
 }
 
 .links {
   display: none;
-  color: var(--background-fade);
 }
 
 .links li {
@@ -105,4 +106,60 @@
   .menu {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+/* mobile menu */
+.mobile_menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.show_mobile_menu {
+  max-height: 100vh;
+  padding: 2rem 0;
+}
+
+.mobile_menu ul {
+  margin-left: 1rem;
+}
+
+.mobile_menu li,
+.accordian_heading {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+}
+
+.sub_links {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordian {
+  margin: 1rem;
+}
+
+.accordian_heading {
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.check:checked ~ .sub_links {
+  max-height: 400px;
+}
+
+.mobile_links > li {
+  opacity: 0.95;
+
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.sub_links > li:hover {
+  color: var(--accent-primary);
 }

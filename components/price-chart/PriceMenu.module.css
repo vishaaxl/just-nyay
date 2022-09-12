@@ -1,5 +1,5 @@
 .price_chart {
-  margin: 80vh auto 0 auto;
+  margin: 1vh auto 0 auto;
   line-height: 1.4;
 
   padding-bottom: 2rem;
@@ -149,7 +149,7 @@
 
 @media (min-width: 425px) {
   .price_chart {
-    margin-top: 75vh;
+    margin-top: 1vh;
   }
 
   .price_chart h1 {

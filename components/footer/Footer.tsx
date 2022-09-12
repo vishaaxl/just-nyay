@@ -36,29 +36,32 @@ const footer_data = [
 
 const Footer: React.FC<Props> = () => {
   return (
-    <footer className={styles.footer}>
-      <div className="container">
-        <div className={styles.main_header}>
-          <h2>JustNyay</h2>
-          <div className={styles.icon_wrapper}>
-            <AiFillYoutube className="font-med hover hover-scale" />
-            <AiFillInstagram className="font-med hover hover-scale" />
-            <AiFillFacebook className="font-med hover hover-scale" />
+    <>
+      <footer className={styles.footer}>
+        <div className="container">
+          <div className={styles.main_header}>
+            <h2>JustNyay</h2>
+            <div className={styles.icon_wrapper}>
+              <AiFillYoutube className="font-med hover hover-scale" />
+              <AiFillInstagram className="font-med hover hover-scale" />
+              <AiFillFacebook className="font-med hover hover-scale" />
+            </div>
+          </div>
+
+          <div className={styles.content_wrapper}>
+            {footer_data.map((data) => (
+              <div className={styles.box} key={data.id}>
+                <div className={styles.h3}>{data.heading}</div>
+                {data.values.map((val) => (
+                  <p key={val}>{val}</p>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
-
-        <div className={styles.content_wrapper}>
-          {footer_data.map((data) => (
-            <div className={styles.box} key={data.id}>
-              <div className={styles.h3}>{data.heading}</div>
-              {data.values.map((val) => (
-                <p key={val}>{val}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </footer>
+      </footer>
+      <div className="ample-media">Developed By &#169;Ample Media Agency</div>
+    </>
   );
 };
 

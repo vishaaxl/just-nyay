@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 
-import TopMenu from "components/top-menu/TopMenu";
 import MainMenu from "components/mega-menu/MainMenu";
 import Hero from "components/main-hero/Hero";
 import PriceChart from "components/price-chart/PriceMenu";
@@ -14,8 +13,6 @@ import Testimonials from "components/testimonials/Testimonials";
 const Home: NextPage = () => {
   return (
     <>
-      <TopMenu />
-      <MainMenu />
       <Hero />
       <PriceChart />
       <Youtube />
@@ -24,7 +21,6 @@ const Home: NextPage = () => {
       <ContactForm />
       <Testimonials />
       <FAQs />
-      <Footer />
     </>
   );
 };

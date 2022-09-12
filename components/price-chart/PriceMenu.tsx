@@ -3,6 +3,7 @@ import styles from "./PriceMenu.module.css";
 import { AiFillStar } from "react-icons/ai";
 import { GoVerified } from "react-icons/go";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 interface Props {}
 
@@ -26,6 +27,7 @@ const price_array = [
 ];
 
 const PriceChart: React.FC<Props> = () => {
+  const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState<string>("");
 
   const selectPlan = (name: string) => {
@@ -51,7 +53,10 @@ const PriceChart: React.FC<Props> = () => {
           On Phone Instant Legal consultaion from
           <br /> top lawyers
         </p>
-        <div className="primary-btn">Legal Consultation at just 599</div>
+
+        <div className="primary-btn" onClick={() => router.push("/contact")}>
+          Legal Consultation at just 599
+        </div>
       </div>
 
       {/* pricing part */}
