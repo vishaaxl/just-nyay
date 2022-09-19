@@ -150,7 +150,7 @@ const MainMenu: React.FC<Props> = () => {
                 )}
               </AnimatePresence>
             </motion.li>
-            <Link href="/contact">
+            <Link href="/buy-now">
               <li>Second opinion</li>
             </Link>
             <Link href="/legal-reporter">
@@ -167,7 +167,7 @@ const MainMenu: React.FC<Props> = () => {
       >
         <div className="container">
           <ul className={styles.mobile_links}>
-            <Link href="/contact">
+            <Link href="/buy-now">
               <li>Talk to Lawyer</li>
             </Link>
             <li>
@@ -234,7 +234,10 @@ const MainMenu: React.FC<Props> = () => {
               Legal Reporter
             </li>
 
-            <Link href="/contact">
+            <Link href="/buy-now">
+              <li>Contact</li>
+            </Link>
+            <Link href="/buy-now">
               <li>Second Opinion</li>
             </Link>
           </ul>

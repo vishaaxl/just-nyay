@@ -1,7 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 
 import PageHeading from "components/page-heading/PageHeading";
-import ConsultationFrom from "components/consultation-form/ConsultationForm";
+import PriceMenu from "components/price-chart/PriceMenu";
 
 import { pages } from "data";
 import { useEffect, useState } from "react";
@@ -17,13 +17,13 @@ const Index: NextPage<Props> = ({ heading, content }) => {
       <PageHeading title={heading.replace(/-/g, " ")} />
       <section className="container">
         <div className="main_login_form">
-          <ConsultationFrom />
           {content.length > 10 && (
             <div
               className="dynamic-content"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           )}
+          <PriceMenu />
         </div>
       </section>
     </>

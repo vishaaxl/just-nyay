@@ -308,6 +308,7 @@ img {
 
   font-family: "serif", "sans-serif";
   text-transform: capitalize;
+  margin-bottom: 2rem;
 }
 
 .ample-media {
@@ -320,7 +321,7 @@ img {
 
 /* dynamic content from data.js */
 .dynamic-content {
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 60rem;
   line-height: 1.4;
   padding-bottom: 2rem;

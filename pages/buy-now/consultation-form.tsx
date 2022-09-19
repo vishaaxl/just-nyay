@@ -5,10 +5,10 @@ interface Props {}
 import PageHeading from "components/page-heading/PageHeading";
 import ConsultationForm from "components/consultation-form/ConsultationForm";
 
-const Contact: NextPage = () => {
+const ConsultaionForm: NextPage = () => {
   return (
     <>
-      <PageHeading title="Ask Your Query" />
+      <PageHeading title="Brief your query" />
       <div className="container">
         <ConsultationForm />
       </div>
@@ -16,4 +16,4 @@ const Contact: NextPage = () => {
   );
 };
 
-export default Contact;
+export default ConsultaionForm;

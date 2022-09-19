@@ -102,7 +102,7 @@ const Hero: React.FC<Props> = () => {
             </p>
             <div
               className="primary-btn"
-              onClick={() => router.push("/contact")}
+              onClick={() => router.push("/buy-now")}
             >
               consult a justnyay lawyer
             </div>

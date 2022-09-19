@@ -54,7 +54,7 @@ const PriceChart: React.FC<Props> = () => {
           <br /> top lawyers
         </p>
 
-        <div className="primary-btn" onClick={() => router.push("/contact")}>
+        <div className="primary-btn" onClick={() => setSelectedPlan("60")}>
           Legal Consultation at just 599
         </div>
       </div>
@@ -94,7 +94,12 @@ const PriceChart: React.FC<Props> = () => {
             </div>
           ))}
         </div>
-        <div className={styles.buy_now}>Buy Now</div>
+        <div
+          className={styles.buy_now}
+          onClick={() => router.push("/buy-now/verify-otp")}
+        >
+          Buy Now
+        </div>
       </div>
     </section>
   );
