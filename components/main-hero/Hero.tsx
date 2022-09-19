@@ -30,21 +30,56 @@ const Hero: React.FC<Props> = () => {
         <div className={styles.embla__container}>
           <div className={styles.embla__slide}>
             <img
-              src="/images/hero-1.jpg"
+              src="/images/hero-1.png"
               alt=""
               className={styles.slide_image}
             />
           </div>
           <div className={styles.embla__slide}>
             <img
-              src="/images/hero-2.jpg"
+              src="/images/hero-2.png"
               alt=""
               className={styles.slide_image}
             />
           </div>
           <div className={styles.embla__slide}>
             <img
-              src="/images/hero-3.jpg"
+              src="/images/hero-3.png"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-4.png"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-5.png"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-6.png"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-7.png"
+              alt=""
+              className={styles.slide_image}
+            />
+          </div>
+          <div className={styles.embla__slide}>
+            <img
+              src="/images/hero-8.png"
               alt=""
               className={styles.slide_image}
             />
@@ -57,8 +92,8 @@ const Hero: React.FC<Props> = () => {
           <div className={styles.content_wrapper}>
             <span>Most Successful Law firm</span>
             <h1>
-              Effective Legal <br />
-              Solutions
+              Legal Issue, <br />
+              No Issue
             </h1>
             <p>
               Quick and Instant Consultation.

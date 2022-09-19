@@ -11,7 +11,6 @@ const ConsultationFrom: React.FC<Props> = () => {
           fullname: "",
           email: "",
           phone: "",
-          alternatenumber: "",
           address: "",
           casenumber: "",
           act: "",
@@ -31,7 +30,7 @@ const ConsultationFrom: React.FC<Props> = () => {
                 Enter Your Personal Details
               </h3>
               <p className={styles.block_description}>
-                Tow work with an attorney on helping you achieve your goals,
+                Too work with an attorney on helping you achieve your goals,
                 enter your details precisely.
               </p>
               <div className={styles.input_block}>
@@ -40,35 +39,13 @@ const ConsultationFrom: React.FC<Props> = () => {
               <div className={styles.input_block}>
                 <Input name="email" placeholder="Email" />
               </div>
-              <div className={`${styles.input_block} ${styles.flex}`}>
+              <div className={`${styles.input_block}`}>
                 <Input name="phone" placeholder="Phone no." type="tel" />
-                <Input
-                  name="aternamenumber"
-                  placeholder="Altername Phone no."
-                  type="tel"
-                />
               </div>
             </div>
             {/* block two */}
             <div className={styles.block}>
-              <h3 className={styles.block_heading}>Enter Your Case Details</h3>
-
-              <div className={`${styles.input_block} ${styles.flex}`}>
-                <Input name="casenumber" placeholder="Case Number" />
-
-                <Input name="act" placeholder="Act Name" />
-              </div>
-              <div className={styles.input_block}>
-                <p className={styles.block_description}>
-                  **Double check the quality of files you are uploading, they
-                  will be used by our lawyers for future references.
-                </p>
-                <Input
-                  name="attatchments"
-                  placeholder="Case Related Files"
-                  type="file"
-                />
-              </div>
+              <h3 className={styles.block_heading}>Brief Your Case</h3>
               <div className={styles.input_block}>
                 <Input
                   name="description"

@@ -1,5 +1,12 @@
 import styles from "./FAQs.module.css";
-interface Props {}
+
+interface Props {
+  questionsList?: {
+    id: number;
+    question: string;
+    ans: string;
+  }[];
+}
 
 const faqs = [
   {
@@ -30,7 +37,7 @@ const faqs = [
   },
 ];
 
-const FAQs: React.FC<Props> = () => {
+const FAQs: React.FC<Props> = ({ questionsList }) => {
   return (
     <section className={styles.FAQs}>
       <article className="container">
@@ -44,14 +51,25 @@ const FAQs: React.FC<Props> = () => {
             <span>customer support</span> team.
           </p>
         </div>
-        <div className={styles.section_two}>
-          {faqs.map((elem) => (
-            <div key={elem.id} className={styles.question_block}>
-              <h3 className={styles.question}>- {elem.question}</h3>
-              <p dangerouslySetInnerHTML={{ __html: elem.ans }} />
-            </div>
-          ))}
-        </div>
+        {questionsList ? (
+          <div className={styles.section_two}>
+            {questionsList.map((elem) => (
+              <div key={elem.id} className={styles.question_block}>
+                <h3 className={styles.question}>- {elem.question}</h3>
+                <p dangerouslySetInnerHTML={{ __html: elem.ans }} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className={styles.section_two}>
+            {faqs.map((elem) => (
+              <div key={elem.id} className={styles.question_block}>
+                <h3 className={styles.question}>- {elem.question}</h3>
+                <p dangerouslySetInnerHTML={{ __html: elem.ans }} />
+              </div>
+            ))}
+          </div>
+        )}
       </article>
     </section>
   );

@@ -296,7 +296,7 @@ img {
   opacity: 0.8;
 }
 
-/*  */
+/* page header */
 .page-header {
   display: flex;
   justify-content: center;
@@ -307,6 +307,7 @@ img {
   padding: 5rem 0;
 
   font-family: "serif", "sans-serif";
+  text-transform: capitalize;
 }
 
 .ample-media {
@@ -315,4 +316,28 @@ img {
   color: var(--accent-primary);
   font-size: 0.85rem;
   padding: 0.75rem;
+}
+
+/* dynamic content from data.js */
+.dynamic-content {
+  margin: 0 auto;
+  max-width: 60rem;
+  line-height: 1.4;
+  padding-bottom: 2rem;
+}
+
+.dynamic-content h2 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+/* director page */
+.director {
+  line-height: 1.4;
+  margin: 2rem auto;
+}
+
+.director h1 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
 }

@@ -10,7 +10,7 @@ const Youtube: React.FC<Props> = ({ hideHeading, autoplay, link }) => {
   return (
     <section className={styles.youtube}>
       <div className="container">
-        {!hideHeading && <h1 className={styles.title}>Interviews</h1>}
+        {!hideHeading && <h1 className={styles.title}>Legal Reporter</h1>}
         <iframe
           src={`https://www.youtube.com/embed/${
             link || "x6iJU2hlz8c"

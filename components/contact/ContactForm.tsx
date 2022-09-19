@@ -47,7 +47,7 @@ const ContactForm: React.FC<Props> = () => {
                 />
                 <Input
                   name="desc"
-                  placeholder="Description of your case"
+                  placeholder="Brief your case"
                   component="textarea"
                   rows="4"
                 />

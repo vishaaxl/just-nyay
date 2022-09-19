@@ -8,7 +8,7 @@ import ConsultationForm from "components/consultation-form/ConsultationForm";
 const Contact: NextPage = () => {
   return (
     <>
-      <PageHeading title="Consultaion Form" />
+      <PageHeading title="Ask Your Query" />
       <div className="container">
         <ConsultationForm />
       </div>

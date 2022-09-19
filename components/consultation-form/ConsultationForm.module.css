@@ -29,3 +29,12 @@
   margin-bottom: 1rem;
   line-height: 1.4;
 }
+
+.accent {
+  color: var(--accent-blue);
+  cursor: pointer;
+}
+
+.accent:hover {
+  text-decoration: underline;
+}

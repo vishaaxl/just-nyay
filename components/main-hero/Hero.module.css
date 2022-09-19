@@ -52,7 +52,7 @@
 
 .hero_content h1 {
   font-weight: 700;
-  font-size: clamp(50px, 6vw, 80px);
+  font-size: clamp(60px, 10vw, 100px);
   line-height: 1.125;
 }
 

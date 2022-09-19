@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
 
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 interface Props {}
 
@@ -25,7 +26,7 @@ const footer_data = [
   {
     id: 3,
     heading: "company",
-    values: ["about", "contact us", "youtube", "Blogs"],
+    values: ["about", "contact us", "youtube", "Director"],
   },
   {
     id: 4,
@@ -35,6 +36,28 @@ const footer_data = [
 ];
 
 const Footer: React.FC<Props> = () => {
+  const router = useRouter();
+
+  const linkBuilder = (val: string, heading: string) => {
+    let link: string;
+    switch (heading) {
+      case "solutions":
+        link =
+          val == "Lawyers click here"
+            ? "/lawyer/register"
+            : (link = `/lawyer/${val.replace(/ /g, "-")}`);
+
+        break;
+      case "support":
+        link = `/lawyer/${val}`;
+        break;
+      default:
+        link = `/${val}`;
+        break;
+    }
+
+    return link.toLowerCase();
+  };
   return (
     <>
       <footer className={styles.footer}>
@@ -52,9 +75,14 @@ const Footer: React.FC<Props> = () => {
             {footer_data.map((data) => (
               <div className={styles.box} key={data.id}>
                 <div className={styles.h3}>{data.heading}</div>
-                {data.values.map((val) => (
-                  <p key={val}>{val}</p>
-                ))}
+                {data.values.map((val) => {
+                  let link = linkBuilder(val, data.heading);
+                  return (
+                    <p key={val} onClick={() => router.push(`${link}`)}>
+                      {val}
+                    </p>
+                  );
+                })}
               </div>
             ))}
           </div>
