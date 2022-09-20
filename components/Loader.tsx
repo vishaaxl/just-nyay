@@ -13,7 +13,13 @@ const Loader: React.FC<Props> = () => {
       exit={{ opacity: 0 }}
     >
       <div className="blink">
-        <Image src="/images/jn-logo.jpeg" alt="logo" height={150} width={150} />
+        <Image
+          priority
+          src="/images/jn-logo.jpeg"
+          alt="logo"
+          height={150}
+          width={150}
+        />
       </div>
     </motion.div>
   );
