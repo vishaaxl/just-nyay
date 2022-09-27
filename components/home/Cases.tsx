@@ -16,7 +16,7 @@ const cases = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
     icon: <MdGavel />,
     link: "#",
-    image: "/images/hero-1.jpg",
+    image: "/images/case-1.jpeg",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const cases = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
     icon: <GiChestnutLeaf />,
     link: "#",
-    image: "/images/hero-1.jpg",
+    image: "/images/case-2.jpeg",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const cases = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
     icon: <GiHandcuffs />,
     link: "#",
-    image: "/images/hero-1.jpg",
+    image: "/images/case-1.jpeg",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const cases = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
     icon: <MdTraffic />,
     link: "#",
-    image: "/images/hero-1.jpg",
+    image: "/images/case-3.jpeg",
   },
 ];
 

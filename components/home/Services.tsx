@@ -60,10 +60,10 @@ const Services: React.FC<Props> = () => {
           </div>
           <div className={styles.service_image}>
             <Image
-              objectPosition="right"
+              objectPosition="right top"
               layout="fill"
               objectFit="cover"
-              src="/images/hero-1.png"
+              src="/images/service-1.jpeg"
               alt=""
             />
           </div>

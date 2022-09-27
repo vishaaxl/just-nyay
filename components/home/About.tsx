@@ -42,7 +42,7 @@ const About: React.FC<Props> = () => {
           <div className={styles.about_image_one}>
             <Image
               alt=""
-              src="/images/hero-1.png"
+              src="/images/about-1.jpeg"
               layout="fill"
               objectFit="cover"
             />
@@ -50,7 +50,7 @@ const About: React.FC<Props> = () => {
           <div className={styles.about_image_two}>
             <Image
               alt=""
-              src="/images/hero-2.png"
+              src="/images/about-2.jpeg"
               layout="fill"
               objectFit="cover"
               objectPosition="left"
