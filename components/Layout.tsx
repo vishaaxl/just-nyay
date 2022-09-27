@@ -1,5 +1,5 @@
-import Footer from "./footer/Footer";
-import MainMenu from "./mega-menu/MainMenu";
+import Footer from "./Footer";
+import TopNav from "./home/TopNav";
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <MainMenu />
+      <TopNav />
       {children}
       <Footer />
     </>

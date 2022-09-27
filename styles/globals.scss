@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --font-accent: "Frank Ruhl Libre", serif;
+  --primary: #fff;
+  --secondary: #272928;
+  --accent-primary: #e0a965;
+  --accent-secondary: #ffa113;
+
+  --accent-blue: #162542;
+  --background-light: #f3f4f5;
+  --background-medium: #eff0f2;
+  --background-dark: #313131;
+
+  --shadow-primary: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--secondary);
+  background-color: var(--primary);
+
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+.container {
+  width: 90%;
+  max-width: 80rem;
+
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.488em;
+}
+h2 {
+  font-size: 2.074em;
+}
+h3 {
+  font-size: 1.728em;
+}
+h4 {
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1.025em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hover {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.full-width {
+  min-width: 100%;
+}
+
+/*  loader  */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d2b45;
+}
+
+.blink {
+  text-decoration: blink;
+  animation: blinker 1s ease-in-out infinite alternate;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.btn-primary {
+  box-shadow: var(--shadow-primary);
+  display: inline-block;
+
+  a {
+    display: inline-block;
+    padding: 0.25em 2em;
+
+    line-height: 40px;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    background-color: var(--accent-primary);
+    color: var(--primary);
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+  }
+
+  a span {
+    position: relative;
+    z-index: 2;
+  }
+
+  a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-blue);
+    transition: all 0.35s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  a:hover:after {
+    width: 100%;
+  }
+}
+
+.line_heading {
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+
+  span {
+    margin-right: 1rem;
+    display: inline-block;
+    height: 3px;
+    width: 56px;
+    background-color: var(--accent-primary);
+  }
+
+  @media (min-width: 425px) {
+    font-size: 1.125rem;
+  }
+}
