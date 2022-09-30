@@ -11,36 +11,32 @@ interface Props {}
 const cases = [
   {
     id: 1,
-    title: "Divorce",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    title: "Criminal",
+    description: "If you need the best criminal lawyer for your criminial case",
     icon: <MdGavel />,
     link: "#",
     image: "/images/case-1.jpeg",
   },
   {
     id: 2,
-    title: "Drug offense",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    title: "Divorce",
+    description: "Are you upset with your partner and want a divorce",
     icon: <GiChestnutLeaf />,
     link: "#",
     image: "/images/case-2.jpeg",
   },
   {
     id: 3,
-    title: "Domestic Violence",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    title: "Startup",
+    description: "Are you going to start your own startup by forming a company",
     icon: <GiHandcuffs />,
     link: "#",
     image: "/images/case-1.jpeg",
   },
   {
     id: 4,
-    title: "Traffic Violence",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    title: "Online Fraud ",
+    description: "Have you been scammed online in any purchase or service",
     icon: <MdTraffic />,
     link: "#",
     image: "/images/case-3.jpeg",

@@ -1,4 +1,5 @@
 import Footer from "./Footer";
+import Hero from "./home/Hero";
 import TopNav from "./home/TopNav";
 
 interface Props {
@@ -9,6 +10,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <TopNav />
+      <Hero />
       {children}
       <Footer />
     </>

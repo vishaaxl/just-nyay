@@ -18,20 +18,19 @@ const About: React.FC<Props> = () => {
             25 Years Of Experience In Law Solutiuons
           </p>
           <p className={styles.about_description}>
-            Sed ut perspiciatis unde omnis iste natus error site voluaccusantium
-            doloremque laudantium totam rem aperiam eaque quae ab illo inventore
-            veritatis et quas architecto beatae vitae dicta sunt explicabo. Nemo
-            enim ipsam voluptatem quia voluptas sit aspernatur aute sed quia
-            consequuntur magne
+            The purpose of starting Just Nyay is only to reach the solution of
+            the complex legal problem to the common people of the country.
+            According to media reports by the year 2022, about 1.5 crore cases
+            are pending in the lower courts. India’s middle class and lower
+            class are constantly facing trouble in the process of justice.
+            <br />
+            <br /> Just Nyay&apos;s media company Legal Reporter, started in the
+            year 2019, has been working in the legal reporting field for the
+            past 20 years. The Legal Reporter has so far interacted with more
+            than 200 senior lawyers of the Supreme Court to know their views on
+            different legal subjects.
           </p>
-          <div className={styles.count_container}>
-            <h1>100 +</h1>
-            <p>Cases Won</p>
-          </div>
-          <div className={styles.count_container}>
-            <h1>150 +</h1>
-            <p>Clients reached</p>
-          </div>
+
           <div className="btn-primary">
             <a href="#">
               <span>Book Consulation</span>
@@ -53,7 +52,7 @@ const About: React.FC<Props> = () => {
               src="/images/about-2.jpeg"
               layout="fill"
               objectFit="cover"
-              objectPosition="left"
+              objectPosition="right"
             />
           </div>
         </div>
