@@ -1,6 +1,7 @@
 import PageHeading from "components/PageHeading";
 import PriceChart from "components/Pricing";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/page.module.scss";
 
 interface Props {}
@@ -9,7 +10,7 @@ const SecondOpinion: React.FC<Props> = () => {
   return (
     <>
       <Head>
-        <title>Just Nyay | Legal Issues No Issues</title>
+        <title>Just Nyay | Legal Issue No Issue</title>
 
         <meta
           name="description"
@@ -34,6 +35,7 @@ const SecondOpinion: React.FC<Props> = () => {
             3. Do you also feel that the legal advice you are getting is not
             enough?
           </li>
+
           <li>
             4. Do you also think that it will be better if you get this legal
             advice from a big lawyer of the country?
@@ -47,6 +49,17 @@ const SecondOpinion: React.FC<Props> = () => {
             country about your career?
           </li>
         </ul>
+
+        <div className="container" style={{ marginTop: "1rem" }}>
+          <Image
+            src="/images/case-2.jpeg"
+            alt=""
+            height="50"
+            width="100%"
+            objectFit="contain"
+            layout="responsive"
+          />
+        </div>
 
         <h3 className={styles.main_heading}>Q. Need for a second opinion!</h3>
         <p className={styles.para}>
@@ -89,6 +102,16 @@ const SecondOpinion: React.FC<Props> = () => {
           take your case in the right direction and you will get relief in your
           case. At this time you need a second opinion the most.
         </p>
+        <div className="container" style={{ marginTop: "-2rem" }}>
+          <Image
+            src="/images/about-2.jpeg"
+            alt=""
+            height="70"
+            width="100%"
+            objectFit="contain"
+            layout="responsive"
+          />
+        </div>
         <h3 className={styles.main_heading}>Q. Whom to Get Second Opinion!</h3>
         <p className={styles.para}>
           A. The judiciary of India is mainly divided into three parts, the

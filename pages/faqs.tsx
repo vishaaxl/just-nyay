@@ -15,7 +15,7 @@ const Faqs: React.FC<Props> = () => {
   return (
     <>
       <Head>
-        <title>Just Nyay | Legal Issues No Issues</title>
+        <title>Just Nyay | Legal Issue No Issue</title>
 
         <meta
           name="description"
