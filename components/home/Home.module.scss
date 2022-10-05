@@ -186,6 +186,12 @@
     color: var(--primary);
     height: 100%;
 
+    text-align: right;
+
+    @media (min-width: 425px) {
+      text-align: left;
+    }
+
     display: grid;
     align-content: center;
 
