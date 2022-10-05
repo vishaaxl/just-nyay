@@ -1,4 +1,6 @@
 import PageHeading from "components/PageHeading";
+import PriceChart from "components/Pricing";
+import Head from "next/head";
 import styles from "../styles/page.module.scss";
 
 interface Props {}
@@ -6,6 +8,18 @@ interface Props {}
 const SecondOpinion: React.FC<Props> = () => {
   return (
     <>
+      <Head>
+        <title>Just Nyay | Legal Issues No Issues</title>
+
+        <meta
+          name="description"
+          content="One stop solution to all your legal proplems"
+        />
+        <meta
+          name="keywords"
+          content="legal, reporter, case, court, solutions"
+        ></meta>
+      </Head>
       <PageHeading title="Second Opinion" />
       <div className="container">
         <h3 className={styles.main_heading}>
@@ -91,6 +105,7 @@ const SecondOpinion: React.FC<Props> = () => {
           who have vast experience in legal practice.
         </p>
       </div>
+      <PriceChart />
     </>
   );
 };

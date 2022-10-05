@@ -312,14 +312,6 @@
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
-
-    .about_images {
-      padding: 2rem;
-    }
-
-    .about_image_two {
-      left: 20%;
-    }
   }
 
   .about_title {
@@ -362,14 +354,15 @@
 
     .about_image_one {
       position: relative;
-      height: 200px;
-      width: 400px;
+      height: 250px;
+      width: 100%;
       max-width: 100%;
     }
+
     .about_image_two {
       position: relative;
       height: 350px;
-      width: 80%;
+      width: 100%;
       max-width: 400;
 
       top: 2rem;
@@ -495,6 +488,11 @@
 
 .question_block {
   margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
 
 .section_two p {

@@ -1,13 +1,13 @@
 import styles from "./Home.module.scss";
-import { Service } from "./Services";
 
-import { AiFillPhone } from "react-icons/ai";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { MdEmail, MdGavel } from "react-icons/md";
 
 interface Props {}
 
 const TopNav: React.FC<Props> = () => {
+  const router = useRouter();
   return (
     <>
       <div className={styles.top_nav}>
@@ -16,7 +16,11 @@ const TopNav: React.FC<Props> = () => {
       </div>
       <div className="container">
         <div className={styles.quick_info}>
-          <div className="logo">
+          <div
+            className="logo"
+            onClick={() => router.push("/")}
+            style={{ cursor: "pointer" }}
+          >
             <Image
               src="/images/logo.png"
               alt=""

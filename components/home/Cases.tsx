@@ -5,6 +5,7 @@ import { GiChestnutLeaf, GiHandcuffs } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface Props {}
 
@@ -14,7 +15,7 @@ const cases = [
     title: "Criminal",
     description: "If you need the best criminal lawyer for your criminial case",
     icon: <MdGavel />,
-    link: "#",
+    link: "/lawyers/criminal",
     image: "/images/case-1.jpeg",
   },
   {
@@ -22,7 +23,7 @@ const cases = [
     title: "Divorce",
     description: "Are you upset with your partner and want a divorce",
     icon: <GiChestnutLeaf />,
-    link: "#",
+    link: "/lawyers/divorce",
     image: "/images/case-2.jpeg",
   },
   {
@@ -30,7 +31,7 @@ const cases = [
     title: "Startup",
     description: "Are you going to start your own startup by forming a company",
     icon: <GiHandcuffs />,
-    link: "#",
+    link: "/lawyers/startup",
     image: "/images/case-1.jpeg",
   },
   {
@@ -38,7 +39,7 @@ const cases = [
     title: "Online Fraud ",
     description: "Have you been scammed online in any purchase or service",
     icon: <MdTraffic />,
-    link: "#",
+    link: "/lawyers/cyber-crime",
     image: "/images/case-3.jpeg",
   },
 ];
@@ -65,8 +66,10 @@ interface CaseProps {
 }
 
 const Case: React.FC<CaseProps> = ({ data }) => {
+  const router = useRouter();
+
   return (
-    <div className={styles.cases}>
+    <div className={styles.cases} onClick={() => router.push(data.link)}>
       <div className={styles.bg_wrap}>
         <Image src={data.image} layout="fill" objectFit="cover" alt="" />
       </div>

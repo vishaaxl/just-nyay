@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 interface Props {
+  title?: string;
   questionsList: {
     id: number;
     question: string;
@@ -12,7 +13,7 @@ interface Props {
   }[];
 }
 
-const FAQs: React.FC<Props> = ({ questionsList }) => {
+const FAQs: React.FC<Props> = ({ questionsList, title }) => {
   const [questionOpen, setQuestionOpen] = useState(1);
   const router = useRouter();
 
@@ -20,10 +21,19 @@ const FAQs: React.FC<Props> = ({ questionsList }) => {
     <section className={styles.FAQs}>
       <article className="container">
         <div className={styles.section_one}>
-          <h1>
-            Frequently asked
-            <br /> questions
-          </h1>
+          {title ? (
+            <h1>
+              Frequently asked
+              <br /> questions
+              <br />
+              about {title}
+            </h1>
+          ) : (
+            <h1>
+              Frequently asked
+              <br /> questions
+            </h1>
+          )}
           {router.asPath == "/" && (
             <p>
               Can’t find the answer you’re looking for? We got more{" "}

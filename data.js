@@ -215,7 +215,7 @@ export const pages = [
   },
 ];
 
-export const faqs = [
+export const marriageFaqs = [
   {
     id: 1,
     question:
@@ -240,101 +240,165 @@ export const faqs = [
     ans: ". Yes, absence of marriage registration does not invalidate your marriage.",
   },
   {
-    id: 0,
+    id: 5,
     question: "In which places can I get my marriage registered?",
     ans: "You can get your marriage registered at the office of the Sub-Divisional Magistrate (marriage officer) under whose jurisdiction (location of marriage) the marriage has been solemnised. You can also get the marriage registered at the office of the SDM within whose jurisdiction either husband or wife is residing.",
   },
   {
-    id: 5,
+    id: 6,
     question: "Can we apply marriage certificate online?",
     ans: "You can apply for marriage registration online. After submitting your online application, a date will be fixed. You and your partner along with witnesses and all required documents will have to go to the office of the marriage officer on the fixed date to get the marriage registered. Upon registration of marriage, your marriage certificate will be issued.<p>In Advoker, we have a pool of Marriage Registration experts who are well versed with the process. We will make the entire process a breeze for you by taking care of all formalities. We will draft and submit your application, help you in preparation and finalization of documents, prepare draft affidavit and get it notarised, and undertake all ancillary matters related to the process of Marriage Registration for you.</p>",
   },
   {
-    id: 6,
+    id: 7,
     question: "What is the fee for marriage registration?",
     ans: "The State Governments have been authorized to prescribe fees for registration of marriages. Therefore, the fees for marriage registration is different for each state.",
   },
   {
-    id: 9,
+    id: 8,
     question: "How long does the marriage registration process take?",
     ans: 'Generally, you will get an appointment for registration of marriage within 10-15 days of submission of application form. On the date fixed, you and your partner along with two witnesses will be required to be present at the office of the Sub-Divisional Magistrate to sign documents and get the marriage registered. After registration of marriage, marriage certificate is issued on the same date. However, if required, MyAdvo"s Expert will request for a date which is convenient to both you and your partner. On the fixed date, the marriage will be registered and certificate will be issued.',
   },
   {
-    id: 12,
-    question: "Who is the authority to register a marriage?",
-    ans: "Marriages are registered by the Sub-Divisional Magistrate of the area where the marriage took place or where either of the spouses stayed for at least six months before the marriage.",
-  },
-  {
-    id: 15,
-    question: "How can I check my marriage registration status online?",
-    ans: "You can check the status of your marriage registration online through the website of the municipal corporation or municipal council of the district in which application has been filed. You can track the status by using the application number.",
-  },
-  {
-    id: 18,
+    id: 9,
     question:
-      "Who can be a witness to a marriage for marriage registration purpose?",
-    ans: "A. Any person who has attended the marriage and has an identity proof and a proof of residence can be present as a witness to the marriag.",
+      "Q.	Is registration of marriage a necessary ground for filing of divorce?",
+    ans: "No, registration of marriage is not necessary. But it is advisable that you get your marriage registered as your marriage certificate will be helpful and will add value to your divorce case as far as validity of your marriage is concerned.",
+  },
+
+  {
+    id: 10,
+    question: "Q.	How long does it take to get divorce?",
+    ans: "Divorce matters usually take alot of time. In case of a contested divorce that is where only one of the spouse wants divorce are usually very time taking and may take around 3-5 years.But in cases, where both you and your spouse mutually decide to take a divorce, such a proceed may take only 6-8 months",
+  },
+];
+
+export const insiderTrading = [
+  {
+    id: 0,
+    question: "What Is Insider Trading? ",
+    ans: "Insider trading involves trading in a public company's stock by someone who has non-public, material information about that stock for any reason. Insider trading can be either illegal or legal depending on when the insider makes the trade.",
   },
   {
-    id: 21,
-    question: "Who to approach for marriage registration?",
-    ans: "For the purpose of registration of marriage, one has to approach the office of the Sub Divisional Magistrate under whose jurisdiction the marriage took place or where either of the spouses stayed for at least six months before the marriage.",
+    id: 1,
+    question: "Insider trading is related to?",
+    ans: "Term insider trading is associated with the share market. Insider trading is the buying or selling of a publicly-traded company's stock by someone who has non-public, material information about that stock",
   },
   {
-    id: 16,
-    question: "Can a marriage be registered anywhere in India?",
-    ans: "The Hindu marriage act applies to all over Indian states and the Union territories, Jammu and Kashmir being an exception to it. According to the law and as per the recent strict guidelines of the Supreme Court, it is highly necessary to register the marriages.",
+    id: 2,
+    question: "How do you identify insider trading?",
+    ans: "Market surveillance activities: This is one of the most important ways of identifying insider trading. The SEC uses sophisticated tools to detect illegal insider trading, especially around the time of important events such as earnings reports and key corporate developments.",
   },
   {
-    id: 19,
-    question: "How do I check my marital status?",
-    ans: "You can also sms the letter M followed by your ID number (example: M 5001010050080) to 32551 A reply sms will be sent back to your cellphone to confirm your marital status and the date of your marriage. (R1 per sms and will be charged by your network service provider).",
+    id: 3,
+    question: "Who is an insider?",
+    ans: "The Sebi defines an 'insider' as someone who has access to price-sensitive information about a particular company's shares or securities. An insider can be anyone who has been associated with the company in some way during the six months preceding the insider trade.",
   },
   {
-    id: 22,
-    question: "Which type of marriage is valid in India?",
-    ans: "Under the Hindu marriage and court marriage rule, there are certain conditions that have to be complied with before marriage is valid in India: The persons getting married must be unmarried and must not have a living spouse from their previous marriage. The legal age for a woman is 18 years and for a man is 21 years.",
+    id: 4,
+    question: "What is an example of insider trading?",
+    ans: "Insider trading is whenever someone uses market-moving nonpublic information in the act of buying or selling a financial asset. For example, say you work as an executive at a company that plans to make an acquisition. If it's not public, that would count as inside information",
+  },
+];
+
+export const domesticViolence = [
+  {
+    id: 0,
+    question: "What do you mean by domestic violence?",
+    ans: "Domestic violence means a violence performed with the victim in the victim's domestic circle.",
   },
   {
-    id: 21,
-    question: "How long does it take to register marriage in India?",
-    ans: "At present, it takes 7-15 days for marriages to get registered and for the issuance of certificates. The couple needs to be present in office to fill in Form 1 and 2 and the application for registering marriage.",
+    id: 1,
+    question: "What does domestic violence include?",
+    ans: "Physical abuse, sexual abuse, verbal and emotional abuse, economic abuse. ",
   },
   {
-    id: 24,
-    question: "What is the disadvantage of court marriage?",
-    ans: "One of the major disadvantages of court marriage or wedding is the case of divorce. Court weddings or marriage usually create room for divorce and if divorce should occur, it has a strict process of going through it.",
+    id: 2,
+    question: "Who can file a case against domestic violence?",
+    ans: "Any person who is subjected to domestic violence",
   },
   {
-    id: 27,
-    question: "What is the difference between registry and court marriage?",
-    ans: "Court and registry marriage are the same marriage process or type of marriage being called different names. Marriages are not conducted at the court registry, but only at the marriage registry.",
-  },
-  {
-    id: 30,
-    question: "How is court marriage done?",
-    ans: "Application form (notice in the form specified) duly filled and signed by the bride and the groom. Documentary evidence of the date of birth of both the parties (matriculation certificate/ passport/ birth certificate) Receipt of fees paid with respect to the application form in the District Court.",
-  },
-  {
-    id: 33,
-    question: "Is notice to parents about court marriage sent?",
-    ans: "No notice is send by such office except that it is displayed on the notice board of such office for a period of one month after you give an application for the intended marriage. ",
-  },
-  {
-    id: 31,
+    id: 3,
     question:
-      "Is registration of marriage a necessary ground for filing of divorc?",
-    ans: "No, registration of marriage is not necessary. But it is advisablethat you get your marriage registered as your marriage certificatewill be helpful and will add value to your divorce case as far asvalidity of your marriage is concerned.",
+      "What is the difference between Section 498A of IPC and Domestic violence?",
+    ans: "Domestic violence is known for the complaint related to any form of harassment such as demand of dowry, physically, mentally, socially, economically etc. Whereas Section 498A of IPC primarily states when a victim is harassed by her husband or relatives of husband by cruelty against her for not fulfilling their demand so that person is punished under this section of IPC.",
   },
   {
-    id: 34,
-    question: "How long does it take to get divorce?",
-    ans: "Divorce matters usually take alot of time. In case of a contested divorce that is where only one of the spouse wants divorce are usually very time taking and may take around 3-5 years.But in cases, where both you and your spouse mutually decide to take a divorce, such a proceed may take only 6-8 months.",
+    id: 4,
+    question: "Does the woman herself file a case against domestic violence?",
+    ans: "Yes, a woman has the right to lodge a complaint against domestic violence by herself.",
   },
   {
-    id: 37,
+    id: 4,
+    question: "Which states have the highest domestic violence cases in India?",
+    ans: "The states which have the highest domestic violence cases in Karnataka, Bihar and Manipur in India. ",
+  },
+];
+
+export const distributionOfProperty = [
+  {
+    id: 0,
+    question: "What is Partition?",
+    ans: "Partition means the process of division of property.",
+  },
+  {
+    id: 1,
+    question: "Which act regulates the division of property?",
+    ans: "Hindu Succession act, 1956 regulates the concept of distribution of property.",
+  },
+  {
+    id: 2,
+    question: "What is a rule of succession?",
+    ans: "Succession itself depends on whether the property is a self acquired property or an ancestral property with testamentary or intestate succession. ",
+  },
+  {
+    id: 3,
     question:
-      "What can i do when my husband/wife is not willing to give me divorce?",
-    ans: " In such a case you must file for a Contested Divorce in the district family court. This happens when only one of the spouse seeks divorce and the other does not. The complete divorce proceedings may take 3-5 years. If the divorce petition is accepted by the court, the same shall be sent to your spouse who shall then have to appear in court for further proceedings.",
+      "What is the devolution of interest in cases of death under hindu succession?",
+    ans: "In this case the property will devolve to all the coparceners and this act also includes female heirs within the coparcenary. ",
+  },
+  {
+    id: 4,
+    question: "Whom will the property be distributed first?",
+    ans: "The property will distribute the close relatives of Class 1 heir that is sons, daughters, mother etc. If there is no class 1 heir then the property will go to class 2 heir are the distant closest relatives that are father, son’s daughter son, , son’s daughter daughter and so on. ",
+  },
+  {
+    id: 4,
+    question: "Is the widow liable to get a division in property?",
+    ans: "Yes, widows are liable to get a distribution in property. ",
+  },
+];
+
+export const childCustody = [
+  {
+    id: 0,
+    question: "What is child custody?",
+    ans: "A child custody means a custody of a child’s care is given to either of the parents after divorce. ",
+  },
+  {
+    id: 1,
+    question: "At what age is child custody mandatory to a mother?",
+    ans: "The custody of a child below five years of age is generally given to another. ",
+  },
+  {
+    id: 2,
+    question:
+      "What are the factors which contribute to the welfare of a child?",
+    ans: "The main factor of custody is who assures the best possible future of a child which includes proper ethical upbringing of a child, assurance of the safety of a child, imparting quality education and the guardian with whom the custody is vested is financially well. ",
+  },
+  {
+    id: 3,
+    question: "Which court handles the custody of child matters? ",
+    ans: "A family court can handle the child custody cases.",
+  },
+  {
+    id: 4,
+    question: "6.	What are the rights of the parents over minor children?",
+    ans: "Both the parents have an equal right over the child. ",
+  },
+  {
+    id: 4,
+    question: "Is the child view taken when the custody has been performed?",
+    ans: "Yes, if the child is above 9 years of age then the view of the child is also considered. ",
   },
 ];

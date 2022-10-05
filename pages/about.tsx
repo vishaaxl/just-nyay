@@ -1,4 +1,6 @@
 import PageHeading from "components/PageHeading";
+import Head from "next/head";
+import Image from "next/image";
 
 import styles from "../styles/page.module.scss";
 
@@ -7,6 +9,18 @@ interface Props {}
 const About: React.FC<Props> = () => {
   return (
     <>
+      <Head>
+        <title>Just Nyay | Legal Issues No Issues</title>
+
+        <meta
+          name="description"
+          content="One stop solution to all your legal proplems"
+        />
+        <meta
+          name="keywords"
+          content="legal, reporter, case, court, solutions"
+        ></meta>
+      </Head>
       <PageHeading title="About us" />
       <div className="container">
         <h3 className={styles.main_heading}>About JustNyay</h3>
@@ -31,6 +45,16 @@ const About: React.FC<Props> = () => {
           <br /> So, don&apos;t delay and contact Just Nyay immediately for any
           legal problem.
         </p>
+        <div className="container" style={{ marginTop: "-5rem" }}>
+          <Image
+            src="/images/about-1.jpeg"
+            alt=""
+            height="80"
+            width="100%"
+            objectFit="contain"
+            layout="responsive"
+          />
+        </div>
       </div>
     </>
   );

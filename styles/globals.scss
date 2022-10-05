@@ -308,43 +308,133 @@ img {
   padding: 2em 0;
   color: var(--primary);
 
+  margin-bottom: 2rem;
+
   @media (min-width: 425px) {
     font-size: 3rem;
   }
 }
 
-//external
-.marquee {
+// carousel
+.embla {
+  position: relative;
+  background-color: #f7f7f7;
+  padding: 10px;
+  max-width: 100%;
   overflow: hidden;
-  margin-top: 2rem;
 }
 
-.marquee-content {
-  display: flex;
-  animation: scrolling 20s linear infinite;
-}
-
-.marquee-item {
-  flex: 0 0 70vw;
-  margin: 0 1vw;
-
-  @media (min-width: 425px) {
-    flex: 0 0 40vw;
-  }
-}
-
-.marquee-item img {
-  display: block;
+.embla__viewport {
+  overflow: hidden;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
-@keyframes scrolling {
-  0% {
-    transform: translateX(0);
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  cursor: pointer;
+  position: relative;
+  min-width: 90%;
+  padding-left: 10px;
+
+  @media (min-width: 767px) {
+    min-width: 60%;
   }
-  100% {
-    transform: translatex(-110%);
+
+  @media (min-width: 1024px) {
+    min-width: 35%;
   }
+}
+
+.embla__slide__img {
+  width: 100%;
+  object-fit: contain;
+}
+
+// input
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-block label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.input-block input,
+.input-block textarea {
+  font-family: inherit;
+
+  font-size: 1rem;
+  outline: none;
+  padding: 0.75rem 0.25rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  opacity: 0.8;
+}
+
+.input-block input:hover,
+.input-block textarea:hover {
+  border-bottom: 1px solid var(--accent-primary);
+}
+
+.error {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: red;
+}
+
+.custom-select {
+  font-family: inherit;
+
+  font-size: 1rem;
+  outline: none;
+  padding: 0.75rem 0.25rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  opacity: 0.8;
+}
+
+// button
+.primary-btn {
+  border: none;
+  outline: none;
+  background: var(--accent-blue);
+  width: max-content;
+  padding: 0.85rem 1.25rem;
+
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--primary);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-btn:hover {
+  transform: translateX(4px);
 }

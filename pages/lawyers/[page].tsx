@@ -3,6 +3,8 @@ import { GetServerSideProps } from "next";
 
 import styles from "../../styles/page.module.scss";
 import { pages } from "../../data.js";
+import PricingSection from "components/Pricing";
+import Head from "next/head";
 
 interface Props {
   title: string;
@@ -17,6 +19,17 @@ interface Props {
 const Page: React.FC<Props> = ({ title, pageContent }) => {
   return (
     <>
+      <Head>
+        <title>Just Nyay | {title}</title>
+        <meta
+          name="description"
+          content="One stop solution to all your legal proplems"
+        />
+        <meta
+          name="keywords"
+          content={`legal, reporter, case, court, ${title}`}
+        ></meta>
+      </Head>
       <PageHeading title={title} />
       <section className="container">
         {pageContent[0] && (
@@ -26,6 +39,7 @@ const Page: React.FC<Props> = ({ title, pageContent }) => {
           </>
         )}
       </section>
+      <PricingSection />
     </>
   );
 };

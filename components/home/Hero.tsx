@@ -219,7 +219,7 @@ const Hero: React.FC<Props> = () => {
               )}
             </AnimatePresence>
           </motion.li>
-          <li>Second Opinion</li>
+          <li onClick={() => router.push("/second-opinion")}>Second Opinion</li>
           <motion.li
             onHoverStart={() => setShowDropdown("services")}
             onHoverEnd={() => setShowDropdown("")}
@@ -253,13 +253,13 @@ const Hero: React.FC<Props> = () => {
               )}
             </AnimatePresence>
           </motion.li>
-          <li onClick={() => router.push("/second-opinion")}>
+          <li onClick={() => router.push("/legal-reporter")}>
             Legal Reporter TV
           </li>
           <li onClick={() => router.push("/about")}>About Us</li>
         </motion.ul>
 
-        <div className="btn-primary">
+        <div className="btn-primary" onClick={() => router.push("/buy-now")}>
           <a href="#">
             <span>Consult now</span>
           </a>
@@ -292,7 +292,10 @@ const Hero: React.FC<Props> = () => {
               10000 Expert Lawyers Group
             </motion.p>
             <motion.div variants={listItem} className={styles.line_three}>
-              <div className="btn-primary">
+              <div
+                className="btn-primary"
+                onClick={() => router.push("/buy-now")}
+              >
                 <a href="#">
                   <span>Book Consultation</span>
                 </a>

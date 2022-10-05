@@ -1,0 +1,55 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+
+  .player_wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .close_icon,
+  .youtube_icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+
+    margin-left: auto;
+    opacity: 0.9;
+    cursor: pointer;
+
+    @media (min-width: 425px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .youtube_icon {
+    margin: 0 auto;
+  }
+
+  .socials {
+    & > * {
+      margin: 0 1rem;
+    }
+  }
+
+  .player {
+    height: 190px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 3rem;
+
+    @media (min-width: 425px) {
+      height: 390px;
+    }
+    @media (min-width: 767px) {
+      height: 420px;
+    }
+  }
+}

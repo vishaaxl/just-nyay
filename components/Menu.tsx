@@ -261,7 +261,15 @@ const Menu: React.FC<Props> = ({ setMobileMenu }) => {
                 </motion.div>
               ))}
           </div>
-          <span className={styles.link}>Legal Reporter TV</span>
+          <span
+            className={styles.link}
+            onClick={() => {
+              router.push("/legal-reporter");
+              setMobileMenu(false);
+            }}
+          >
+            Legal Reporter TV
+          </span>
           <span
             className={styles.link}
             onClick={() => {

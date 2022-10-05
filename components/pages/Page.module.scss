@@ -1,0 +1,19 @@
+.video_grid {
+  padding-bottom: 2rem;
+
+  @media (min-width: 425px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .player {
+    height: 190px;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @media (min-width: 900px) {
+      height: 290px;
+    }
+  }
+}

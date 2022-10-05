@@ -5,6 +5,8 @@ import Cases from "components/home/Cases";
 import Services from "components/home/Services";
 import FAQs from "components/home/Faqs";
 import Marquee from "components/home/Marquee";
+import PriceChart from "components/Pricing";
+import Head from "next/head";
 
 const faqs = [
   {
@@ -38,7 +40,19 @@ const faqs = [
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Just Nyay | Legal Issues No Issues</title>
+        <meta
+          name="description"
+          content="One stop solution to all your legal proplems"
+        />
+        <meta
+          name="keywords"
+          content="legal, reporter, case, court, solutions"
+        ></meta>
+      </Head>
       <Cases />
+      <PriceChart />
       <Marquee />
       <About />
       <Services />
