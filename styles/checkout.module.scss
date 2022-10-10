@@ -1,0 +1,125 @@
+.checkout_wrapper {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+  }
+
+  .header {
+    margin: 2rem 0;
+    background-color: var(--background-light);
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (min-width: 425px) {
+      padding: 1rem 1.5rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    span:first-child {
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    span:last-child {
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+
+    .header_price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #624bd6;
+    }
+  }
+
+  .checkout_form {
+    margin-bottom: 1.5rem;
+    .checkout_form_heading {
+      display: block;
+      margin-bottom: 1.5rem;
+
+      font-size: 1.25rem;
+      span {
+        font-weight: 600;
+        color: var(--accent-primary);
+      }
+    }
+  }
+
+  .checkout_summary {
+    margin: 2rem 0;
+    box-shadow: var(--shadow-primary);
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    label {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    input {
+      padding: 0.75rem 0;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .summary {
+      margin-top: 2rem;
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 600;
+      opacity: 0.9;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      color: #624bd6;
+    }
+
+    .summary_line {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+
+      span:first-child {
+        font-size: 0.9rem;
+      }
+
+      span:last-child {
+        font-weight: 600;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .summary_secure {
+    padding: 0.5rem 0;
+    position: relative;
+    width: 100%;
+    height: 120px;
+
+    @media (min-width: 425px) {
+      height: 250px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 150px;
+    }
+  }
+}

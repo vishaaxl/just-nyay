@@ -1,11 +1,15 @@
 .main_heading {
   line-height: 1.4;
-  margin: 1em 0;
   font-weight: 600;
+
+  max-width: 50rem;
+  margin: 1em auto;
 }
 
 .para {
   line-height: 1.5;
   color: var(--background-dark);
-  margin-bottom: 5em;
+
+  max-width: 50rem;
+  margin: 0 auto 5rem auto;
 }

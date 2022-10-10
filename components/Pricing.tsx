@@ -5,6 +5,9 @@ import { GoVerified } from "react-icons/go";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+import CustomSelect from "./CustomSelect";
+import { useCartContext } from "context/Cart";
+
 interface Props {}
 
 const price_array = [
@@ -27,11 +30,14 @@ const price_array = [
 ];
 
 const PriceChart: React.FC<Props> = () => {
+  const cart = useCartContext();
+
   const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState<string>("");
 
   const selectPlan = (name: string) => {
     setSelectedPlan(name);
+    cart.updateCart("plan", name);
   };
 
   return (
@@ -62,6 +68,30 @@ const PriceChart: React.FC<Props> = () => {
       {/* pricing part */}
 
       <div className={styles.pricing_component} id="buy-now">
+        <div
+          style={{
+            display: "grid",
+            gap: "1rem",
+            gridTemplateColumns: "1fr 1fr",
+          }}
+        >
+          <CustomSelect
+            optionsList={["Hindi", "English"]}
+            placeholder="Select Language"
+            name="language"
+          />
+          <CustomSelect
+            name="problemType"
+            optionsList={[
+              "Criminal / Property",
+              "Personal/ Family",
+              "Corporate Law",
+              "Civil Matters",
+              "others",
+            ]}
+            placeholder="Problem Type"
+          />
+        </div>
         <div className={styles.pricing_component_wrapper}>
           {price_array.map((elem) => (
             <div
@@ -96,7 +126,7 @@ const PriceChart: React.FC<Props> = () => {
         </div>
         <div
           className={styles.buy_now}
-          onClick={() => router.push("/buy-now/login")}
+          onClick={() => router.push("/buy-now/checkout")}
         >
           Buy Now
         </div>

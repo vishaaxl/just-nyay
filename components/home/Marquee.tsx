@@ -5,7 +5,9 @@ import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
-interface Props {}
+interface Props {
+  data: any;
+}
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/eshop-a3b91.appspot.com/o/jn%2FSenior%20Advocate%20Aman%20Lekhi-min.png?alt=media&token=5142e901-985d-44e2-9a40-202381951ad0",
@@ -18,8 +20,9 @@ const images = [
   "https://firebasestorage.googleapis.com/v0/b/eshop-a3b91.appspot.com/o/jn%2FSenior%20Advocate%20Colin%20Gonsalves-min.png?alt=media&token=a7d5241b-93ec-4273-a894-b5a69fa76a4c",
 ];
 
-const Marquee: React.FC<Props> = () => {
+const Marquee: React.FC<Props> = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [playerVideo, setPlayerVideo] = useState("wVwe7TgJYq0");
 
   const [viewportRef, embla] = useEmblaCarousel({
     dragFree: true,
@@ -40,25 +43,40 @@ const Marquee: React.FC<Props> = () => {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        {isModalOpen && <VideoModal setIsModalOpen={setIsModalOpen} />}
+        {isModalOpen && (
+          <VideoModal setIsModalOpen={setIsModalOpen} embedId={playerVideo} />
+        )}
       </AnimatePresence>
       <section className={styles.marquee}>
         <div className="embla">
           <div className="embla__viewport" ref={viewportRef}>
             <div className="embla__container">
-              {images.map((image, idx) => (
-                <div
-                  className="embla__slide"
-                  key={idx}
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  <img
-                    className="embla__slide__img"
-                    src={image}
-                    alt="A cool cat."
-                  />
-                </div>
-              ))}
+              {data.items.map((item: any) => {
+                const { id, snippet = {} } = item;
+                const { thumbnails = {}, resourceId = {} } = snippet;
+                const { maxres = {} } = thumbnails;
+
+                if (maxres.url) {
+                  return (
+                    <div
+                      className="embla__slide"
+                      key={id}
+                      onClick={() => {
+                        setPlayerVideo(resourceId.videoId);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      <img
+                        className="embla__slide__img"
+                        src={maxres.url}
+                        alt=""
+                      />
+                    </div>
+                  );
+                } else {
+                  return;
+                }
+              })}
             </div>
           </div>
         </div>

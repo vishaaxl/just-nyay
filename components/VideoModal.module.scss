@@ -38,18 +38,18 @@
       margin: 0 1rem;
     }
   }
+}
 
-  .player {
-    height: 190px;
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 3rem;
+.player {
+  height: 190px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 3rem;
 
-    @media (min-width: 425px) {
-      height: 390px;
-    }
-    @media (min-width: 767px) {
-      height: 420px;
-    }
+  @media (min-width: 425px) {
+    height: 390px;
+  }
+  @media (min-width: 767px) {
+    height: 420px;
   }
 }

@@ -7,13 +7,9 @@
     gap: 1rem;
   }
 
-  .player {
-    height: 190px;
-    width: 100%;
-    margin-bottom: 1rem;
-
-    @media (min-width: 900px) {
-      height: 290px;
-    }
+  @media (min-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }

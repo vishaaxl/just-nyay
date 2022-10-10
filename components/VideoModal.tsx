@@ -11,11 +11,11 @@ import { motion } from "framer-motion";
 import { SetStateAction } from "react";
 
 interface Props {
-  link?: string;
+  embedId: string;
   setIsModalOpen: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const Modal: React.FC<Props> = ({ link, setIsModalOpen }) => {
+const Modal: React.FC<Props> = ({ embedId, setIsModalOpen }) => {
   return (
     <motion.section
       className={styles.modal}
@@ -30,7 +30,7 @@ const Modal: React.FC<Props> = ({ link, setIsModalOpen }) => {
             onClick={() => setIsModalOpen(false)}
           />
           <iframe
-            src="https://www.youtube.com/embed/wVwe7TgJYq0?autoplay=1&mute=1"
+            src={`https://www.youtube.com/embed/${embedId}?autoplay=1&mute=1`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

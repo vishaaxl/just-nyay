@@ -1,0 +1,18 @@
+.custom_select {
+  padding: 1rem 0.75rem;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+
+  box-shadow: var(--shadow-secondary);
+}
+
+.select_wrapper {
+  position: relative;
+}

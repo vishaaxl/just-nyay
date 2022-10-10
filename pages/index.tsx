@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 
 import About from "components/home/About";
 import Cases from "components/home/Cases";
@@ -7,6 +7,11 @@ import FAQs from "components/home/Faqs";
 import Marquee from "components/home/Marquee";
 import PriceChart from "components/Pricing";
 import Head from "next/head";
+
+const YOUTUBE_PLAYLIST_API =
+  "https://www.googleapis.com/youtube/v3/playlistItems";
+
+const PLAYLIST_ID = "PLPWEDbk41oFUYtDTf2_CFFPmj9pvrPCMV";
 
 const faqs = [
   {
@@ -37,7 +42,7 @@ const faqs = [
   },
 ];
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ data }: any) => {
   return (
     <>
       <Head>
@@ -53,12 +58,26 @@ const Home: NextPage = () => {
       </Head>
       <Cases />
       <PriceChart />
-      <Marquee />
+      {data && <Marquee data={data} />}
       <About />
       <Services />
       <FAQs questionsList={faqs} />
     </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const data = await fetch(
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`
+  )
+    .then((data) => data.json())
+    .catch((err) => err);
+
+  return {
+    props: {
+      data,
+    },
+  };
 };
 
 export default Home;
