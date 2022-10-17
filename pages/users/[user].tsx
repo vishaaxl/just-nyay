@@ -35,7 +35,7 @@ const User: NextPage = ({}) => {
             }
           )
         : console.log("No User found"),
-    [user]
+    [user?.phoneNumber]
   );
 
   if (!orders.length) {
