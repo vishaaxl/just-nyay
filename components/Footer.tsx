@@ -5,6 +5,7 @@ import {
   AiOutlineYoutube,
   AiOutlineFacebook,
 } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 interface Props {}
 
@@ -82,6 +83,7 @@ const sections = [
 ];
 
 const Footer: React.FC<Props> = () => {
+  const router = useRouter();
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -95,7 +97,7 @@ const Footer: React.FC<Props> = () => {
           <ul>
             <li>About Us</li>
             <li>Lawyer signup</li>
-            <li>Talk to a lawyer</li>
+            <li onClick={() => router.push("/login/user")}>User sign-in</li>
             <li>Legal Reporter</li>
             <li>Privacy Policy</li>
             <li className={styles.icon_wrapper}>

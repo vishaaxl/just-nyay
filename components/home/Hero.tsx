@@ -170,10 +170,9 @@ const Hero: React.FC<Props> = () => {
           style={{ opacity: mobileMenu ? 0.8 : 1 }}
         >
           <Image
-            src="/images/about-1.jpeg"
+            src="/images/hero.jpg"
             layout="fill"
             objectFit="cover"
-            objectPosition="right"
             alt=""
           />
         </div>

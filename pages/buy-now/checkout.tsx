@@ -1,9 +1,17 @@
 import styles from "../../styles/checkout.module.scss";
 import type { NextPage } from "next";
+import { useState } from "react";
 
 import CheckoutForm from "components/forms/CheckoutForm";
 import Image from "next/image";
+import { toast } from "react-toastify";
+
 import { useCartContext } from "context/Cart";
+
+// database
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "firebase.config";
+import { useRouter } from "next/router";
 
 interface SummaryProps {
   title: string;
@@ -11,7 +19,32 @@ interface SummaryProps {
 }
 
 const Login: NextPage = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
+
   const cart = useCartContext();
+
+  const checkout = () => {
+    setSubmitting(true);
+    const data = (({ updateCart, ...o }) => o)(cart);
+    addDoc(collection(db, "orders"), {
+      ...data,
+      phoneNumber: `+91${data.phone}`,
+    })
+      .then((docRef) => {
+        toast("Order Placed successfully", {
+          type: "success",
+        });
+        setSubmitting(false);
+        router.push("/login/user");
+      })
+      .catch((err) => {
+        toast("Something went wrong", {
+          type: "error",
+        });
+        setSubmitting(false);
+      });
+  };
 
   const Header = () => {
     return (
@@ -75,12 +108,14 @@ const Login: NextPage = () => {
 
           {/* checkout button */}
           <div
+            onClick={() => !submitting && checkout()}
             className="primary-btn"
             style={{
               background: "#624BD6",
               width: "100%",
               padding: "1rem 0",
               textAlign: "center",
+              opacity: submitting ? 0.5 : 1,
             }}
           >
             Checkout

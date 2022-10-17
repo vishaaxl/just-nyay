@@ -3,6 +3,20 @@
   margin: 2rem auto;
 }
 
+.login_form {
+  position: relative;
+  z-index: 5;
+
+  background-color: var(--primary);
+  margin: 0em auto;
+  width: 85%;
+  max-width: 35rem;
+  padding: 2em 1em;
+  border-radius: 5px;
+
+  box-shadow: var(--shadow-primary);
+}
+
 @media (min-width: 768px) {
   .flex {
     display: grid;

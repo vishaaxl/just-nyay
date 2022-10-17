@@ -1,3 +1,4 @@
+import { useCartContext } from "context/Cart";
 import { Field, useField } from "formik";
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
   disabled?: boolean;
   component?: string;
   rows?: string;
+  updateCart?: boolean;
+  value?: string;
 }
 
 const Input: React.FC<Props> = ({
@@ -16,8 +19,10 @@ const Input: React.FC<Props> = ({
   disabled,
   component,
   rows,
+  updateCart,
 }) => {
   const [field, meta] = useField(name);
+  const cart = useCartContext();
   return (
     <div className="input-block custom-input">
       <label htmlFor={name}>{placeholder}</label>
@@ -28,6 +33,10 @@ const Input: React.FC<Props> = ({
         {...field}
         component={component}
         rows={rows}
+        onChange={(e: any) => {
+          field.onChange(e);
+          updateCart && cart.updateCart(name, e.target.value);
+        }}
       />
       {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>

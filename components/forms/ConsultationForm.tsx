@@ -28,22 +28,10 @@ const ConsultationForm: React.FC<Props> = () => {
         {({ errors, touched }) => (
           <Form>
             <div className={styles.block}>
-              <h3 className={styles.block_heading}>
-                Enter Your Personal Details
-              </h3>
               <p className={styles.block_description}>
                 Too work with an attorney on helping you achieve your goals,
                 enter your details precisely.
               </p>
-              <div className={styles.input_block}>
-                <Input name="fullname" placeholder="Full Name" />
-              </div>
-              <div className={styles.input_block}>
-                <Input name="email" placeholder="Email" />
-              </div>
-              <div className={`${styles.input_block}`}>
-                <Input name="phone" placeholder="Phone no." type="tel" />
-              </div>
             </div>
             {/* block two */}
             <div className={styles.block}>
