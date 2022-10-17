@@ -1,27 +1,19 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import {
-  getAuth,
-  onAuthStateChanged,
-  User as FirebaseUser,
-} from "firebase/auth";
+import { onAuthStateChanged, User as FirebaseUser } from "firebase/auth";
+import { auth } from "firebase.config";
 
 const AuthContext = createContext<FirebaseUser | null>(null);
 
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState<FirebaseUser | null>(null);
-  const auth = getAuth();
 
   useEffect(() => {
     return () => {
       onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser);
-
-        if (!user) {
-          console.log("User not found!");
-        }
       });
     };
-  }, [auth, user]);
+  }, [user]);
 
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 };
