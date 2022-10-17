@@ -71,6 +71,7 @@ const LoginForm: React.FC<Props> = () => {
         // ...
         setOtpSent(false);
         setLoading(false);
+        console.log(error);
         setError("*something went wrong, try refreshing the page");
       });
   };
