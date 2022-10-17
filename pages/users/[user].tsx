@@ -96,7 +96,7 @@ const User: NextPage = ({}) => {
           </div>
         </div> */}
         <div className={styles.header}>
-          <h3 className="header">Assigned Lawyers</h3>
+          <h3 className="header">Assigned Consultant</h3>
         </div>
 
         <div className={styles.card_wrapper}>
@@ -114,9 +114,9 @@ const User: NextPage = ({}) => {
             </div>
             <div className={styles.card_content}>
               <p className={styles.line}>Assigned Lawyer</p>
-              <h2 className={styles.line}>Viplawa Awasthi</h2>
+              <h2 className={styles.line}>Rishabh Mishra</h2>
               <span className={`${styles.line} ${styles.desc}`}>
-                Mr. Viplava Awasthi has been practicing as a lawyer for the last
+                Mr. Rishabh Mishra has been practicing as a lawyer for the last
                 13+ years.
               </span>
               <span className={styles.line}>Learn More</span>
@@ -127,7 +127,7 @@ const User: NextPage = ({}) => {
                 layout="fill"
                 objectFit="cover"
                 alt=""
-                src="/images/about-2.jpeg"
+                src="/images/layer.jpg"
               />
             </div>
           </div>

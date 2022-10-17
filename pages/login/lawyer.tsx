@@ -6,18 +6,9 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-const Index: NextPage = () => {
-  const user = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (user) {
-      router.push(`/users/${user.uid}`);
-    }
-  }, [user, router]);
-
+const Lawyer: NextPage = () => {
   return (
-    <section style={{ position: "relative", padding: "8em 0" }}>
+    <section style={{ position: "relative", padding: "5em 0" }}>
       <Image
         alt=""
         src="/images/case-2.jpeg"
@@ -30,4 +21,4 @@ const Index: NextPage = () => {
   );
 };
 
-export default Index;
+export default Lawyer;

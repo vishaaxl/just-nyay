@@ -29,7 +29,7 @@ const Login: NextPage = () => {
     const data = (({ updateCart, ...o }) => o)(cart);
     addDoc(collection(db, "orders"), {
       ...data,
-      phoneNumber: `+91${data.phone}`,
+      phoneNumber: `+91${data.phoneNumber}`,
     })
       .then((docRef) => {
         toast("Order Placed successfully", {

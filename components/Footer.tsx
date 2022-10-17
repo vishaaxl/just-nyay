@@ -6,6 +6,8 @@ import {
   AiOutlineFacebook,
 } from "react-icons/ai";
 import { useRouter } from "next/router";
+import { auth } from "firebase.config";
+import { toast } from "react-toastify";
 
 interface Props {}
 
@@ -96,10 +98,21 @@ const Footer: React.FC<Props> = () => {
         <div className={styles.section_one}>
           <ul>
             <li>About Us</li>
-            <li>Lawyer signup</li>
+            <li onClick={() => router.push("/login/lawyer-signup")}>
+              Lawyer sign-up
+            </li>
+            <li onClick={() => router.push("/login/lawyer")}>Lawyer sign-in</li>
             <li onClick={() => router.push("/login/user")}>User sign-in</li>
-            <li>Legal Reporter</li>
-            <li>Privacy Policy</li>
+            <li
+              onClick={() => {
+                auth
+                  .signOut()
+                  .then(() => toast("Logged out", { type: "success" }))
+                  .catch((err) => console.log(err));
+              }}
+            >
+              Log out
+            </li>
             <li className={styles.icon_wrapper}>
               <AiOutlineTwitter className={styles.icon} />
               <AiOutlineYoutube className={styles.icon} />
