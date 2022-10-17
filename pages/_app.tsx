@@ -8,8 +8,10 @@ import { ToastContainer } from "react-toastify";
 import Layout from "components/Layout";
 import { CartProvider } from "context/Cart";
 import { AuthProvider } from "context/User";
+import { initFirebase } from "firebase.config";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const app = initFirebase();
   return (
     <AuthProvider>
       <CartProvider>
