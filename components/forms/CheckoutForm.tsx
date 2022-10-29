@@ -9,16 +9,16 @@ interface Props {}
 
 const CheckoutForm: React.FC<Props> = () => {
   const cart = useCartContext();
-
   return (
     <div className={styles.checkout_form}>
       <Formik
+        enableReinitialize
         initialValues={{
           firstName: "",
           lastName: "",
           email: "",
           city: "",
-          phoneNumber: "",
+          phoneNumber: "+91",
         }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string()
@@ -33,7 +33,7 @@ const CheckoutForm: React.FC<Props> = () => {
           phoneNumber: Yup.number()
             .typeError("Must be a number")
             .min(10000000, "Enter a valid number!")
-            .max(100000000000, "Enter a valid number")
+            .max(10000000000000, "Enter a valid number")
             .required("Required"),
           city: Yup.string()
             .min(2, "Too Short!")

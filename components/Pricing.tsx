@@ -33,11 +33,22 @@ const PriceChart: React.FC<Props> = () => {
   const cart = useCartContext();
 
   const router = useRouter();
-  const [selectedPlan, setSelectedPlan] = useState<string>("");
+  const [error, setError] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState<string>("60");
 
   const selectPlan = (name: string) => {
     setSelectedPlan(name);
     cart.updateCart("plan", name);
+  };
+
+  console.log(cart);
+  const buynow = () => {
+    if (cart.language == "" || cart.problemType == "") {
+      setError("**Both options are required");
+      return;
+    }
+
+    router.push("/buy-now/checkout");
   };
 
   return (
@@ -68,6 +79,9 @@ const PriceChart: React.FC<Props> = () => {
       {/* pricing part */}
 
       <div className={styles.pricing_component} id="buy-now">
+        <div className="error" style={{ margin: "0 0 1rem 0" }}>
+          {error}
+        </div>
         <div
           style={{
             display: "grid",
@@ -92,6 +106,7 @@ const PriceChart: React.FC<Props> = () => {
             placeholder="Problem Type"
           />
         </div>
+
         <div className={styles.pricing_component_wrapper}>
           {price_array.map((elem) => (
             <div
@@ -124,10 +139,7 @@ const PriceChart: React.FC<Props> = () => {
             </div>
           ))}
         </div>
-        <div
-          className={styles.buy_now}
-          onClick={() => router.push("/buy-now/checkout")}
-        >
+        <div className={styles.buy_now} onClick={() => buynow()}>
           Buy Now
         </div>
       </div>

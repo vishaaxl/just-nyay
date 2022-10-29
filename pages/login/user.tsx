@@ -17,7 +17,7 @@ const Index: NextPage = () => {
   }, [user, router]);
 
   return (
-    <section style={{ position: "relative", padding: "8em 0" }}>
+    <section style={{ position: "relative" }} className="page-padding">
       <Image
         alt=""
         src="/images/case-2.jpeg"

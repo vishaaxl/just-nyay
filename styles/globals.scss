@@ -465,3 +465,10 @@ img {
 .primary-btn:hover {
   transform: scale(1.01);
 }
+
+.page-padding {
+  padding: 5rem 0;
+  @media (min-width: 425px) {
+    padding: 10rem 0;
+  }
+}

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 const Lawyer: NextPage = () => {
   return (
-    <section style={{ position: "relative", padding: "5em 0" }}>
+    <section style={{ position: "relative" }} className="page-padding">
       <Image
         alt=""
         src="/images/case-2.jpeg"

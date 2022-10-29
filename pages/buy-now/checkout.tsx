@@ -38,7 +38,11 @@ const Login: NextPage = () => {
     // check if the user is already registered
     const q = query(
       collection(db, "users"),
-      where("phoneNumber", "==", `+91${cart.phoneNumber}`),
+      where(
+        "phoneNumber",
+        "==",
+        `+91${cart.phoneNumber.substr(cart.phoneNumber.length - 10)}`
+      ),
       limit(1)
     );
 
@@ -47,7 +51,9 @@ const Login: NextPage = () => {
     if (!querySnapshot.empty) {
       addDoc(collection(db, "orders"), {
         user: querySnapshot.docs[0].id,
-        phoneNumber: `+91${cart.phoneNumber}`,
+        phoneNumber: `+91${cart.phoneNumber.substr(
+          cart.phoneNumber.length - 10
+        )}`,
 
         language: cart.language,
         payment: false,
@@ -75,7 +81,9 @@ const Login: NextPage = () => {
     // add user
     addDoc(collection(db, "users"), {
       city: cart.city,
-      phoneNumber: `+91${cart.phoneNumber}`,
+      phoneNumber: `+91${cart.phoneNumber.substr(
+        cart.phoneNumber.length - 10
+      )}`,
 
       email: cart.email,
       firstname: cart.firstname,
@@ -87,7 +95,9 @@ const Login: NextPage = () => {
         // });
         addDoc(collection(db, "orders"), {
           user: docRef.id,
-          phoneNumber: `+91${cart.phoneNumber}`,
+          phoneNumber: `+91${cart.phoneNumber.substr(
+            cart.phoneNumber.length - 10
+          )}`,
 
           language: cart.language,
           payment: false,

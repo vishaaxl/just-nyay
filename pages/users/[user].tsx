@@ -216,14 +216,12 @@ const User: NextPage = ({}) => {
             <div className={styles.content}>
               <div className={styles.header}>
                 <h2 className="header">Hello, {userInfo.firstname}</h2>
-                <span>Welcome back</span>
+                <span>Update Profile</span>
               </div>
 
               {/* transactions */}
+
               <div className={styles.white_wrapper}>
-                <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Update Profile</h2>
-                </div>
                 <UserProfile />
               </div>
             </div>
@@ -250,7 +248,7 @@ const User: NextPage = ({}) => {
               {/* transactions */}
               <div className={styles.white_wrapper}>
                 <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Transactions</h2>
+                  <h2 className="header">Purchases</h2>
                 </div>
                 <Transactions />
               </div>
@@ -333,22 +331,6 @@ const User: NextPage = ({}) => {
                     No record found
                   </span>
                 </div>
-              </div>
-
-              {/* transactions */}
-              <div className={styles.white_wrapper}>
-                <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Transactions</h2>
-                </div>
-                <Transactions />
-              </div>
-
-              {/* update profile */}
-              <div className={styles.white_wrapper}>
-                <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Update Profile</h2>
-                </div>
-                <UserProfile />
               </div>
             </div>
           </div>
