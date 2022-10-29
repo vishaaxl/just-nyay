@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const Index: NextPage = () => {
-  const user = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
 
   useEffect(() => {

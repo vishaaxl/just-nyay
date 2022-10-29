@@ -5,10 +5,11 @@ import {
   User as FirebaseUser,
 } from "firebase/auth";
 
-const AuthContext = createContext<FirebaseUser | null>(null);
+const AuthContext = createContext<any | null>(null);
 
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState<FirebaseUser | null>(null);
+  const [userInfo, setUserInfo] = useState<any | null>({});
 
   const auth = getAuth();
 
@@ -18,7 +19,21 @@ export const AuthProvider = ({ children }: any) => {
     });
   }, [user, auth]);
 
-  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
+  const updateUser = (data: any) => {
+    setUserInfo((prev: any) => ({
+      ...prev,
+      ...data,
+      fullname: data.firstname + " " + data.lastname,
+    }));
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{ user: user, userInfo: userInfo, updateUser }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const useAuth = () => {

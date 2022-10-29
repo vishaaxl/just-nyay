@@ -1,5 +1,7 @@
 import "../styles/globals.scss";
+import "react-loading-skeleton/dist/skeleton.css";
 import "react-toastify/dist/ReactToastify.css";
+
 import type { AppProps } from "next/app";
 
 import NextNProgress from "nextjs-progressbar";

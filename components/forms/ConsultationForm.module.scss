@@ -41,6 +41,7 @@
 }
 
 .block_heading {
+  font-weight: 600;
   margin-bottom: 1.75rem;
   opacity: 0.9;
   color: var(--accent-primary);
@@ -62,4 +63,32 @@
 
 .accent:hover {
   text-decoration: underline;
+}
+
+.checkbox_group {
+  display: flex;
+  align-items: center;
+
+  margin: 1rem 0 2rem 0;
+  padding: 0.75rem 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    & > * {
+      margin-left: 0.5rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.user_profile_form {
+  padding-bottom: 2rem;
 }

@@ -9,7 +9,15 @@ import { toast } from "react-toastify";
 import { useCartContext } from "context/Cart";
 
 // database
-import { collection, addDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  query,
+  where,
+  getDocs,
+  doc,
+  limit,
+} from "firebase/firestore";
 import { db } from "firebase.config";
 import { useRouter } from "next/router";
 
@@ -24,19 +32,81 @@ const Login: NextPage = () => {
 
   const cart = useCartContext();
 
-  const checkout = () => {
+  const checkout = async () => {
     setSubmitting(true);
-    const data = (({ updateCart, ...o }) => o)(cart);
-    addDoc(collection(db, "orders"), {
-      ...data,
-      phoneNumber: `+91${data.phoneNumber}`,
+
+    // check if the user is already registered
+    const q = query(
+      collection(db, "users"),
+      where("phoneNumber", "==", `+91${cart.phoneNumber}`),
+      limit(1)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      addDoc(collection(db, "orders"), {
+        user: querySnapshot.docs[0].id,
+        phoneNumber: `+91${cart.phoneNumber}`,
+
+        language: cart.language,
+        payment: false,
+        plan: cart.plan,
+      })
+        .then((doc) => {
+          // redirect to continue payment and set payment true on successfull transaction
+          toast("Continue payment to proceed", {
+            type: "success",
+          });
+
+          router.push("/login/user");
+          setSubmitting(false);
+        })
+        .catch((err) => {
+          toast("Something went wrong", {
+            type: "error",
+          });
+          setSubmitting(false);
+        });
+
+      return;
+    }
+
+    // add user
+    addDoc(collection(db, "users"), {
+      city: cart.city,
+      phoneNumber: `+91${cart.phoneNumber}`,
+
+      email: cart.email,
+      firstname: cart.firstname,
+      lastname: cart.lastname,
     })
       .then((docRef) => {
-        toast("Order Placed successfully", {
-          type: "success",
-        });
-        setSubmitting(false);
-        router.push("/login/user");
+        // toast("Order Placed successfully", {
+        //   type: "success",
+        // });
+        addDoc(collection(db, "orders"), {
+          user: docRef.id,
+          phoneNumber: `+91${cart.phoneNumber}`,
+
+          language: cart.language,
+          payment: false,
+          plan: cart.plan,
+        })
+          .then((doc) => {
+            // redirect to continue payment and set payment true on successfull transaction
+            router.push("/login/user");
+            toast("Continue payment to proceed", {
+              type: "success",
+            });
+            setSubmitting(false);
+          })
+          .catch((err) => {
+            toast("Something went wrong", {
+              type: "error",
+            });
+            setSubmitting(false);
+          });
       })
       .catch((err) => {
         toast("Something went wrong", {

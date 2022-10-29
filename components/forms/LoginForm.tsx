@@ -9,7 +9,8 @@ import * as Yup from "yup";
 // database
 import { signInWithPhoneNumber, RecaptchaVerifier } from "firebase/auth";
 
-import { auth } from "firebase.config";
+import { auth, db } from "firebase.config";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 interface Props {}
 
@@ -45,8 +46,22 @@ const LoginForm: React.FC<Props> = () => {
     );
   };
 
-  const requestOtp = (phoneNumber: string) => {
+  const requestOtp = async (phoneNumber: string) => {
     setLoading(true);
+
+    // check if number is registered
+    const q = query(
+      collection(db, "users"),
+      where("phoneNumber", "==", `+91${phoneNumber}`)
+    );
+
+    const querySnapshot = await getDocs(q);
+    if (querySnapshot.empty) {
+      setError("**user not found");
+      return;
+    }
+
+    // login process
     generateRecaptcha();
 
     if (phoneNumber.length != 10) {
