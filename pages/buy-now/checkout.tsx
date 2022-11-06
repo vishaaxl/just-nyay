@@ -38,7 +38,7 @@ const Login: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!cart.price) {
+    if (!cart.plan) {
       router.push("/buy-now");
     }
   }, []);

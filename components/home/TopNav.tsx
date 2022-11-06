@@ -36,8 +36,8 @@ const TopNav: React.FC<Props> = () => {
                 <MdGavel size={35} className={styles.logo} />
               </div>
               <div className={styles.content}>
-                <span>PHONE NUMBER</span>
-                <span>+012 (345) 56 899</span>
+                <span>TOLL FREE NUMBER</span>
+                <span>+91 9318428656</span>
               </div>
             </div>
             <div className={styles.quick_section}>
@@ -46,7 +46,7 @@ const TopNav: React.FC<Props> = () => {
               </div>
               <div className={styles.content}>
                 <span>Email Address</span>
-                <span>help@justnyay.com</span>
+                <span>info@justnyay.com</span>
               </div>
             </div>
           </div>

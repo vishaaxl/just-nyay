@@ -14,6 +14,7 @@ const CartProvider: React.FC<Props> = ({ children }) => {
     language: "",
     problemType: "",
     plan: "60",
+    price: "2099",
   });
 
   const updateCart = (name: string, value: string) => {
