@@ -1,6 +1,6 @@
 import styles from "../../styles/checkout.module.scss";
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CheckoutForm from "components/forms/CheckoutForm";
 import Image from "next/image";
@@ -36,6 +36,12 @@ declare global {
 const Login: NextPage = () => {
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (!cart.price) {
+      router.push("/buy-now");
+    }
+  }, []);
 
   const cart = useCartContext();
 
@@ -261,9 +267,12 @@ const Login: NextPage = () => {
           {/* summary */}
           <span className={styles.summary}>Summary</span>
 
-          <SummaryLine title="Base Price" price={999.0} />
+          <SummaryLine
+            title="Base Price"
+            price={Math.round(cart.price - (cart.price / 100) * 18)}
+          />
           <SummaryLine title="Discount" price={0.0} />
-          <SummaryLine title="GST (18%)" price={152.39} />
+          <SummaryLine title="GST (18%)" price={(cart.price / 100) * 18} />
 
           {/* header reuse */}
           <div className={styles.header} style={{ alignItems: "center" }}>
@@ -271,7 +280,7 @@ const Login: NextPage = () => {
               <span>Total</span>
             </div>
             <div className={styles.header_section}>
-              <em className={styles.header_price}> &#8377; 999.00</em>
+              <em className={styles.header_price}> &#8377; {cart.price}.00</em>
             </div>
           </div>
 
