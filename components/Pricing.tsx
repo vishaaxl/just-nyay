@@ -13,19 +13,23 @@ interface Props {}
 const price_array = [
   {
     id: 1,
-    title: "60",
+    title: "15",
+    price: "599",
   },
   {
     id: 2,
-    title: "45",
+    title: "30",
+    price: "1099",
   },
   {
     id: 3,
-    title: "30",
+    title: "45",
+    price: "1599",
   },
   {
     id: 4,
-    title: "15",
+    title: "60",
+    price: "2099",
   },
 ];
 
@@ -39,9 +43,14 @@ const PriceChart: React.FC<Props> = () => {
   const selectPlan = (name: string) => {
     setSelectedPlan(name);
     cart.updateCart("plan", name);
+
+    price_array.map((e) => {
+      if (e.title == name) {
+        cart.updateCart("price", e.price);
+      }
+    });
   };
 
-  console.log(cart);
   const buynow = () => {
     if (cart.language == "" || cart.problemType == "") {
       setError("**Both options are required");
@@ -128,8 +137,8 @@ const PriceChart: React.FC<Props> = () => {
                 <label htmlFor={elem.title}>{elem.title} Minutes</label>
               </div>
               <div className={styles.line_two}>
-                <span className={styles.accent}>Rs. 999 </span> (Rs 16.6 /
-                minute)
+                <span className={styles.accent}>Rs. {elem.price} </span> (Rs
+                16.6 / minute)
               </div>
               <div className={styles.line_three}>Save Rs 181</div>
               <div className={styles.line_four}>

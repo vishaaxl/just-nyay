@@ -46,7 +46,8 @@ const User: NextPage = ({}) => {
         ? onSnapshot(
             query(
               collection(db, "orders"),
-              where("phoneNumber", "==", user?.phoneNumber)
+              where("phoneNumber", "==", user?.phoneNumber),
+              where("payment", "==", true)
             ),
             async (snapshot) => {
               //fetch the user

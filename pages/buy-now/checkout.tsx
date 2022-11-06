@@ -17,6 +17,7 @@ import {
   getDocs,
   doc,
   limit,
+  updateDoc,
 } from "firebase/firestore";
 import { db } from "firebase.config";
 import { useRouter } from "next/router";
@@ -26,11 +27,99 @@ interface SummaryProps {
   price: number;
 }
 
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
+
 const Login: NextPage = () => {
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
 
   const cart = useCartContext();
+
+  // razorpay related stuff
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const makePayment = async (docId: string) => {
+    const res = await initializeRazorpay();
+
+    if (!res) {
+      alert("Razorpay SDK Failed to load");
+      return;
+    }
+
+    // Make API call to the serverless API
+    const data = await fetch("/api/user-payment", { method: "POST" }).then(
+      (res) => res.json()
+    );
+
+    let options = {
+      key: process.env.NEXT_PUBLIC_RAZOR_PAY_ID,
+      name: "Just-nyay Pvt Ltd",
+      order_id: data.id,
+      currnecy: data.currency,
+      amount: cart.price,
+      description: "Payment for just-nyay",
+      image:
+        "https://just-nyay.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      handler: async function (response: any) {
+        // Validate payment at server - using webhooks is a better idea.
+        const razorpayResponse = {
+          orderCreationId: data.order_id,
+          razorpayPaymentId: response.razorpay_payment_id,
+          razorpayOrderId: response.razorpay_order_id,
+          razorpaySignature: response.razorpay_signature,
+        };
+
+        const success = await fetch("/api/success", {
+          method: "POST",
+          mode: "cors",
+          credentials: "same-origin",
+          referrerPolicy: "no-referrer",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(razorpayResponse),
+        }).then((res) => res.json());
+
+        if (success.msg == "success") {
+          toast("Payment Successful", {
+            type: "success",
+          });
+
+          const docRef = doc(db, "orders", docId);
+          await updateDoc(docRef, {
+            payment: true,
+          }).then(() => router.push("/login/user"));
+        }
+      },
+      prefill: {
+        name: cart.firstname + " " + cart.lastname,
+        email: cart.email,
+        contact: `+91${cart.phoneNumber.substr(cart.phoneNumber.length - 10)}`,
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
 
   const checkout = async () => {
     setSubmitting(true);
@@ -65,7 +154,7 @@ const Login: NextPage = () => {
             type: "success",
           });
 
-          router.push("/login/user");
+          makePayment(doc.id);
           setSubmitting(false);
         })
         .catch((err) => {
@@ -105,10 +194,10 @@ const Login: NextPage = () => {
         })
           .then((doc) => {
             // redirect to continue payment and set payment true on successfull transaction
-            router.push("/login/user");
             toast("Continue payment to proceed", {
               type: "success",
             });
+            makePayment(doc.id);
             setSubmitting(false);
           })
           .catch((err) => {
@@ -134,7 +223,7 @@ const Login: NextPage = () => {
           <span>{cart.plan} minutes </span>
         </div>
         <div className={styles.header_section}>
-          <em className={styles.header_price}> &#8377; 999.00</em>
+          <em className={styles.header_price}> &#8377; {cart.price}.00</em>
         </div>
       </div>
     );
