@@ -9,7 +9,8 @@ import * as Yup from "yup";
 // database
 import { signInWithPhoneNumber, RecaptchaVerifier } from "firebase/auth";
 
-import { auth } from "firebase.config";
+import { auth, db } from "firebase.config";
+import { collection, getDocs, limit, query, where } from "firebase/firestore";
 
 interface Props {}
 
@@ -45,12 +46,31 @@ const LawyerLogin: React.FC<Props> = () => {
     );
   };
 
-  const requestOtp = (phoneNumber: string) => {
+  const requestOtp = async (phoneNumber: string) => {
     setLoading(true);
     generateRecaptcha();
 
     if (phoneNumber.length != 10) {
       setError("**Invalid phone number");
+      setLoading(false);
+      return;
+    }
+
+    // check if the user is already registered
+    const q = query(
+      collection(db, "lawyers"),
+      where(
+        "phoneNumber",
+        "==",
+        `+91${phoneNumber.substr(phoneNumber.length - 10)}`
+      ),
+      limit(1)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.empty) {
+      setError("**Lawyer does not exist");
       setLoading(false);
       return;
     }
@@ -84,7 +104,7 @@ const LawyerLogin: React.FC<Props> = () => {
         .confirm(otp)
         .then((res: any) => {
           const user = res.user;
-          router.push(`/users/${user.uid}`);
+          router.push(`/lawyers/dashboard/${user.uid}`);
           setLoading(false);
         })
         .catch((err: any) => {
@@ -114,7 +134,9 @@ const LawyerLogin: React.FC<Props> = () => {
             .max(1000000, "Invalid otp! ")
             .required("Required"),
         })}
-        onSubmit={(values) => {}}
+        onSubmit={async (values) => {
+          setLoading(true);
+        }}
       >
         {({ errors, touched, values }) => (
           <Form>
@@ -139,7 +161,7 @@ const LawyerLogin: React.FC<Props> = () => {
               <button
                 style={{ opacity: loading ? "0.5" : 1 }}
                 className="primary-btn"
-                // onClick={() => !loading && requestOtp(values.phoneNumber)}
+                onClick={() => !loading && requestOtp(values.phoneNumber)}
               >
                 Send Otp
               </button>
@@ -147,7 +169,7 @@ const LawyerLogin: React.FC<Props> = () => {
               <button
                 style={{ opacity: loading ? "0.5" : 1 }}
                 className="primary-btn"
-                // onClick={() => !loading && confirmOtp(values.otp)}
+                onClick={() => !loading && confirmOtp(values.otp)}
               >
                 Log in
               </button>

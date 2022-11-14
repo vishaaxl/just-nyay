@@ -151,6 +151,8 @@ const Login: NextPage = () => {
         )}`,
 
         language: cart.language,
+        problemType: cart.problemType,
+        staus: "pending",
         payment: false,
         plan: cart.plan,
       })
@@ -195,6 +197,8 @@ const Login: NextPage = () => {
           )}`,
 
           language: cart.language,
+          problemType: cart.problemType,
+          staus: "pending",
           payment: false,
           plan: cart.plan,
         })

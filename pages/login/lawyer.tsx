@@ -1,10 +1,6 @@
-import LoginForm from "components/forms/LoginForm";
-import { useEffect } from "react";
-import { useAuth } from "context/User";
-
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import LawyerLogin from "components/forms/LawyerLogin";
 
 const Lawyer: NextPage = () => {
   return (
@@ -16,7 +12,7 @@ const Lawyer: NextPage = () => {
         objectFit="cover"
         style={{ zIndex: "-1" }}
       />
-      <LoginForm />
+      <LawyerLogin />
     </section>
   );
 };

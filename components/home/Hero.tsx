@@ -106,7 +106,7 @@ const services = [
       "Tenant Eviction Notice",
       "Refund of Security Notice",
       "Faulty Product Notice",
-      "Cheque Bounce Notice ",
+      "Cheque Bounce Notice",
       "Recovery Notice",
     ],
   },
@@ -142,7 +142,7 @@ const services = [
     style: "nine",
     elems: [
       "Succession Certificate",
-      "Property Verification ",
+      "Property Verification",
       "Property Registration",
       "Gift Deed ",
       "Lease Agreement",

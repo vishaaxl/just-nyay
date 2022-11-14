@@ -8,6 +8,7 @@ import {
 import { useRouter } from "next/router";
 import { auth } from "firebase.config";
 import { toast } from "react-toastify";
+import { useAuth } from "context/User";
 
 interface Props {}
 
@@ -62,6 +63,7 @@ const sections = [
 
 const Footer: React.FC<Props> = () => {
   const router = useRouter();
+  const { user } = useAuth();
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -79,16 +81,18 @@ const Footer: React.FC<Props> = () => {
             </li>
             <li onClick={() => router.push("/login/lawyer")}>Lawyer sign-in</li>
             <li onClick={() => router.push("/login/user")}>User sign-in</li>
-            <li
-              onClick={() => {
-                auth
-                  .signOut()
-                  .then(() => toast("Logged out", { type: "success" }))
-                  .catch((err) => console.log(err));
-              }}
-            >
-              Log out
-            </li>
+            {user && (
+              <li
+                onClick={() => {
+                  auth
+                    .signOut()
+                    .then(() => toast("Logged out", { type: "success" }))
+                    .catch((err) => console.log(err));
+                }}
+              >
+                Log out
+              </li>
+            )}
             <li className={styles.icon_wrapper}>
               <AiOutlineTwitter className={styles.icon} />
               <AiOutlineYoutube className={styles.icon} />

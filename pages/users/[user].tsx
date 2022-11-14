@@ -12,6 +12,7 @@ import {
   onSnapshot,
   doc,
   getDoc,
+  limit,
 } from "firebase/firestore";
 
 import { useRouter } from "next/router";
@@ -45,26 +46,43 @@ const User: NextPage = ({}) => {
       user?.phoneNumber
         ? onSnapshot(
             query(
-              collection(db, "orders"),
+              collection(db, "users"),
               where("phoneNumber", "==", user?.phoneNumber),
-              where("payment", "==", true)
+              limit(1)
             ),
             async (snapshot) => {
               //fetch the user
-              const docRef = doc(db, "users", snapshot.docs[0].data().user);
-              const docSnap = await getDoc(docRef);
-
-              setOrders(snapshot.docs);
+              if (snapshot.empty) {
+                router.push("/");
+                return;
+              }
 
               // update user globally
-              updateUser(docSnap.data());
+              snapshot.forEach((doc) => updateUser(doc.data()));
             }
           )
         : console.log("No User found"),
     [user]
   );
 
-  if (!orders.length) {
+  useEffect(
+    () =>
+      user?.phoneNumber
+        ? onSnapshot(
+            query(
+              collection(db, "orders"),
+              where("phoneNumber", "==", user?.phoneNumber),
+              where("payment", "==", true)
+            ),
+            async (snapshot) => {
+              setOrders(snapshot.docs);
+            }
+          )
+        : console.log("No User found"),
+    [user]
+  );
+
+  if (!orders.length || !user) {
     return (
       <section className={`${styles.skeleton_container} container`}>
         <Skeleton
@@ -191,7 +209,7 @@ const User: NextPage = ({}) => {
   };
 
   return (
-    <main style={{ background: "rgba(0,0,0,0.05)" }}>
+    <main style={{ background: "rgba(0,0,0,0.02)" }}>
       <Head>
         <title>Just Nyay | Legal Issue No Issue</title>
         <meta

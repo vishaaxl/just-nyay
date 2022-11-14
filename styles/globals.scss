@@ -197,7 +197,8 @@ h2 {
   font-size: 2.074em;
 }
 h3 {
-  font-size: 1.728em;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 h4 {
   font-size: 1.125rem;
@@ -318,7 +319,6 @@ img {
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  font-family: var(--font-accent);
   font-size: 2rem;
   padding: 2em 0;
   color: var(--primary);
@@ -460,6 +460,10 @@ img {
   color: var(--primary);
 
   transition: all 0.3s ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .primary-btn:hover {

@@ -56,17 +56,17 @@ const Page: React.FC<Props> = ({ title, pageContent }) => {
           name="description"
           content="One stop solution to all your legal proplems"
         />
-        <meta
-          name="keywords"
-          content={`legal, reporter, case, court, ${title}`}
-        ></meta>
+        <meta name="keywords" content={`legal, reporter, case, court`}></meta>
       </Head>
       <PageHeading title={title} />
       <section className="container">
         {pageContent[0] && (
           <>
             <h3 className={styles.main_heading}>{pageContent[0].heading}</h3>
-            <p className={styles.para}>{pageContent[0].content}</p>
+            <div
+              className={styles.para}
+              dangerouslySetInnerHTML={{ __html: pageContent[0].content }}
+            />
           </>
         )}
       </section>

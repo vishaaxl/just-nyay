@@ -31,29 +31,193 @@ export const pages = [
     id: 12,
     title: "divorce",
     heading: "Connect with Best Divorce Lawyers / Advocates in India",
-    content:
-      "EveryDay Important legal decisions are constantly coming from the Supreme Court and High Courts regarding marriage related matters and if your case is also related to marriage and you are looking for a lawyer who can get your case done quickly and in your favour than use Just Nyay to consult top divorce lawyer for marriage issues in India to file or defend your mutual divorce petition, contested divorce, alimony, domestic violence (DV), interim maintenance, 125 CrPC, dowry harassment u/s 498a, women cell complaints or any other related matters. ",
+    content: `
+    <p>
+If you and your spouse have chosen to divorce, one of the first issues you'll have is whether you should visit a divorce lawyer. Divorce lawyers are family law practitioners who ensure that divorce and legal separation cases result in outcomes that benefit all parties involved.
+    <br/>
+    <br/>
+    If you do not want to go to court to meet with a divorce lawyer and instead prefer to have an online lawyer consultation, Just Nyay is the right platform for you. You can discuss your case with our divorce lawyers, who are family law professionals with extensive expertise.
+     <br/>
+    <br/>
+Benefits of online divorce consultation with Just Nyay
+Our lawyers protect your rights during divorces, legal separations, alimony, abuse and neglect processes, custody disputes, and other actions, and we make online legal consultation a simple and satisfying experience.
+ <br/>
+    <br/>
+
+   
+ 
+    <ul>
+<li>•		Our online divorce consultation service provides you with a risk-free assessment of your rights by qualified family and divorce lawyers. Our lawyers have years of expertise and can advise and coach you on how to address your concerns amicably.
+</li>
+<li>•		Our online divorce consultations provide a more convenient and secure option to have your case examined without leaving the comfort of your own home.
+</li>
+<li>•		Just Nyay guarantees the best professional and individualised counsel for your divorce case. You will have a one-to-one discussion of your case with our lawyers.
+</li>
+<li>•		With Just Nyay, you can save money on transportation, save time, and receive immediate solutions to your problems through the online medium.
+</li>
+<li>•		During divorce consultations, we maintain complete confidentiality for all parties and provide concealed service so that no one knows what you spoke with the lawyer.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 15,
     title: "family-disputes",
     heading: "Connect with Best Family Lawyers / Advocates in India",
-    content:
-      "Your children do not want to keep you, despite earning they do not arrange medicine and food for elderly parents or you want divorce from your partner or you want child custody or maintenance of the child or maintenance from the husband and if you are a victim of domestic violence are then use Just Nyay for top Lawyers in India who are expert in Family Law. ",
+    content: `
+    <p>
+The area of family law is very diverse from that of civil law and criminal law. A lawyer is appointed by an individual or a family to handle various disputes in the family such as filing a divorce, alimony or maintenance, wanting the custody of your child, fighting a dispute related to family discord, if you are being harassed by your children, etc. To deal with these disputes, always hire a lawyer who is knowledgeable and an expert in family law. With Just Nyay, you can hire the best lawyer for all your family dispute issues.    <br/>
+
+    <br/>
+    <h3>
+When do you need a family dispute lawyer?
+
+    </h3>
+You must look out for the top lawyers if you are dealing with any legal family dispute issues. A lawyer who is an expert in this field can understand the rights, legal complexities, and correct court procedures and can assist you with your case quite comfortably.
+ 
+    <br/>
+    <br/>
+    <ul>
+<li>•	A family lawyer helps you to secure your rightful share in your family estate. 
+</li>
+<li>•	They will protect your interests in the event of a disputed will or inheritance. 
+</li>
+<li>•	They can assist you in partitioning a family estate between disputing family members. 
+</li>
+<li>•	If you are facing domestic abuse or violence then in such cases a family dispute lawyer can help you in applying for protection orders.
+</li>
+<li>•	They can help you to get our child’s custody, assist you in getting access to your child, and also can secure visitation rights if necessary.
+</li>
+
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why take our online family lawyer consultations?
+    </h3>
+    <br/>
+    <br/>
+Just Nyay is the best place where you can easily consult some of India’s top family lawyers about your case. Take a look at the reasons why you should take our online family lawyer consultations.
+    <br/>
+    <br/>
+    <ul>
+<li>•	You can discuss about your case online from the comfort of your home.
+</li>
+<li>•	Our lawyers are well-qualified and experts in their respective fields.
+</li>
+<li>•	Our online consultation process is quick and easy. 
+</li>
+<li>•	Get personalized attention from our top lawyers. 
+</li>
+<li>•	Our online consultation fees are quite reasonable.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 18,
     title: "child-custody",
     heading: "Connect with Best Child Custody Lawyers / Advocates in India",
-    content:
-      "There is a situation of divorce between husband and wife and many questions are arising in your mind regarding the custody of children, then contact Just Nyay as soon as possible. We will connect you with such lawyers of the country who have the best experience in the matter related to custody of children.",
+    content: `
+    <p>
+Custody of a child is one of the most difficult aspects of divorce. If you are going through a divorce and you are not being able to come to a mutual agreement on the custody of your child with your partner, then Just Nyay, one of India’s leading online legal service providers, helps you to connect with the best child custody lawyers who assist you in getting the custody arrangement that is in the best interests of your child.     <br/>
+
+    <br/>
+    <h3>
+When do you need a child custody lawyer?
+
+    </h3>
+    There are times in a marital relationship when the husband and the wife decide to file a divorce case to end the marriage. In such cases, if they have a child and they cannot come to mutual consent on the custody, then a child custody lawyer could be of great help.
+ 
+    <br/>
+    <br/>
+    <ul>
+<li>•	A child custody lawyer assists you in filing a petition in court on your behalf for the custody of your child.
+</li>
+<li>•	They protect the rights of a minor by guaranteeing that a parent is not denied custody or visitation rights to the child wrongfully. 
+</li>
+<li>•	They also protect a child from an abusive parent by approaching the court for proper relief.
+</li>
+
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why our online child custody consultations are the best?
+    </h3>
+    <br/>
+    <br/>
+Just Nyay is the best place to connect with the top child custody lawyers. You can get legal counsel from top lawyers who have vast experience in matters related to the custody of children.
+    <br/>
+    <br/>
+    <ul>
+<li>•	We offer a secure and confidential online consultation with our lawyers.
+</li>
+<li>•	Get personalized attention from our best lawyers.
+</li>
+<li>•	Our consultation process is quite simple and quick. 
+</li>
+<li>•	Our online consultation fees are quite reasonable. 
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 21,
     title: "muslim-law",
     heading: "Connect with Best Muslim Law Lawyers / Advocates in India",
-    content:
-      "All the Muslims in India are governed by the Muslim Personal Law (Shariat). This law deals with marriage, succession, inheritance and charities among Muslims. Connect with Just Nyay to hire top muslim Law lawyers in India for muslim divorce, muslim property lawyers, shia or sunni muslim talaq, disputes related to khula or mahr, muslim family disputes, islamic laws, and muslim inheritance laws.  ",
+    content: `
+    <p>
+ The Muslim Personal Law (Shariat) Application Act, 1937 is the guardian of every Muslim residing in India. This law governs Muslim marriage, succession, inheritance, and charitable giving among others.    <br/>
+    <br/>
+Sharia courts protect and enforce Sharia rules, often known as Muslim laws. Muslims are welcome to approach these courts for legal advice. There are no strict and formal court procedures. The Sharia court's verdict is also not legally binding on the parties.
+
+    <br/>
+    <br/>
+    <h3>
+Who requires Muslim law consultation?
+    </h3>
+ 
+    <br/>
+    <br/>
+    <ul>
+<li>•		Sharia courts are formed to provide Muslims with an alternative judicial system. So, if someone has a legal problem, they can seek relief through either lower courts or Sharia courts.
+</li>
+<li>•		Ordinary judicial proceedings necessitate the completion of various procedures. People who do not want to participate in these procedures choose Sharia courts.
+</li>
+<li>•		Muslim women approach these courts for getting divorce or have their marriages annulled.
+</li>
+<li>•		Sharia courts deliver quick and affordable justice. The poor people particularly approach the courts to seek justice.
+</li>
+<li>•		Criminal cases are not heard in these courts. People who have concerns with divorce, marriage, gifts, trusts, wakfs, and charity visit these courts.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Benefits of online Muslim law consultation with Just Nyay
+    </h3>
+    <br/>
+    <br/>
+If you wish to seek online Muslim law consultation then Just Nyay is the best platform for you. We get you connected with the experts in Muslim law who can provide you with the perfect solution of your cases.
+    <br/>
+    <br/>
+    <ul>
+<li>•		We offer online Muslim law consulting service through experienced lawyers who are experts in Muslim law. Our lawyers have years of expertise and can advise you on how to address your concerns constructively.
+</li>
+<li>•		Our online Muslim law consultations offer a more convenient and secure way to have your case reviewed by experts through the digital media without leaving your house.
+</li>
+<li>•		We give the best competent and personalised representation for your Muslim law dispute through expert lawyers who will discuss your case with you one-on-one.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 24,
@@ -96,16 +260,85 @@ export const pages = [
     title: "trademark-and-copyright",
     heading:
       "Connect with Best Trademark & Copyright Lawyers / Advocates in India",
-    content:
-      "If you are a startup, designer, developer, or artist, there are many reasons you might need a Lawyer for copyright, patent or trademark etc. You have to protect your work, brand or mark against copyright misuses or someone may have stolen your artwork or website design or plagiarised text from your print or online article. Use Just Nyay to find a top trademark lawyer in India to file a trademark, copyright or patent of your work or to initiate proceedings against misuse or infringement of your mark or brand. ",
+    content: `
+    <p>
+    <h3>Trademark</h3>
+    <br/>
+A trademark is a symbol, word, name, signature, or shape of goods that has been legally registered or is thought to represent a company or product. A trademark gives the owner of the product or service exclusive rights on them. A trademark distinguishes a product or service from comparable products. No other organisation may use the same emblem or sign that you have registered as your distinctive trademark.
+
+    <br/>
+    <br/>
+    <h3>Copyright</h3>
+    <br/>Copyright is the ownership right granted to the creator of any product or service in order to safeguard their work. Copyright protects works of literature, theatre, music, art, sound recordings, cinematography, and other artistic endeavours. A copyright gives the owner of the subject exclusive ownership of their work. Copyright ensures that a person's creative work cannot be copied by a third party. According to Copyright Act, no one can use the original work without the permission of the creator. Copyright makes the creator the legal owner of the work's rights and the creator may charge others for using or reproducing their work.
+    <br/>
+    <br/>
+    <h3>
+How can Just Nyay help in Trademark and Copyright cases?
+    </h3>
+    <br/>
+    Given that people may not have enough time to travel to courts and consult with attorneys over infringements of their Trademark and Copyright rights, Just Nyay provides an online platform to facilitate online legal consultation on Trademark and Copyright matters. We put you in touch with Trademark and Copyright lawyers who can advise you on all of your rights infringement cases. You should contact Just Nyay for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+<li>•		Professional lawyers with years of expertise in this industry give online Trademark and Copyright consultation services.
+</li>
+<li>•		We offer individualised Trademark and Copyright infringement consultations by skilled lawyers who will discuss your case with you one-on-one.
+</li>
+<li>•		Our online Trademark and Copyright law consultation is a friendly environment where you may discuss your issue in total privacy.
+</li>
+
+    </ul>
+    </p>
+    `,
   },
   {
     id: 42,
     title: "customs-and-central-excise",
     heading:
       "Connect with Best Customs & Central Excise Lawyers / Advocates in India",
-    content:
-      "If you are a businessman and want to talk to the best lawyers of the country related to Duty Evasion, Customs Seizure, Customs Clearance, Excise Matters and Central Board of Excise and Customs then the platform of Just Nyay will help you. Use Just Nyay to hire a top Customs & Central Excise lawyer in India for all these issues.",
+    content: `
+    <p>
+Excise duty is a type of tax imposed by the Government of India for the production, licensing, and sale of certain goods. Excise duty charges are also collected for alcohol and narcotics by state governments. While customs duty means taxes that are imposed on the import and export of goods. All customs duty matters come under the Central Board of Excise & Customs (CBEC). So, if you are looking for a lawyer who can help you with matters relating to duty evasion, excise matters, customs clearance, customs seizure, or any other issues on CBEC, then Just Nyay is the right place for you. With Just Nyay, you can hire the best lawyer who will take care of all these issues.
+    <br/>
+    <br/>
+    <h3>
+When do you need a customs and central excise lawyer?
+    </h3>
+    <br/>
+    <ul>
+<li>•		If you are in the import and export business and your goods have been wrongly detained by the customs department then in such case you need a lawyer.
+</li>
+<li>•		A customs and central excise lawyer will help you if the central excise or the customs department has towed you for any tax evasion.
+</li>
+<li>•		If you need customs clearance then a top lawyer can be of great help.
+</li>
+<li>•		If you have an existing issue filed by the customs or the central excise department against you, then a customs and central excise lawyer will help you in the case.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Reasons to take our online customs and central excise lawyer consultation
+    </h3>
+    <br/>
+    <br/>
+Just Nyay is the best place where you can easily consult some of India’s top lawyers regarding your customs and central excise matters. Take a look at the reasons why you should take our online consultation.
+    <br/>
+    <br/>
+    <ul>
+<li>•		We ensure you connect with the lawyers that suit your best interests.
+</li>
+<li>•		Our lawyers are well-qualified in the relevant fields.
+</li>
+<li>•		Get personalized attention from our best lawyers.
+</li>
+<li>•		We offer a swift and easy online consultation service.
+</li>
+<li>•		Our consultation rates are very reasonable.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 45,
@@ -118,15 +351,101 @@ export const pages = [
     id: 48,
     title: "banking-finance",
     heading: "Connect with Best Banking / Finance Lawyers / Advocates in India",
-    content:
-      "If you are a businessman and deal in banking or finance constantly and facing difficulties due to various legal procedures then do not worry at all. We have a large panel of expert lawyers to answer all your banking and finance related queries.Only contact Just Nyay to hire a top banking and finance lawyer in India for matters falling under Indian Contract Act, SARFAESI, DRT, RBI (including, notifications, circulars, master circulars),Transfer of Property Act or any other banking and finance legal requirements. ",
+    content: `
+    <p>
+    Banking and finance law governs all aspects of bank and financial institution operations. Lawyers in this field assist clients in adhering to the complex legal frameworks that govern transactions. Lawyers working in banking and finance draft and negotiate contracts that set the terms of various financial arrangements. They also advise businesses mergers and acquisitions, initial public offerings, and liquidations, among others.
+    <br/>
+    <br/>
+    <h3>
+    Why do you need banking and finance lawyer?
+    </h3>
+    <br/>
+    Almost anyone can be affected by banking and finance-related legal issues. Not everyone is familiar with the terms and issues associated with banking and finance. You require the services of banking and finance lawyers for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+    <li>
+    •	Banking and finance lawyers provide legal counsel on a wide range of corporate and financial matters, including insolvency proceedings, fraud and money-laundering regulations, mergers and acquisitions, contracts, stock purchases and investments, tax audits, and so on.
+    </li>
+    <li>
+   •	The banking sectors comply with an increasing number of regulations. Banking and finance attorneys provide guidance on these matters.
+    </li>
+    <li>
+  •	Banking and finance lawyers advise on changing business models that emerge in the banking sector from time to time.
+    </li>
+    <li>
+•	Banking and finance lawyers gives guidance in the event of a security breach in the financial sector.
+    </li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+    Why hire Just Nyay lawyers for banking and finance cases?
+    </h3>
+    <br/>
+    <br/>
+    With so many banking industry challenges to deal with, charting a clear path forward may appear to be an overwhelming task, but resolving all issues is possible with the right support from expert lawyers. Just Nyay provides experienced lawyer service to help resolve banking and financial issues as quickly and smoothly as possible.
+    <br/>
+    <br/>
+    <ul>
+    <li>
+    •	Our banking and finance lawyers are well-versed in financial law and provide clients with pragmatic advice that is delivered in a commercially focused manner.
+    </li>
+    <li>
+   •	Our lawyers act as a liaison between parties, assisting everyone in reaching mutually beneficial agreements.
+    </li>
+    <li>
+  •	We provide a secure and one-on-one consultation service to give you a tailored solution to all banking and financial issues.
+    </li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 51,
     title: "gst",
     heading: "Connect with Best GST Lawyers / Advocates in India",
-    content:
-      "GST is a multi-stage tax system which is comprehensive in nature and applied on the sale of goods and services. The main aim of this taxation system is to curb the cascading effect of other Indirect taxes and it is applicable throughout India. A GST lawyer will be able to guide you on how GST will be applicable on your business and the legalities around non-compliance to GST. Connect with Just Nyay to hire a top GST advocate to get opinion on GST and its application to your business, defend you if a tax authority accuses you of under-reporting your taxes, and if you are in violation of any GST compliance in India.   ",
+    content: `
+    <p>
+The Goods and Services Tax, or GST, is a legal entity registration that serves as legal proof of the proprietor's business. All businesses and individuals who buy, sell, or provide services must register for GST. Firms and individuals with annual revenue of Rs.40 lakhs or more are required to register for GST. A company that operates without registering for GST faces severe penalties.
+    <br/>
+    <br/>
+    <h3>
+Why do you need a GST lawyer?
+    </h3>
+    <br/>
+GST serves as legal proof of a business because it is a legal entity registration. There are several aspects of GST that your lawyer can shed light on that you may not know. You require the services of a GST lawyer for the following reasons:
+    <br/><br/>
+    <ul>
+<li>•		Anyone who conducts any economic activity, including trade and commerce, is required to register for GST. A GST lawyer will advise you on how GST will affect your business.
+</li>
+<li>•		A company or individual who fails to pay GST is fined. A GST lawyer will advise you on the legal ramifications of non-compliance with GST.
+</li>
+<li>•		A GST lawyer assists small businesses that are unfamiliar with GST rules in meeting the basic GST requirements.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why hire Just Nyay lawyers for GST cases?
+    </h3>
+    <br/>
+    <br/>
+Given that people may not have the time to travel to courts and consult with attorneys about GST issues, Just Nyay offers an online platform for online legal consultation on GST registration, GST penalty cases, GST requirements, and other topics. We connect you with lawyers who can help you with all of your GST issues. Just Nyay should be contacted for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+<li>•		Our professional lawyers have sufficient experience in this field to provide online GST consultation services.
+</li>
+<li>•		Individualized GST consultations are provided by skilled lawyers who will discuss your case with you one-on-one. 
+</li>
+<li>•		Our online GST lawyer consultation provides a welcoming environment in which you can discuss your issue in complete confidentiality.
+</li>
+<li>•		The fees of our GST lawyers are well within your case budget.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 54,
@@ -146,44 +465,320 @@ export const pages = [
     id: 60,
     title: "documentation",
     heading: "Connect with Best Documentation Lawyers / Advocates in India",
-    content:
-      "Drafting legal documents is a technical task in the legal system in India. Legal documents to be presented before any authority, if all the legal parameters do not meet then your documents will either be rejected or your business or personal work will be affected. Connect with Just Nyay to hire a top documentation lawyer in India for due diligence, mutation, mergers, lease agreements, partnership deeds and will drafting and registration.",
+    content: `
+    <p>
+Legal documentation plays a vital role in forming any contractual relationship. If legal documents are drafted skillfully, it reduces the probability of financial instability. Whether it is a succession certificate in property matters, probate for a will, or a bail bond in a criminal case, almost every area of law involves some type of documentation. So, it is best to hire lawyers who are experts in the documentation. Contact Just Nyay, one of India"s leading online legal service providers, and consult some of the top documentation lawyers for drafting various documents relating to mutation, due diligence, mergers, partnership deeds, lease agreements, will drafting and registration, etc.
+    <br/>
+    <br/>
+    <h3>
+'Know the reasons why our online documentation lawyer consultation is the best
+    </h3>
+    <br/>
+    Take a look at the reasons why you should take Just Nyay’s online documentation lawyer consultation service.
+    <br/><br/>
+    <ul>
+<li>•		We have profiles of many experienced and expert lawyers.
+</li>
+<li>•		We offer an instant consultation service.
+</li>
+<li>•		Just Nyay offers you a secure one-to-one consultation service
+</li>
+<li>•		Our services are affordable and cost-effective.
+</li>
+<li>•		Our lawyers are highly reputed in their field.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+When do you need a documentation lawyer?
+    </h3>
+    <br/>
+    <br/>
+While drafting any legal document you must seek out the top lawyers in this field. A documentation lawyer drafts a thought-out will, agreement, deed, or contract for you and helps you avoid future disputes and losses.
+    <br/>
+    <br/>
+    <ul>
+<li>•		Proper documentation is important to purchase a new home, make rental agreements or sale deeds, and this is where you need top documentation lawyer
+
+</li>
+<li>•		A lawyer can also help you if you need due diligence on the property papers, taking any kind of loan, or even getting married.
+
+</li>
+<li>•		They can help you to start your businesses by drafting the necessary constitutional documents and contracts. 
+
+</li>
+<li>•		A documentation lawyer can also perform property title searches to guarantee that your investment in a property stays secure.
+
+</li>
+<li>•		If you want to make a will or power of attorney, a documentation lawyer can be of great help.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 63,
     title: "consumer-court",
     heading: "Connect with Best Consumer Court Lawyers / Advocates in India",
-    content:
-      "We are all consumers in our day-to-day lives. We enter into several transactions in a day while being a consumer. At some point, there happen to be some goods which are not pure, services not up to the mark, extra charges for a below the mark product, etc. Sometimes, facts are concealed regarding the raw material used in a product to promote sales. In all such cases, consumer rights are being hampered because when you are paying for something, you should know what you are buying and must be served as promised in ideal terms. Connect with Just Nyay to find a top consumer court lawyer in India for your District Consumer, State Consumer Forum & National Consumer Dispute Redressal Commission (NCDRC) matters. ",
+    content: `
+    <p>
+ Consumer law refers to laws that protect the public from predatory and unfair business practices. Consumer laws protect consumers from dishonest ways of doing business. This area of law needs compliance from the companies to regulate consumer laws. So, if you are looking for the best consumer court lawyers, then Just Nyay is the best place for you. Our lawyers can take care of a wide range of areas such as product liability, consumer fraud, false advertising, and different business scams like delayed possession or completion of realty projects. With us, you can hire the best lawyer who will take care of all these issues.
+    <br/>
+    <br/>
+    <h3>
+ When do you need consumer court lawyers?
+    </h3>
+    <br/>
+    <ul>
+   <li>•		If your rights as a consumer have been violated, consumer court lawyers will be able to secure a refund and compensation. 
+</li>
+<li>•		For a person who has been offered a defective or deficient product or service, a consumer court lawyer can help get a refund and compensation
+</li>
+<li>•		They can help consumers, who are victims of medical negligence, who are not being given possession of a flat on time they have bought, and people who have been wrongfully deprived of their insurance claim.
+</li>
+<li>•		Lawsuits against companies can also be initiated by consumer court lawyers who have misled or harmed consumers.
+</li>
+<li>•		Consumer court lawyers offer legal guidance to businesses on how to comply with government guidelines.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+  Why our online consumer court lawyer consultations are the best?
+    </h3>
+    <br/>
+    <br/>
+Just Nyay is the best place to connect with the top consumer court lawyers. You can get legal counsel from the best lawyers who have vast experience in matters related to this field.
+    <br/>
+    <br/>
+    <ul>
+<li>•		Get secure and confidential online consultations with our lawyers.
+</li>
+<li>•		You can discuss your legal matter from the comfort of your home.
+</li>
+<li>•		We offer personalized attention from our best lawyers.
+</li>
+<li>•		Our online consultation fees are quite reasonable.
+</li>
+<li>•		We have highly reputed lawyers who are experts in this field.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 66,
     title: "civil",
     heading: "Connect with Best Civil Lawyers / Advocates in India",
-    content:
-      "There has been a dispute over any of your movable and immovable property immediately connected with Just Nyay to hire a top civil lawyer in India to file or defend property matters, matrimonial and family matters, recovery matters, employment matters and any other matters falling under civil law.  ",
+    content: `
+    <p>
+  A civil lawyer plays an important part in handling civil lawsuits with no criminal angle. A civil lawyer usually takes care of legal disputes relating to family relationships, personal injury, employment, and real estate. They can also work with business institutions and government entities. They also know all the noncriminal attributes of a legal dispute between two parties. A civil lawyer works to resolve the grievance or claims of his client through available legal means. So, if you are looking for a civil lawyer who can help you with all your legal matters, then Just Nyay is your right choice. With Just Nyay, you can hire the best lawyer who will take care of all these issues.
+    <br/>
+    <br/>
+    <h3>
+   When do you need a civil lawyer?
+    </h3>
+    <br/>
+ While dealing with any civil lawsuits, you must seek out the top lawyers in the field. A civil lawyer helps and guides you in various issues.
+    <br/>
+    <br/>
+    <ul>
+   
+<li>•	A civil lawyer handles cases with no criminal angle such as the right to education, defamation, right to education, copyright infringements, property ownership, insurance claims, divorce, and custody of children. 
+</li>
+<li>•	A civil lawyer can help an individual who has been wronged under any civil law that is, family law, property laws, matrimonial laws, labor laws, etc.
+</li>
+<li>•	They can apply the necessary acumen and legal knowledge to help you file or defend yourself in a civil suit.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+   Why our online civil lawyer consultation is the best?
+    </h3>
+    <br/>
+    <br/>
+ Just Nyay is the best platform where you can get in touch with India’s top property lawyer. Consult your case with the top lawyers who have vast experience and knowledge in this field.
+    <br/>
+    <br/>
+    <ul>
+<li>•		We offer affordable and cost-effective online consultation service
+</li>
+<li>•		Get instant consultation service right from the comfort of your home.
+</li>
+<li>•		Our lawyers are highly reputed in their field.
+</li>
+<li>•		Our consultation rates are very reasonable. 
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 69,
     title: "cheque-bounce",
     heading: "Connect with Best Cheque Bounce Lawyers / Advocates in India",
-    content:
-      "A cheque bounce is among the common financial offences which can land the issuer into legal trouble and damage his or her credit rating. A cheque is bounced if the issuer writes a bad cheque - due to technical reasons like mismatch of signature or overwriting, or also when there are insufficient funds in the account as a result of it not being processed by the bank. Connect with Just Nyay to find a top rated cheque bounce lawyer in India for your needs.",
+    content: `
+    <p>
+   Cheque bounce happens when the cheque that is given to the bank for payment is returned back either due to insufficient funds in the account of the drawer or the signature on the cheque does not match with the signature of the drawer or due to any other reason. Cheque bounce, in India is regarded as a lawful offence and the law regulating the offence is section 138 of the Negotiable Instrument Act, 1881. For issues relating to cheque bounce or dishonour of cheque such as if someone has issued a cheque bounce notice against you, or you have received court notice for a 138 NI complaint against you, you need a cheque bounce lawyer. Connect with Just Nyay to find a highly experienced and the best cheque bounce lawyer in India for your needs. 
+    <br/>
+    <br/>
+    <h3>
+    Learn the reasons for cheque bounce
+    </h3>
+    <br/>
+   A cheque is bounced or dishonoured due to various reasons which are: 
+    <br/>
+    <br/>
+    <ul>
+   
+  <li>•	Insufficient funds in the person"s account issuing the cheque
+</li>
+<li>•	If the signature on the cheque is not matching 
+</li>
+<li>•	It the date mentioned on the cheque is yet to come
+</li>
+<li>•	Stale cheque which means the cheque is given to the bank three monthsafte the cheque was issued.
+</li>
+<li>•	When the drawer requests the bank to stop the payment and not to pay forcheque already issued.
+</li>
+<li>•	If there is difference in amount in words and number on the cheque.
+</li>
+<li>•	If the cheque is disfigured or damaged cheque
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+    Why connect with Just Nyay lawyers for cheque bounce issues?
+    </h3>
+    <br/>
+    <br/>
+   Just Nyay is one of the best legal service providers in India. We offer experienced legal assistance from some of India’s top lawyers. You must consult our lawyers for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+   <li>•	Our lawyers are the most knowledgeable and experienced in cases involving cheque bounce.
+</li>
+<li>•	We offer legal consultations at the most competitive rates.
+</li>
+<li>•	Our expert lawyers ooffers you a secure one-to-one consultation.
+</li>
+<li>•	We offer fast and easy consultation service
+
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 72,
     title: "recovery",
     heading: "Connect with Best Recovery Lawyers / Advocates in India",
-    content:
-      "You lent money to a friend or relative in Good Faith or a friend borrowed money from you to run his business or you were working somewhere and the company is not paying your wages, in all these situations you Can file recovery suit. Connect with Just Nyay to hire a top debt recovery lawyer in India to recover your lost money by sending a legal notice, filing a debt recovery suit or a summary suit or for Debt Recovery Tribunal (DRT) matters.  ",
+    content: `
+    <p>
+There are instances where a person borrows money from someone else and does not return it or repay it within the allotted time. In these situations, the debtor commits a default. For the purpose of recouping the funds, the lender party may pursue a variety of legal remedies against the defaulter party. One of the procedural actions one can take to recover money is to file a lawsuit for recovery of funds under Order IV of the Code of Civil Procedure. Under this, the lender party firsts send a legal notice to the defaulter party specifying the amount that must be paid. The lender party may bring a claim against the debtor if they fail to respond to the notice.
+
+    <br/>
+    <br/>
+    <h3>
+When is a suit for recovery filed?
+    </h3>
+    <br/>
+    A civil remedy known as a suit for recovery is a powerful tool for getting money back from a non-payer. Following situations result in the filing of a lawsuit for recovery:
+    <br/>
+    <br/>
+    <ul>
+<li>•		When a debtor refuses to repay a debt, a civil suit for recovery is filed.
+</li>
+<li>•		Anyone can file a lawsuit for recovery, including individuals, banks, businesses, financial institutions, partnership firms, sole proprietorship firms, traders, etc.
+</li>
+<li>•		A recovery suit may be filed to recover unpaid bills, unpaid business debt, etc.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why contact Just Nyay lawyers for recovery suit?
+    </h3>
+    <br/>
+    <br/>
+One of the best law firms in the country, Just Nyay has lawyers and counselors who specifically handle recovery cases. Our team of skilled debt collection lawyers and financial specialists offer specialized solutions to assist you in recovering your money. We put you in contact with attorneys who can support you in all of your recovery cases. You should get in touch with Just Nyay for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+<li>•		Our attorneys are the most knowledgeable and experienced in cases involving money recovery.
+</li>
+<li>•		We have qualified attorneys who can draft a money recovery suit for debt negotiation and debt recovery.
+</li>
+<li>•		Our online lawyer consultations are available at the most affordable prices.
+</li>
+<li>•		Our skilled lawyers provide personalized consultations.
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 75,
     title: "armed-forces-tribunal",
     heading:
       "Connect with Best Armed Forces Tribunal Lawyers / Advocates in India",
-    content:
-      "If you are working in the Arms Forces and the force has ordered a court martial against you while taking disciplinary action against you or your promotion, salary, commission etc. is withheld and you want to put your submission before the force with the help of law. So Just Nyay is giving you a group of lawyers who will help you from the Armed Forces Tribunal to the Supreme Court.",
+    content: `
+    <p>
+Armed Forces Tribunal is a military court in India dealing with armed forces issues. The purview of Armed Forces Tribunal includes:
+<br/>
+<br/>
+<ul>
+<li>
+•	Any appeals against a court-martial order, decision, finding, sentence, or any issue related thereto may be heard by the Armed Forces Tribunal.
+<li>
+<li>
+•	The Tribunal has the authority to release an accused person held by the military on bail.
+<li>
+<li>
+•	The appeal against court martial orders may be accepted by the Tribunal.
+<li>
+<li>
+•	The Armed Forces Tribunal has the authority to commute the entire sentence, reduce the punishment imposed, grant the appellant parole, suspend the sentence of imprisonment, etc.
+<li>
+</ul>
+
+<br/>
+<br/>
+<h3>
+Consult with top Armed Forces Tribunal lawyers through Just Nyay
+</h3>
+<br/>
+<br/>
+Charting a clear course forward in light of the numerous issues facing the armed forces may seem like an impossible task, but with the right assistance from knowledgeable attorneys, all problems can be resolved.
+
+<br/>For the quickest and most efficient resolution of armed forces issues, Just Nyay offers experienced legal assistance. We have attorneys and counsellors who specialise in armed forces cases.<br/> We connect clients with lawyers who can assist with cases involving the armed forces. Our services should be availed because of the following reasons:
+<br/>
+<br/>
+
+<ul>
+<li>
+•	For issues relating to armed forces commission, appointment, promotion, salary raise issues, and Court Martial matters, one can hire a top-rated Armed Forces Tribunal lawyer in India through Just Nyay.
+</li>
+<li>
+•	Our Armed Forces Tribunal lawyers are knowledgeable in armed forces law and offer clients frank guidance that is delivered with discretion.
+</li>
+<li>
+•	Our online legal consultations are offered at the most competitive rates.
+</li>
+<li>
+•	Our attorneys offer a private, one-on-one consultation service to provide a customised response to all issues affecting the armed forces.
+</li>
+<li>
+•	Our online armed forces law consultation is a welcoming place in which to discuss cases in complete confidentiality.
+</li>
+</ul>
+</p>
+`,
   },
   {
     id: 78,
@@ -205,6 +800,62 @@ export const pages = [
     heading: "Connect with Best Immigration Lawyers / Advocates in India",
     content:
       "Immigration cases in India and their procedures are extremely complex which not every ordinary lawyer can deal with. If any immigration case is going on against you then Just Justice is there to help you. We can provide you with expert lawyers on top immigration matters in the country. Then what's the delay, contact us immediately  for US, UK, Canada and Dubai Immigration. ",
+  },
+  {
+    id: 89,
+    title: "marriage-registration",
+    heading:
+      "Connect with Best marriage-regisration Lawyers / Advocates in India",
+    content: `
+    <p>
+  The marriage certificate is a legal document that states that two people are officially married. In India, registration of marriages can be done under Hindu Marriage Act, of 1955, or under the Special Marriage Act, of 1954. A marriage certificate, in the case of both types of marriages, is legitimate proof that a couple is legally married. It is to be noted that the groom must be over 21 years of age, and the bride must be over 18 years of age to obtain a marriage certificate. So, if you are looking for a lawyer who can help you with your marriage registration process then Just Nyay is the right place for you. With Just Nyay, you can hire the best lawyer who will take care of all your marriage registration process.
+    <br/>
+    <br/>
+    <h3>
+ Reasons to take our marriage registration service
+    </h3>
+    <br/>
+  Just Nyay is the best place where you can easily consult some of India’s top lawyers regarding your marriage certificate process. Take a look at the reasons why you should take our marriage registration service. 
+    <br/>
+    <br/>
+    <ul>
+<li>•		Our lawyers are well-experienced in their respective fields.
+</li>
+<li>•		Get fast and easy consultation service with us.
+</li>
+<li>•		Our lawyers offer personalized attention to their clients.
+</li>
+<li>•		We take minimal fees for our online consultation service.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+ Benefits of having a marriage registration certificate
+    </h3>
+    <br/>
+    <br/>
+A marriage registration certificate brings in several benefits such as:
+    <br/>
+    <br/>
+    <ul>
+<li>•		It acts as legally valid proof of marriage.
+</li>
+<li>•		Marriage Certificate simplifies documentation for visa applications, joint bank accounts, bank loans, etc.
+</li>
+<li>•		A marriage registration certificate is compulsory to obtain family law benefits.
+</li>
+<li>•		In case of the death of the spouse, a marriage certificate is necessary to claim bank deposits, life insurance proceeds, mutual funds, etc. 
+</li>
+<li>•		In martial disputes, the certificate can be used as strong and valid evidence by either of them.
+</li>
+<li>•		Legal proceedings can be made easy in case of the succession of property to the spouse.
+
+</li>
+    </ul>
+    </p>
+    `,
   },
   {
     id: 87,

@@ -4,10 +4,16 @@ import * as Yup from "yup";
 
 import Input from "components/Input";
 import { toast } from "react-toastify";
+import { db } from "firebase.config";
+import { addDoc, collection } from "firebase/firestore";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface Props {}
 
 const LawyerSignup: React.FC<Props> = () => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
   return (
     <div className={styles.lawyer_signup_form}>
       <Formik
@@ -16,7 +22,6 @@ const LawyerSignup: React.FC<Props> = () => {
           lastname: "",
           email: "",
           password: "",
-          gender: "",
           state: "",
           city: "",
           barCouncilId: "",
@@ -27,12 +32,9 @@ const LawyerSignup: React.FC<Props> = () => {
         }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string().required("Required"),
-          otp: Yup.string().required("Required"),
+          lastname: Yup.string().required("Required"),
           email: Yup.string().email().required("Required"),
-          password: Yup.string()
-            .min(8, "Must be 8 characters long")
-            .required("Required"),
-          gender: Yup.string().required("Required"),
+
           state: Yup.string().required("Required"),
           city: Yup.string().required("Required"),
           barCouncilId: Yup.string().required("Required"),
@@ -42,13 +44,36 @@ const LawyerSignup: React.FC<Props> = () => {
             .typeError("Invalid year")
             .required("Required"),
           phoneNumber: Yup.number()
-            .typeError("Invalid phone number")
+            .typeError("Must be a number")
+            .min(10000000, "Enter a valid number!")
+            .max(100000000000, "Enter a valid number")
             .required("Required"),
         })}
-        onSubmit={(values) => {
-          toast("Request sent, check email", {
-            type: "success",
-          });
+        onSubmit={async (values) => {
+          setLoading(true);
+          const docRef = collection(db, "lawyers");
+          await addDoc(docRef, {
+            ...values,
+            verified: false,
+            phoneNumber: `+91${values.phoneNumber.substr(
+              values.phoneNumber.length - 10
+            )}`,
+          })
+            .then((docRef) => {
+              toast("Request sent, check email", {
+                type: "success",
+              });
+
+              router.push("/login/lawyer");
+              setLoading(false);
+            })
+            .catch((err) => {
+              console.log(err);
+              toast("Something went Wrong", {
+                type: "error",
+              });
+              setLoading(false);
+            });
         }}
       >
         {({ errors, touched }) => (
@@ -62,9 +87,9 @@ const LawyerSignup: React.FC<Props> = () => {
                 <Input name="lastname" placeholder="Last Name" />
               </div>
               <div className={styles.input_block}>
-                <Input name="email" placeholder="Email" type="email" />
-                <Input name="password" placeholder="Password" type="password" />
+                <Input name="email" placeholder="E-mail" />
               </div>
+
               <div className={styles.input_block}>
                 <Input name="state" placeholder="State" />
                 <Input name="city" placeholder="City" />
@@ -95,7 +120,9 @@ const LawyerSignup: React.FC<Props> = () => {
               </div>
             </div>
 
-            <button className="primary-btn">Become a just-nyay lawyer</button>
+            <button className="primary-btn" disabled={loading}>
+              Become a just-nyay lawyer
+            </button>
           </Form>
         )}
       </Formik>
