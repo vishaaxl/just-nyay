@@ -102,7 +102,7 @@ const Footer: React.FC<Props> = () => {
         </div>
 
         <span className={styles.developed}>
-          2022 © Ample Media Agency | All Rights Reserved
+          2022 © Advozone India Pvt Ltd | All Rights Reserved
         </span>
       </div>
     </footer>
