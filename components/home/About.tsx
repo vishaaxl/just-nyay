@@ -30,11 +30,7 @@ const About: React.FC<Props> = () => {
             than 200 senior lawyers of the Supreme Court to know their views on
             different legal subjects.
           </p>
-          <p className={styles.about_description}>
-            All the products, services & advertisements of JustNyay.com are
-            Solely owned, operated, managed and modified by Advozone India
-            Private Limited.
-          </p>
+          
 
           <div className="btn-primary">
             <a href="#">

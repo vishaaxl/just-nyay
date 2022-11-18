@@ -45,6 +45,11 @@ const About: React.FC<Props> = () => {
           <br /> So, don&apos;t delay and contact Just Nyay immediately for any
           legal problem.
         </p>
+        <p className={styles.para}>
+          All the products, services & advertisements of JustNyay.com are Solely
+          owned, operated, managed and modified by Advozone India Private
+          Limited.
+        </p>
         <div className="container" style={{ marginTop: "-5rem" }}>
           <Image
             src="/images/about-1.jpeg"
