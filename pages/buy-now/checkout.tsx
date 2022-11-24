@@ -172,11 +172,11 @@ const Login: NextPage = () => {
 
         language: cart.language,
         problemType: cart.problemType,
-        staus: "pending",
+        status: "pending",
         payment: false,
         plan: cart.plan,
-        time:cart.time,
-        date:cart.date,
+        time: cart.time,
+        date: cart.date,
         createdAt: serverTimestamp(),
       })
         .then((doc) => {
@@ -224,7 +224,7 @@ const Login: NextPage = () => {
 
           language: cart.language,
           problemType: cart.problemType,
-          staus: "pending",
+          status: "pending",
           payment: false,
           plan: cart.plan,
           createdAt: serverTimestamp(),
