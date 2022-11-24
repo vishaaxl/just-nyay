@@ -1,55 +1,78 @@
 import styles from "./ConsultationForm.module.scss";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
 
 import Input from "components/Input";
 import { toast } from "react-toastify";
 import { useAuth } from "context/User";
+import {
+  collection,
+  getDocs,
+  limit,
+  query,
+  where,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "firebase.config";
 
 interface Props {}
 
-interface MyFormValues {
-  firstname: string;
-  lastname: string;
-  email: string;
-  gender: string[];
-  phoneNumber: string;
-  state: string;
-  city: string;
-  postalCode: string;
-}
-
 const UserProfile: React.FC<Props> = () => {
-  const { userInfo } = useAuth();
+  const [submitting, setSubmitting] = useState(false);
+  const { user, userInfo } = useAuth();
 
-  const initialValues: MyFormValues = {
-    firstname: userInfo.firstname,
-    lastname: userInfo.lastname,
-    email: userInfo.email,
-    gender: [],
-    phoneNumber: userInfo.phoneNumber,
-    state: "",
-    city: userInfo.city,
-    postalCode: "",
-  };
   return (
     <div className={styles.user_profile_form}>
       <Formik
         enableReinitialize
-        initialValues={initialValues}
+        initialValues={{
+          firstname: userInfo.firstname,
+          email: userInfo.email,
+          lastname: userInfo.lastname,
+          state: userInfo.state,
+          city: userInfo.city,
+          postalCode: userInfo.postalCode,
+        }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string().required("Required"),
           lastname: Yup.string().required("Required"),
           email: Yup.string().email().required("Required"),
-          gender: Yup.string().required("Required"),
-          phoneNumber: Yup.string().required("Required"),
           state: Yup.string().required("Required"),
           city: Yup.string().required("Required"),
           postalCode: Yup.string().required("Required"),
         })}
-        onSubmit={(values) => {
-          toast("Request sent, check email", {
-            type: "success",
+        onSubmit={async (values) => {
+          // check user
+          setSubmitting(true);
+          const q = query(
+            collection(db, "users"),
+            where("phoneNumber", "==", user.phoneNumber),
+            limit(1)
+          );
+
+          const querySnapshot = await getDocs(q);
+
+          querySnapshot.forEach((document) => {
+            const id = document.id;
+            const docRef = doc(db, "users", id);
+            updateDoc(docRef, values)
+              .then(() => {
+                setSubmitting(false);
+
+                toast("Updated Information", {
+                  type: "success",
+                });
+              })
+              .catch((err) => {
+                setSubmitting(false);
+
+                toast("Please try again later", {
+                  type: "error",
+                });
+                console.log(err);
+              });
           });
         }}
       >
@@ -64,50 +87,7 @@ const UserProfile: React.FC<Props> = () => {
               <div className={styles.input_block}>
                 <Input name="email" placeholder="Email" type="email" />
               </div>
-              <div
-                role="group"
-                aria-labelledby="checkbox-group"
-                className={styles.checkbox_group}
-                style={{ overflow: "scroll" }}
-              >
-                <label htmlFor="" style={{ marginRight: "2rem" }}>
-                  Gender{" "}
-                </label>
-                <label>
-                  Male
-                  <Field
-                    type="checkbox"
-                    name="gender"
-                    value="male"
-                    checked={values.gender.includes("male")}
-                  />
-                </label>
-                <label>
-                  Female
-                  <Field
-                    type="checkbox"
-                    name="gender"
-                    value="female"
-                    checked={values.gender.includes("female")}
-                  />
-                </label>
-                <label>
-                  Other
-                  <Field
-                    type="checkbox"
-                    name="gender"
-                    value="Other"
-                    checked={values.gender.includes("other")}
-                  />
-                </label>
-              </div>
-              <div className={styles.input_block}>
-                <Input
-                  name="phoneNumber"
-                  placeholder="Phone Number (+91)"
-                  type="tel"
-                />
-              </div>
+
               <div className={styles.input_block}>
                 <Input name="state" placeholder="State" />
                 <Input name="city" placeholder="City" />
@@ -121,7 +101,9 @@ const UserProfile: React.FC<Props> = () => {
               </div>
             </div>
 
-            <button className="primary-btn">Save changes</button>
+            <button className="primary-btn" disabled={submitting}>
+              Save changes
+            </button>
           </Form>
         )}
       </Formik>

@@ -19,6 +19,8 @@ const CheckoutForm: React.FC<Props> = () => {
           email: "",
           city: "",
           phoneNumber: "+91",
+          date: "",
+          time: "",
         }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string()
@@ -39,6 +41,8 @@ const CheckoutForm: React.FC<Props> = () => {
             .min(2, "Too Short!")
             .max(50, "Too Long!")
             .required("Required"),
+          date: Yup.string().required("Required"),
+          time: Yup.string().required("Required"),
         })}
         onSubmit={(values) => {}}
       >
@@ -60,6 +64,34 @@ const CheckoutForm: React.FC<Props> = () => {
                   updateCart
                 />
                 <Input name="city" placeholder="City" updateCart />
+              </div>
+              <div className={`${styles.input_block}`}>
+                <Input
+                  name="date"
+                  placeholder="When should we contact you"
+                  type="date"
+                  updateCart
+                  min={new Date().toISOString().split("T")[0]}
+                />
+                <Input
+                  name="time"
+                  placeholder="Time"
+                  updateCart
+                  component="select"
+                >
+                  <option value="9-10">9 - 10</option>
+                  <option value="10-11">10 - 11</option>
+                  <option value="11-12">11 - 12</option>
+                  <option value="12-13">12 - 13</option>
+                  <option value="13-14">13 - 14</option>
+                  <option value="14-15">14 - 15</option>
+                  <option value="15-16">15 - 16</option>
+                  <option value="16-17">16 - 17</option>
+                  <option value="17-18">17 - 18</option>
+                  <option value="18-19">18 - 19</option>
+                  <option value="19-20">19 - 20</option>
+                  <option value="20-21">20 - 21</option>
+                </Input>
               </div>
             </div>
           </Form>

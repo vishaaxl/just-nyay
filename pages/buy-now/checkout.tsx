@@ -18,6 +18,7 @@ import {
   doc,
   limit,
   updateDoc,
+  serverTimestamp,
 } from "firebase/firestore";
 import { db } from "firebase.config";
 import { useRouter } from "next/router";
@@ -174,6 +175,9 @@ const Login: NextPage = () => {
         staus: "pending",
         payment: false,
         plan: cart.plan,
+        time:cart.time,
+        date:cart.date,
+        createdAt: serverTimestamp(),
       })
         .then((doc) => {
           // redirect to continue payment and set payment true on successfull transaction
@@ -204,6 +208,9 @@ const Login: NextPage = () => {
       email: cart.email,
       firstname: cart.firstname,
       lastname: cart.lastname,
+      createdAt: serverTimestamp(),
+      time: cart.time,
+      date: cart.date,
     })
       .then((docRef) => {
         // toast("Order Placed successfully", {
@@ -220,6 +227,7 @@ const Login: NextPage = () => {
           staus: "pending",
           payment: false,
           plan: cart.plan,
+          createdAt: serverTimestamp(),
         })
           .then((doc) => {
             // redirect to continue payment and set payment true on successfull transaction
@@ -322,7 +330,7 @@ const Login: NextPage = () => {
               opacity: submitting ? 0.5 : 1,
             }}
           >
-            Checkout
+            {submitting ? "Please wait" : "Checkout"}
           </div>
 
           <div className={styles.summary_secure}>

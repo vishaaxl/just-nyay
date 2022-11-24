@@ -10,6 +10,9 @@ interface Props {
   rows?: string;
   updateCart?: boolean;
   value?: string;
+  children?: any;
+  min?: any;
+  max?: any;
 }
 
 const Input: React.FC<Props> = ({
@@ -20,6 +23,9 @@ const Input: React.FC<Props> = ({
   component,
   rows,
   updateCart,
+  children,
+  min,
+  max,
 }) => {
   const [field, meta] = useField(name);
   const cart = useCartContext();
@@ -27,6 +33,8 @@ const Input: React.FC<Props> = ({
     <div className="input-block custom-input">
       <label htmlFor={name}>{placeholder}</label>
       <Field
+        min={min || null}
+        max={max || null}
         id={name}
         type={type || "text"}
         disabled={disabled}
@@ -37,7 +45,9 @@ const Input: React.FC<Props> = ({
           field.onChange(e);
           updateCart && cart.updateCart(name, e.target.value);
         }}
-      />
+      >
+        {children}
+      </Field>
       {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
       ) : null}

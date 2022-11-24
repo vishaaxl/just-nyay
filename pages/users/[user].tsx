@@ -26,6 +26,7 @@ import {
   MdLogout,
   MdOutlineMoney,
   MdPerson,
+  MdPhone,
   MdSupportAgent,
 } from "react-icons/md";
 import UserProfile from "components/forms/UserProfile";
@@ -322,7 +323,7 @@ const User: NextPage = ({}) => {
               {/* recect calls */}
               <div className={styles.white_wrapper}>
                 <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Recent Calls</h2>
+                  <h2 className="header">Booked Appointments</h2>
                 </div>
                 <div
                   style={{
@@ -387,6 +388,7 @@ const SidebarDesktop = ({ currentPage, setCurrentPage }: any) => {
         <MdOutlineMoney className={styles.sidebar_icon} />
         <span>Transactions</span>
       </div>
+
       <div className={styles.sidebar_row}>
         <MdSupportAgent className={styles.sidebar_icon} />
         <span>Support</span>
