@@ -30,7 +30,6 @@ const About: React.FC<Props> = () => {
             than 200 senior lawyers of the Supreme Court to know their views on
             different legal subjects.
           </p>
-          
 
           <div className="btn-primary">
             <a href="#">
@@ -42,7 +41,7 @@ const About: React.FC<Props> = () => {
           <div className={styles.about_image_one}>
             <Image
               alt=""
-              src="/images/about-1.jpeg"
+              src="/images/layer.jpg"
               layout="fill"
               objectFit="cover"
             />
@@ -50,7 +49,7 @@ const About: React.FC<Props> = () => {
           <div className={styles.about_image_two}>
             <Image
               alt=""
-              src="/images/about-2.jpeg"
+              src="/images/case-1.jpeg"
               layout="fill"
               objectFit="cover"
               objectPosition="right"

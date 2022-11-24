@@ -258,8 +258,15 @@ const Hero: React.FC<Props> = () => {
           <li onClick={() => router.push("/about")}>About Us</li>
         </motion.ul>
 
-        <div className="btn-primary" onClick={() => router.push("/buy-now")}>
-          <a href="#">
+        <div
+          className="btn-primary"
+          onClick={() =>
+            router.asPath == "/second-opinion"
+              ? router.push("/second-opinion/buy-now")
+              : router.push("/buy-now")
+          }
+        >
+          <a>
             <span>Consult now</span>
           </a>
         </div>

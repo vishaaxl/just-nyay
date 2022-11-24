@@ -8,7 +8,9 @@ import { useRouter } from "next/router";
 import CustomSelect from "./CustomSelect";
 import { useCartContext } from "context/Cart";
 
-interface Props {}
+interface Props {
+  heading?: string;
+}
 
 const price_array = [
   {
@@ -33,7 +35,7 @@ const price_array = [
   },
 ];
 
-const PriceChart: React.FC<Props> = () => {
+const PriceChart: React.FC<Props> = ({ heading }) => {
   const cart = useCartContext();
 
   const router = useRouter();
@@ -71,7 +73,7 @@ const PriceChart: React.FC<Props> = () => {
             </div>
             <div className={styles.number_ratings}>1047 Ratings</div>
           </div>
-          <h1>Ask for Lawyer</h1>
+          <h1>{heading ? heading : "Ask for Lawyer"}</h1>
         </div>
         {/* content */}
         <span>Quick and Instant consultation</span>
@@ -138,9 +140,11 @@ const PriceChart: React.FC<Props> = () => {
               </div>
               <div className={styles.line_two}>
                 <span className={styles.accent}>Rs. {elem.price} </span> (Rs
-                16.6 / minute)
+                {(Number(elem.price) / Number(elem.title)).toFixed(2)} / minute)
               </div>
-              <div className={styles.line_three}>Save Rs 181</div>
+              <div className={styles.line_three}>
+                Save Rs {(40 * Number(elem.title)) / 60}
+              </div>
               <div className={styles.line_four}>
                 <GoVerified className={styles.icon} />
                 <span>valid for 30 days</span>

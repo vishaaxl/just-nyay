@@ -20,7 +20,7 @@ const Index: NextPage = () => {
     <section style={{ position: "relative" }} className="page-padding">
       <Image
         alt=""
-        src="/images/case-2.jpeg"
+        src="/images/hero.jpg"
         layout="fill"
         objectFit="cover"
         style={{ zIndex: "-1" }}

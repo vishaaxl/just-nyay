@@ -12,7 +12,13 @@ const TopNav: React.FC<Props> = () => {
     <>
       <div className={styles.top_nav}>
         Happy To Discuss About Your Requirement&nbsp;
-        <span className={styles.accent_underline}>Get a Quote</span>
+        <span
+          className={styles.accent_underline}
+          style={{ cursor: "pointer" }}
+          onClick={() => router.push("/buy-now")}
+        >
+          Get a Quote
+        </span>
       </div>
       <div className="container">
         <div className={styles.quick_info}>
@@ -35,19 +41,23 @@ const TopNav: React.FC<Props> = () => {
               <div>
                 <MdGavel size={35} className={styles.logo} />
               </div>
-              <div className={styles.content}>
-                <span>TOLL FREE NUMBER</span>
-                <span>+91 9318428656</span>
-              </div>
+              <a href="tel: 9318428656">
+                <div className={styles.content}>
+                  <span>TOLL FREE NUMBER</span>
+                  <span>+91 9318428656</span>
+                </div>
+              </a>
             </div>
             <div className={styles.quick_section}>
               <div>
                 <MdEmail size={35} className={styles.logo} />
               </div>
-              <div className={styles.content}>
-                <span>Email Address</span>
-                <span>info@justnyay.com</span>
-              </div>
+              <a href="mailto: info@justnyay.com">
+                <div className={styles.content}>
+                  <span>Email Address</span>
+                  <span>info@justnyay.com</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

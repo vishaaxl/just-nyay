@@ -24,7 +24,7 @@ import { useRouter } from "next/router";
 
 interface SummaryProps {
   title: string;
-  price: number;
+  price: any;
 }
 
 declare global {
@@ -35,15 +35,34 @@ declare global {
 
 const Login: NextPage = () => {
   const [submitting, setSubmitting] = useState(false);
+
   const router = useRouter();
+  const cart = useCartContext();
+
+  const checkSubmit = () => {
+    if (submitting) {
+      return false;
+    }
+
+    if (
+      cart.firstname &&
+      cart.lastname &&
+      cart.email &&
+      cart.phoneNumber &&
+      cart.city
+    ) {
+      return true;
+    }
+
+    alert("Plase fill the form before checking out");
+    return false;
+  };
 
   useEffect(() => {
-    if (!cart.plan) {
+    if (!cart.plan && !cart.language && !cart.problemType) {
       router.push("/buy-now");
     }
   }, []);
-
-  const cart = useCartContext();
 
   // razorpay related stuff
   const initializeRazorpay = () => {
@@ -83,7 +102,7 @@ const Login: NextPage = () => {
       amount: cart.price,
       description: "Payment for just-nyay",
       image:
-        "https://just-nyay.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+        "https://justnyay.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       handler: async function (response: any) {
         // Validate payment at server - using webhooks is a better idea.
         const razorpayResponse = {
@@ -276,7 +295,10 @@ const Login: NextPage = () => {
             price={Math.round(cart.price - (cart.price / 100) * 18)}
           />
           <SummaryLine title="Discount" price={0.0} />
-          <SummaryLine title="GST (18%)" price={(cart.price / 100) * 18} />
+          <SummaryLine
+            title="GST (18%)"
+            price={((Number(cart.price) / 100) * 18).toFixed(2)}
+          />
 
           {/* header reuse */}
           <div className={styles.header} style={{ alignItems: "center" }}>
@@ -290,7 +312,7 @@ const Login: NextPage = () => {
 
           {/* checkout button */}
           <div
-            onClick={() => !submitting && checkout()}
+            onClick={() => checkSubmit() && checkout()}
             className="primary-btn"
             style={{
               background: "#624BD6",
