@@ -2,7 +2,7 @@ import PageHeading from "components/PageHeading";
 import PriceChart from "components/Pricing";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/page.module.scss";
+import styles from "../../styles/page.module.scss";
 
 interface Props {}
 
