@@ -154,4 +154,12 @@
   max-height: 100vh;
   overflow: scroll;
   border-radius: 5px;
+
+  .stat_grid {
+    @media (min-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
 }

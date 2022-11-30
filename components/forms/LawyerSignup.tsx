@@ -5,11 +5,46 @@ import * as Yup from "yup";
 import Input from "components/Input";
 import { toast } from "react-toastify";
 import { db } from "firebase.config";
-import { addDoc, collection } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  getDocs,
+  limit,
+  query,
+  serverTimestamp,
+  where,
+} from "firebase/firestore";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
 interface Props {}
+
+const specializationArray = [
+  "Corporate Law",
+  "Banking Law",
+  "Cyber Law",
+  "Administrative Law",
+  "Intellectual Property Law",
+  "Commercial Law",
+  "Maritime Law",
+  "Competition Law",
+  "Consumer Law",
+  "International Law",
+  "Company Law",
+  "Real Estate Law",
+  "Criminal Law",
+  "Civil Law",
+  "Labour Law",
+  "Tax Law",
+  "Business Law",
+  "Media Law",
+  "Environmental Law",
+  "Air and Space Law",
+  "Energy Law",
+  "Mergers and Acquisitions Law",
+  "Human Rights Law",
+  "Patent Law",
+];
 
 const LawyerSignup: React.FC<Props> = () => {
   const [loading, setLoading] = useState(false);
@@ -25,7 +60,7 @@ const LawyerSignup: React.FC<Props> = () => {
           state: "",
           city: "",
           barCouncilId: "",
-          IDnumber: "",
+          specialization: "",
           year: "",
           experience: "",
           phoneNumber: "",
@@ -38,7 +73,7 @@ const LawyerSignup: React.FC<Props> = () => {
           state: Yup.string().required("Required"),
           city: Yup.string().required("Required"),
           barCouncilId: Yup.string().required("Required"),
-          IDnumber: Yup.string().required("Required"),
+          specialization: Yup.string().required("Required"),
           year: Yup.number().typeError("Invalid year").required("Required"),
           experience: Yup.number()
             .typeError("Invalid year")
@@ -52,9 +87,29 @@ const LawyerSignup: React.FC<Props> = () => {
         onSubmit={async (values) => {
           setLoading(true);
           const docRef = collection(db, "lawyers");
+          const q = query(
+            docRef,
+            where(
+              "phoneNumber",
+              "==",
+              `+91${values.phoneNumber.substr(values.phoneNumber.length - 10)}`
+            ),
+            limit(1)
+          );
+
+          const querySnapshot = await getDocs(q);
+
+          if (!querySnapshot.empty) {
+            toast("Already Registered", {
+              type: "warning",
+            });
+            router.push("/login/lawyer");
+          }
+
           await addDoc(docRef, {
             ...values,
             verified: false,
+            createdAt: serverTimestamp(),
             phoneNumber: `+91${values.phoneNumber.substr(
               values.phoneNumber.length - 10
             )}`,
@@ -96,7 +151,17 @@ const LawyerSignup: React.FC<Props> = () => {
               </div>
               <div className={styles.input_block}>
                 <Input name="barCouncilId" placeholder="Bar council ID" />
-                <Input name="IDnumber" placeholder="ID no." />
+                <Input
+                  name="specialization"
+                  placeholder="Specialization"
+                  component="select"
+                >
+                  {specializationArray.map((e) => (
+                    <option value={e} key={e}>
+                      {e}
+                    </option>
+                  ))}
+                </Input>
                 <Input name="year" placeholder="Year" />
               </div>
             </div>

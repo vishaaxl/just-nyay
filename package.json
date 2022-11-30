@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.26",
     "embla-carousel-react": "^7.0.2",
     "firebase": "^9.12.1",
     "formik": "^2.2.9",
     "framer-motion": "^7.3.2",
+    "moment": "^2.29.4",
     "next": "12.2.5",
     "nextjs-progressbar": "^0.0.14",
     "razorpay": "^2.8.3",
@@ -24,6 +26,7 @@
     "react-toastify": "^9.0.8",
     "sass": "^1.55.0",
     "shortid": "^2.2.16",
+    "styled-components": "^5.3.6",
     "yup": "^0.32.11"
   },
   "devDependencies": {

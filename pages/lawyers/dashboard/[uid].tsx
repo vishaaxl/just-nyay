@@ -4,6 +4,8 @@ import { useAuth } from "context/User";
 import { auth, db } from "firebase.config";
 import {
   collection,
+  DocumentData,
+  getDocs,
   limit,
   onSnapshot,
   query,
@@ -18,16 +20,21 @@ import Skeleton from "react-loading-skeleton";
 import { signOut } from "firebase/auth";
 import {
   MdDashboard,
+  MdGavel,
   MdLogout,
   MdOutlineMoney,
   MdPerson,
   MdSupportAgent,
 } from "react-icons/md";
 import UserProfile from "components/forms/UserProfile";
+import LawyerProfile from "components/forms/LawyerProfile";
+import Stats from "components/dashboard/Stats";
+import OrdersTable from "components/dashboard/Table";
 
 const LawyerDashboard: NextPage = () => {
   const [currentPage, setCurrentPage] = useState("dashboard");
   const [sideMenu, setSideMenu] = useState(true);
+  const [orders, setOrders] = useState<DocumentData[]>([]);
 
   const { user, userInfo, updateUser } = useAuth();
   const router = useRouter();
@@ -50,8 +57,23 @@ const LawyerDashboard: NextPage = () => {
               }
 
               // update user globally
-              snapshot.forEach((doc) => {
-                updateUser(doc.data());
+              snapshot.forEach(async (doc) => {
+                const q = query(
+                  collection(db, "orders"),
+                  where("lawyer", "==", doc.id)
+                );
+
+                const ordersSnap = await getDocs(q);
+                if (!orders.length) {
+                  ordersSnap.forEach((order) => {
+                    setOrders((prev) => [
+                      ...prev,
+                      { ...order.data(), id: order.id },
+                    ]);
+                  });
+                }
+
+                updateUser({ ...doc.data(), id: doc.id });
               });
             }
           )
@@ -82,6 +104,29 @@ const LawyerDashboard: NextPage = () => {
     );
   }
 
+  const orderColumn = [
+    {
+      Header: "Order ID",
+      accessor: "id" as const, // accessor is the "key" in the data
+    },
+    {
+      Header: "Plan",
+      accessor: "plan" as const, // accessor is the "key" in the data
+    },
+    {
+      Header: "Language",
+      accessor: "language" as const,
+    },
+    {
+      Header: "Type",
+      accessor: "problemType" as const,
+    },
+    {
+      Header: "Status",
+      accessor: "status" as const,
+    },
+  ];
+
   return (
     <main style={{ background: "rgba(0,0,0,0.02)" }}>
       {currentPage == "dashboard" && (
@@ -92,6 +137,23 @@ const LawyerDashboard: NextPage = () => {
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
             />
+
+            {/* content */}
+            <div className={styles.content}>
+              {/* <div className={styles.stat_grid}>
+                <Stats title="Cases" icon={<MdGavel />} />
+                <Stats title="Clients" icon={<MdPerson />} color="#735E45" />
+              </div> */}
+              {orders && (
+                <OrdersTable
+                  tableData={orders}
+                  tableColumns={orderColumn}
+                  tableName="Assigned Cases"
+                  path="orders"
+                  lawyerId={userInfo.id}
+                />
+              )}
+            </div>
           </div>
         </section>
       )}
@@ -115,7 +177,7 @@ const LawyerDashboard: NextPage = () => {
               {/* transactions */}
 
               <div className={styles.white_wrapper}>
-                <UserProfile />
+                <LawyerProfile />
               </div>
             </div>
           </div>
@@ -145,14 +207,7 @@ const SidebarDesktop = ({ currentPage, setCurrentPage }: any) => {
         <MdPerson className={styles.sidebar_icon} />
         <span>Profile</span>
       </div>
-      <div
-        style={{ color: currentPage == "transactions" ? "#624BD6" : "" }}
-        className={styles.sidebar_row}
-        onClick={() => setCurrentPage("transactions")}
-      >
-        <MdOutlineMoney className={styles.sidebar_icon} />
-        <span>Transactions</span>
-      </div>
+
       <div className={styles.sidebar_row}>
         <MdSupportAgent className={styles.sidebar_icon} />
         <span>Support</span>
