@@ -21,7 +21,10 @@ const SecondOpinion: React.FC<Props> = () => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
-      <section className="container">
+      <section
+        className="container"
+        style={{ lineHeight: 1.6, marginBottom: "2rem" }}
+      >
         <div className={styles.about}>
           <div className={styles.content}>
             <div className="line_heading">
@@ -56,64 +59,8 @@ const SecondOpinion: React.FC<Props> = () => {
                 </li>
               </ul>
             </p>
-            <div className="line_heading">
-              <span className="line"></span>
-              <h4>Problem</h4>
-            </div>
-            <p className={styles.about_description}>
-              The legal process in India is a complex system. The Indian legal
-              system was first codified by the British. Most of the laws
-              governing India are the laws of the British era. The laws made
-              during British rule were made to govern the Indians. Therefore the
-              process of law is much complex and beyond simple understanding.
-              The language of law in India and their definitions are also beyond
-              the comprehension of the common man. That&rsquo;s why as soon as
-              you get caught in the clutches of any law, you go to the lawyer.
-              It is believed that the lawyer you have done for your case has
-              better legal understanding and he is also well acquainted with the
-              decisions of the High Courts and Supreme Court of the country. But
-              it is also seen that a lawyer with common legal sense can also
-              spoil your case. That&rsquo;s why you also need a second opinion
-              for your case.
-              <br />
-              <br /> The judiciary of India is mainly divided into three parts,
-              the lower courts, the High Courts and the Supreme Court. According
-              to the legal process, whether the case is civil or criminal, it
-              starts with the lower courts. As the stage of the case progresses,
-              the matter goes through the High Court to the Supreme Court of the
-              country. Of course, from the lower court to the Supreme Court, the
-              matter takes a larger form, so the lawyers practising in the
-              Supreme Court read and understand every aspect of the case.
-              Constitutional matters, writ cases, all kinds of appeals are heard
-              in the Supreme Court, so only that lawyer can become a successful
-              lawyer who has knowledge of every aspect of Law.
-            </p>
-            <div className="line_heading">
-              <span className="line"></span>
-              <h4>Solution</h4>
-            </div>
-            <p className={styles.about_description}>
-              Just Nyay will get you directly in touch with lawyers who have
-              vast experience in legal practice. Book your consultation with
-              JustNyay and get in touch with some of the most prestigious and
-              well known lawyers in India.
-            </p>
-
-            <div className="btn-primary">
-              <a href="#">
-                <span>Book Consulation</span>
-              </a>
-            </div>
           </div>
           <div className={styles.about_images}>
-            <div className={styles.about_image_one}>
-              <Image
-                alt=""
-                src="/images/layer.jpg"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
             <div className={styles.about_image_two}>
               <Image
                 alt=""
@@ -125,6 +72,49 @@ const SecondOpinion: React.FC<Props> = () => {
             </div>
           </div>
         </div>
+        <p style={{ fontWeight: 600, opacity: 0.9 }}>
+          <div className="line_heading">
+            <span className="line"></span>
+            <h4>Problem</h4>
+          </div>
+          <p className={styles.about_description}>
+            The legal process in India is a complex system. The Indian legal
+            system was first codified by the British. Most of the laws governing
+            India are the laws of the British era. The laws made during British
+            rule were made to govern the Indians. Therefore the process of law
+            is much complex and beyond simple understanding. The language of law
+            in India and their definitions are also beyond the comprehension of
+            the common man. That&rsquo;s why as soon as you get caught in the
+            clutches of any law, you go to the lawyer. It is believed that the
+            lawyer you have done for your case has better legal understanding
+            and he is also well acquainted with the decisions of the High Courts
+            and Supreme Court of the country. But it is also seen that a lawyer
+            with common legal sense can also spoil your case. That&rsquo;s why
+            you also need a second opinion for your case.
+            <br />
+            <br /> The judiciary of India is mainly divided into three parts,
+            the lower courts, the High Courts and the Supreme Court. According
+            to the legal process, whether the case is civil or criminal, it
+            starts with the lower courts. As the stage of the case progresses,
+            the matter goes through the High Court to the Supreme Court of the
+            country. Of course, from the lower court to the Supreme Court, the
+            matter takes a larger form, so the lawyers practising in the Supreme
+            Court read and understand every aspect of the case. Constitutional
+            matters, writ cases, all kinds of appeals are heard in the Supreme
+            Court, so only that lawyer can become a successful lawyer who has
+            knowledge of every aspect of Law.
+          </p>
+          <div className="line_heading" style={{ marginTop: "1rem" }}>
+            <span className="line"></span>
+            <h4>Solution</h4>
+          </div>
+          <p className={styles.about_description}>
+            Just Nyay will get you directly in touch with lawyers who have vast
+            experience in legal practice. Book your consultation with JustNyay
+            and get in touch with some of the most prestigious and well known
+            lawyers in India.
+          </p>
+        </p>
       </section>
 
       {/* <div className="container">
