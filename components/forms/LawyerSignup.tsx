@@ -8,10 +8,12 @@ import { db } from "firebase.config";
 import {
   addDoc,
   collection,
+  doc,
   getDocs,
   limit,
   query,
   serverTimestamp,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import { useRouter } from "next/router";
@@ -46,9 +48,100 @@ const specializationArray = [
   "Patent Law",
 ];
 
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
+
 const LawyerSignup: React.FC<Props> = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  // razorpay related stuff
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const makePayment = async (docId: string, values: any) => {
+    const res = await initializeRazorpay();
+
+    if (!res) {
+      alert("Razorpay SDK Failed to load");
+      return;
+    }
+
+    // Make API call to the serverless API
+    const data = await fetch("/api/user-payment", { method: "POST" }).then(
+      (res) => res.json()
+    );
+
+    let options = {
+      key: process.env.NEXT_PUBLIC_RAZOR_PAY_ID,
+      name: "Just-nyay Pvt Ltd",
+      order_id: data.id,
+      currnecy: data.currency,
+      amount: 699,
+      description: "Payment for just-nyay",
+      image:
+        "https://justnyay.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      handler: async function (response: any) {
+        // Validate payment at server - using webhooks is a better idea.
+        const razorpayResponse = {
+          orderCreationId: data.order_id,
+          razorpayPaymentId: response.razorpay_payment_id,
+          razorpayOrderId: response.razorpay_order_id,
+          razorpaySignature: response.razorpay_signature,
+        };
+
+        const success = await fetch("/api/success", {
+          method: "POST",
+          mode: "cors",
+          credentials: "same-origin",
+          referrerPolicy: "no-referrer",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(razorpayResponse),
+        }).then((res) => res.json());
+
+        if (success.msg == "success") {
+          toast("Payment Successful", {
+            type: "success",
+          });
+
+          const docRef = doc(db, "lawyers", docId);
+          await updateDoc(docRef, {
+            payment: true,
+          }).then(() => router.push("/login/lawyer"));
+        }
+      },
+      prefill: {
+        name: values.firstname + " " + values.lastname,
+        email: values.email,
+        contact: `+91${values.phoneNumber.substr(
+          values.phoneNumber.length - 10
+        )}`,
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+
   return (
     <div className={styles.lawyer_signup_form}>
       <Formik
@@ -115,11 +208,12 @@ const LawyerSignup: React.FC<Props> = () => {
             )}`,
           })
             .then((docRef) => {
-              toast("Request sent, check email", {
+              toast("Continue Payment to proceed", {
                 type: "success",
               });
 
-              router.push("/login/lawyer");
+              makePayment(docRef.id, values);
+
               setLoading(false);
             })
             .catch((err) => {

@@ -21,10 +21,24 @@ const SecondOpinion: React.FC<Props> = () => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
-      <PageHeading title="Second Opinion" />
+      <div
+        className="page-heading"
+        style={{ textAlign: "left", fontWeight: 600 }}
+      >
+        <Image
+          alt=""
+          src="/images/layer.jpg"
+          layout="fill"
+          objectFit="cover"
+          style={{ zIndex: "-1" }}
+        />
+        <div className="container">Second Opinion</div>
+      </div>
       <div className="container">
         <h3 className={styles.main_heading}>
-          Can I Get a Second Opinion for My Legal Case?
+          Can I Get a{" "}
+          <span style={{ textDecoration: "underline" }}>Second Opinion</span>{" "}
+          for My Legal Case?
         </h3>
         <ul className={styles.para}>
           <li>1. Is your case also going on in court?</li>

@@ -179,6 +179,17 @@ body {
   text-rendering: optimizeLegibility;
 
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+
+  &::-webkit-scrollbar {
+    width: 6px; /* Remove scrollbar space */
+    background: var(
+      --background-medium
+    ); /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+  }
 }
 
 .container {

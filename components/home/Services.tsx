@@ -63,7 +63,7 @@ const Services: React.FC<Props> = () => {
               objectPosition="right top"
               layout="fill"
               objectFit="cover"
-              src="/images/service-1.jpeg"
+              src="/images/sub.jpg"
               alt=""
             />
           </div>

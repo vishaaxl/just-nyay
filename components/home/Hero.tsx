@@ -252,10 +252,22 @@ const Hero: React.FC<Props> = () => {
               )}
             </AnimatePresence>
           </motion.li>
-          <li onClick={() => router.push("/legal-reporter")}>
+          <li
+            onClick={() => router.push("/legal-reporter")}
+            style={{
+              color: router.asPath.includes("legal-reporter") ? "#b68c5a" : "",
+            }}
+          >
             Legal Reporter TV
           </li>
-          <li onClick={() => router.push("/about")}>About Us</li>
+          <li
+            onClick={() => router.push("/about")}
+            style={{
+              color: router.asPath.includes("about") ? "#b68c5a" : "",
+            }}
+          >
+            About Us
+          </li>
         </motion.ul>
 
         <div

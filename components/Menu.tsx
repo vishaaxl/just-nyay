@@ -207,6 +207,9 @@ const Menu: React.FC<Props> = ({ setMobileMenu }) => {
               setMobileMenu(false);
               router.push("/second-opinion");
             }}
+            style={{
+              color: router.asPath.includes("second-opinion") ? "#b68c5a" : "",
+            }}
           >
             Second Opinion
           </span>
@@ -267,6 +270,9 @@ const Menu: React.FC<Props> = ({ setMobileMenu }) => {
               router.push("/legal-reporter");
               setMobileMenu(false);
             }}
+            style={{
+              color: router.asPath.includes("legal-reporter") ? "#b68c5a" : "",
+            }}
           >
             Legal Reporter TV
           </span>
@@ -275,6 +281,9 @@ const Menu: React.FC<Props> = ({ setMobileMenu }) => {
             onClick={() => {
               setMobileMenu(false);
               router.push("/about");
+            }}
+            style={{
+              color: router.asPath.includes("about") ? "#b68c5a" : "",
             }}
           >
             About Us
