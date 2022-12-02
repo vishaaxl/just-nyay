@@ -23,7 +23,13 @@ const SecondOpinion: React.FC<Props> = () => {
       </Head>
       <div
         className="page-heading"
-        style={{ textAlign: "left", fontWeight: 600 }}
+        style={{
+          textAlign: "left",
+          fontWeight: 600,
+          minHeight: "20vh",
+          display: "flex",
+          alignItems: "center",
+        }}
       >
         <Image
           alt=""
