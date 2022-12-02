@@ -256,6 +256,8 @@ const LawyerSignup: React.FC<Props> = () => {
                     </option>
                   ))}
                 </Input>
+              </div>
+              <div className={styles.input_block}>
                 <Input name="year" placeholder="Year" />
               </div>
             </div>
