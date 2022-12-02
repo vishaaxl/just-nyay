@@ -324,7 +324,71 @@
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
+    gap: 2rem;
   }
+
+  .about_title {
+    font-weight: 700;
+    font-family: var(--font-accent);
+    margin-bottom: 1rem;
+  }
+
+  .about_sub_title {
+    font-weight: 700;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  .about_description {
+    margin-bottom: 1.75rem;
+    @media (min-width: 425px) {
+      max-width: 90%;
+    }
+  }
+
+  .count_container {
+    margin-bottom: 3rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--background-light);
+    h1 {
+      line-height: 1;
+      font-family: var(--font-accent);
+      font-weight: 700;
+    }
+    p {
+      font-weight: 500;
+      opacity: 0.8;
+    }
+  }
+
+  .about_images {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .about_image_one {
+      position: relative;
+      height: 250px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .about_image_two {
+      position: relative;
+      height: 350px;
+      width: 100%;
+      max-width: 400;
+
+      top: 2rem;
+    }
+  }
+}
+.about_two {
+  line-height: 1.8;
+  padding: 5rem 0;
 
   .about_title {
     font-weight: 700;
