@@ -3,6 +3,7 @@ import PriceChart from "components/Pricing";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "components/home/Home.module.scss";
+import Hero from "components/home/Hero";
 
 interface Props {}
 
@@ -21,6 +22,7 @@ const SecondOpinion: React.FC<Props> = () => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+      <Hero />
       <section
         className="container"
         style={{ lineHeight: 1.6, marginBottom: "2rem" }}

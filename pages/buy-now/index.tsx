@@ -3,6 +3,7 @@ import PriceChart from "components/Pricing";
 import type { NextPage } from "next";
 import Faqs from "components/home/Faqs";
 import Services from "components/home/Services";
+import Hero from "components/home/Hero";
 
 const faqs = [
   {
@@ -36,6 +37,7 @@ const faqs = [
 const Index: NextPage = () => {
   return (
     <>
+      <Hero />
       <PageHeading title="Consult Now" />
 
       <PriceChart />

@@ -30,6 +30,7 @@ import UserProfile from "components/forms/UserProfile";
 import LawyerProfile from "components/forms/LawyerProfile";
 import Stats from "components/dashboard/Stats";
 import OrdersTable from "components/dashboard/Table";
+import Hero from "components/home/Hero";
 
 const LawyerDashboard: NextPage = () => {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -128,62 +129,65 @@ const LawyerDashboard: NextPage = () => {
   ];
 
   return (
-    <main style={{ background: "rgba(0,0,0,0.02)" }}>
-      {currentPage == "dashboard" && (
-        <section className="container" style={{ padding: " 2em 0" }}>
-          <div className={styles.page_wrapper}>
-            {/* sidebar */}
-            <SidebarDesktop
-              setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
+    <>
+      <Hero />
+      <main style={{ background: "rgba(0,0,0,0.02)" }}>
+        {currentPage == "dashboard" && (
+          <section className="container" style={{ padding: " 2em 0" }}>
+            <div className={styles.page_wrapper}>
+              {/* sidebar */}
+              <SidebarDesktop
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
 
-            {/* content */}
-            <div className={styles.content}>
-              {/* <div className={styles.stat_grid}>
+              {/* content */}
+              <div className={styles.content}>
+                {/* <div className={styles.stat_grid}>
                 <Stats title="Cases" icon={<MdGavel />} />
                 <Stats title="Clients" icon={<MdPerson />} color="#735E45" />
               </div> */}
-              {orders && (
-                <OrdersTable
-                  tableData={orders}
-                  tableColumns={orderColumn}
-                  tableName="Assigned Cases"
-                  path="orders"
-                  lawyerId={userInfo.id}
-                />
-              )}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {currentPage == "profile" && (
-        <section className="container" style={{ padding: " 2em 0" }}>
-          <div className={styles.page_wrapper}>
-            {/* sidebar */}
-            <SidebarDesktop
-              setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
-
-            {/* page content */}
-            <div className={styles.content}>
-              <div className={styles.header}>
-                <h2 className="header">Hello, {userInfo.firstname}</h2>
-                <span>Update Profile</span>
-              </div>
-
-              {/* transactions */}
-
-              <div className={styles.white_wrapper}>
-                <LawyerProfile />
+                {orders && (
+                  <OrdersTable
+                    tableData={orders}
+                    tableColumns={orderColumn}
+                    tableName="Assigned Cases"
+                    path="orders"
+                    lawyerId={userInfo.id}
+                  />
+                )}
               </div>
             </div>
-          </div>
-        </section>
-      )}
-    </main>
+          </section>
+        )}
+
+        {currentPage == "profile" && (
+          <section className="container" style={{ padding: " 2em 0" }}>
+            <div className={styles.page_wrapper}>
+              {/* sidebar */}
+              <SidebarDesktop
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+
+              {/* page content */}
+              <div className={styles.content}>
+                <div className={styles.header}>
+                  <h2 className="header">Hello, {userInfo.firstname}</h2>
+                  <span>Update Profile</span>
+                </div>
+
+                {/* transactions */}
+
+                <div className={styles.white_wrapper}>
+                  <LawyerProfile />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+    </>
   );
 };
 

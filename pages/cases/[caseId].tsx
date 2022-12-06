@@ -10,6 +10,7 @@ import Image from "next/image";
 import ConsultationForm from "components/forms/ConsultationForm";
 import Input from "components/Input";
 import { Form, Formik } from "formik";
+import Hero from "components/home/Hero";
 
 interface Props {
   caseData: DocumentData;
@@ -37,6 +38,7 @@ const Page: React.FC<Props> = ({ caseData }) => {
         />
         <meta name="keywords" content={`legal, reporter, case, court`}></meta>
       </Head>
+      <Hero />
       <section className="container" style={{ padding: " 2em 0" }}>
         <div className={styles.header}>
           <h2 className="header">

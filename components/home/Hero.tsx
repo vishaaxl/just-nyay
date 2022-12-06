@@ -10,28 +10,6 @@ import { useRouter } from "next/router";
 
 interface Props {}
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-const listItem = {
-  hidden: { opacity: 0, x: 120 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-};
-
 const lawyers = [
   {
     id: 0,
@@ -162,9 +140,10 @@ const Hero: React.FC<Props> = () => {
 
   return (
     <div
-      className={`${styles.hero} ${router.asPath == "/" && styles.hero_height}`}
+      // ${router.asPath == "/" && styles.hero_height}
+      className={`${styles.hero} `}
     >
-      {router.asPath == "/" && (
+      {/* {router.asPath == "/" && (
         <div
           className={styles.bg_wrap}
           style={{ opacity: mobileMenu ? 0.8 : 1 }}
@@ -176,8 +155,7 @@ const Hero: React.FC<Props> = () => {
             alt=""
           />
         </div>
-      )}
-
+      )} */}
       <nav className={styles.nav}>
         <GiHamburgerMenu
           className={styles.ham_icon}
@@ -286,8 +264,7 @@ const Hero: React.FC<Props> = () => {
       <AnimatePresence exitBeforeEnter>
         {mobileMenu && <Menu setMobileMenu={setMobileMenu} />}
       </AnimatePresence>
-
-      {router.asPath == "/" && (
+      {/* {router.asPath == "/" && (
         <div className="container">
           <motion.div
             className={styles.hero_content}
@@ -321,7 +298,7 @@ const Hero: React.FC<Props> = () => {
             </motion.div>
           </motion.div>
         </div>
-      )}
+      )} */}
 
       <div className={styles.next}></div>
     </div>

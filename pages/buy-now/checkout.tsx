@@ -22,6 +22,7 @@ import {
 } from "firebase/firestore";
 import { db } from "firebase.config";
 import { useRouter } from "next/router";
+import Hero from "components/home/Hero";
 
 interface SummaryProps {
   title: string;
@@ -276,74 +277,80 @@ const Login: NextPage = () => {
   };
 
   return (
-    <section className="container">
-      <div className={styles.checkout_wrapper}>
-        <div className={styles.checkout_form}>
-          <Header />
-          <span className={styles.checkout_form_heading}>
-            Personal <span>Details</span>
-          </span>
-          <CheckoutForm />
-        </div>
-
-        {/* summary section */}
-        <div className={styles.checkout_summary}>
-          <div className="input-block custom-input">
-            <label htmlFor="promo">Have a promocode?</label>
-            <input id="promo" placeholder="Enter promocode" />
-
-            <div className="error"></div>
+    <>
+      <Hero />
+      <section className="container">
+        <div className={styles.checkout_wrapper}>
+          <div className={styles.checkout_form}>
+            <Header />
+            <span className={styles.checkout_form_heading}>
+              Personal <span>Details</span>
+            </span>
+            <CheckoutForm />
           </div>
 
-          {/* summary */}
-          <span className={styles.summary}>Summary</span>
+          {/* summary section */}
+          <div className={styles.checkout_summary}>
+            <div className="input-block custom-input">
+              <label htmlFor="promo">Have a promocode?</label>
+              <input id="promo" placeholder="Enter promocode" />
 
-          <SummaryLine
-            title="Base Price"
-            price={Math.round(cart.price - (cart.price / 100) * 18)}
-          />
-          <SummaryLine title="Discount" price={0.0} />
-          <SummaryLine
-            title="GST (18%)"
-            price={((Number(cart.price) / 100) * 18).toFixed(2)}
-          />
-
-          {/* header reuse */}
-          <div className={styles.header} style={{ alignItems: "center" }}>
-            <div className={styles.header_section}>
-              <span>Total</span>
+              <div className="error"></div>
             </div>
-            <div className={styles.header_section}>
-              <em className={styles.header_price}> &#8377; {cart.price}.00</em>
-            </div>
-          </div>
 
-          {/* checkout button */}
-          <div
-            onClick={() => checkSubmit() && checkout()}
-            className="primary-btn"
-            style={{
-              background: "#624BD6",
-              width: "100%",
-              padding: "1rem 0",
-              textAlign: "center",
-              opacity: submitting ? 0.5 : 1,
-            }}
-          >
-            {submitting ? "Please wait" : "Checkout"}
-          </div>
+            {/* summary */}
+            <span className={styles.summary}>Summary</span>
 
-          <div className={styles.summary_secure}>
-            <Image
-              src="/images/secure.png"
-              alt=""
-              layout="fill"
-              objectFit="contain"
+            <SummaryLine
+              title="Base Price"
+              price={Math.round(cart.price - (cart.price / 100) * 18)}
             />
+            <SummaryLine title="Discount" price={0.0} />
+            <SummaryLine
+              title="GST (18%)"
+              price={((Number(cart.price) / 100) * 18).toFixed(2)}
+            />
+
+            {/* header reuse */}
+            <div className={styles.header} style={{ alignItems: "center" }}>
+              <div className={styles.header_section}>
+                <span>Total</span>
+              </div>
+              <div className={styles.header_section}>
+                <em className={styles.header_price}>
+                  {" "}
+                  &#8377; {cart.price}.00
+                </em>
+              </div>
+            </div>
+
+            {/* checkout button */}
+            <div
+              onClick={() => checkSubmit() && checkout()}
+              className="primary-btn"
+              style={{
+                background: "#624BD6",
+                width: "100%",
+                padding: "1rem 0",
+                textAlign: "center",
+                opacity: submitting ? 0.5 : 1,
+              }}
+            >
+              {submitting ? "Please wait" : "Checkout"}
+            </div>
+
+            <div className={styles.summary_secure}>
+              <Image
+                src="/images/secure.png"
+                alt=""
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -245,8 +245,93 @@ If you wish to seek online Muslim law consultation then Just Nyay is the best pl
     id: 33,
     title: "labour-and-service",
     heading: "Connect with Best Labour & Service Lawyers / Advocates in India",
-    content:
-      "It is seen a lot these days that your company starts treating you like enemies, sometimes will stop your salary, sometimes arbitrarily fire you from the job or transfer you anywhere arbitrarily. Under labour law, you have all the rights that can prevent your company from acting arbitrarily. Use Just Nyay to hire a top service and employment lawyer or a labor lawyer in India for matters like recovery of salary dues, illegal termination, sexual harassment and Central Administrative Tribunal (CAT) matters.",
+    content: `
+    <p>
+Labour laws protect the rights of employees working in government or private organizations. The laws are intended to both empower and protect workers. The law serves as a tool to increase worker safety. The following aspects are governed by labour law:
+    <br/>
+    <br/>
+    <ul>
+    <li>
+    •	Salary and wage
+    </li>
+    <li>
+•	Compensation
+    </li>
+    <li>
+•	Decent working hours
+    </li>
+    <li>
+•	Employment security
+    </li>
+    <li>
+•	Maternity protection
+    </li>
+    <li>
+•	Safe working environment
+    </li>
+    <li>
+•	Employee leave
+    </li>
+    <li>
+•	Pension
+    </li>
+    <li>
+•	Forced labour
+    </li>
+    <li>
+•	Child labour
+    </li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why is labour law important?
+    </h3>
+    <br/>
+Labour laws ensure that employees have a safe place to work in order to benefit themselves and the organisation as a whole.
+    <br/>
+    <br/>
+    <ul>
+<li>•	Labour law ensures that workers are aware of their rights.
+</li>
+<li>•	It ensures that an employee's rights are protected in the workplace.
+</li>
+<li>•	The law protects employees from being exploited by their employers.
+</li>
+<li>•	The law ensures job security by ensuring that they are not fired for any reason.
+</li>
+<li>•	Labour law promotes a positive working environment for employees.
+</li>
+<li>•	The law ensures that employees are compensated appropriately for their competence.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+
+Benefits of online Labour law consultation with Just Nyay
+
+    </h3>
+    <br/>
+    <br/>
+Given that employees may not have enough time to visit courts and contact lawyers about their rights, Just Nyay is providing an online platform to facilitate online labour law consultation for employees. We connect you with labour law specialists that can advise you on all of your employee rights.
+    <br/>
+    <br/>
+    <ul>
+<li>•	We provide online labour law counselling services through professional lawyers who are labour rights and law experts with years of experience in this field.
+</li>
+<li>•	Our online labour law consultations provide a more convenient and secure alternative for discussing your case right from the comfort of your own home.
+</li>
+<li>•	We provide personalised employee rights legal services through qualified lawyers who will discuss your case with you one-on-one.
+</li>
+<li>•	Our online labour law consultation is a welcoming place in which to discuss your case in complete confidentiality.
+</li>
+
+    </ul>
+  
+    </p>
+    `,
   },
   {
     id: 36,
@@ -617,6 +702,63 @@ Just Nyay is the best place to connect with the top consumer court lawyers. You 
     `,
   },
   {
+    id: 68,
+    title: "cheque-bounce-notice-",
+    heading: "Connect with Best Cheque Bounce Lawyers / Advocates in India",
+    content: `
+    <p>
+ When a cheque is presented to the bank for payment and is rejected, the bank will send the drawer of the cheque a notice known as a "cheque bounce notice." Typically, the note explains why the cheque was returned as well as what the drawer can do to make things right.
+    <br/>
+    <br/>
+    <h3>
+   Discover the causes of cheque bounces
+    </h3>
+    <br/>
+  When a cheque is presented to the bank for payment and returned, it may be because there are not enough funds in the drawer's account, the signature on the cheque does not match the drawer's signature, or for any other reason. A cheque can bounce or be dishonoured for a number of reasons, including:
+    <br/>
+    <br/>
+    <ul>
+   
+  <li>•	There is not enough money in the account of the individual issuing the cheque.
+</li>
+<li>•	When the signature on the cheque does not line up.
+</li>
+<li>•	When the drawer asks the bank to halt the transaction and withhold paying for already-issued cheques.
+</li>
+<li>•	If it is a stale cheque, that is, it has been presented to the bank three months after it was issued.
+</li>
+<li>•	If the cheque has been overwritten.
+</li>
+<li>•	If the amount written in words and the number on the cheque disagree.
+</li>
+<li>•	If the cheque is mutilated or damaged.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why connect with Just Nyay lawyers for cheque bounce notice issues?
+    </h3>
+    <br/>
+    <br/>
+   Just Nyay is one of the best legal service providers In India, cheque bounce is recognised as a legal offence, and section 138 of the Negotiable Instruments Act, 1881, governs the offence. You need a cheque bounce lawyer if you have problems with cheque dishonour or bounce. You will find expert cheque bounce lawyers for your needs by contacting Just Nyay. 
+    <br/>
+    <br/>
+    <ul>
+   <li>•	We offer exceptional services for drafting and mailing a proper, well-organized response to a legal notification for cheque bounce
+</li>
+<li>•	We provide a single click-through solution to all of your cheque bounce issues. 
+</li>
+<li>•	Our lawyers listen to all of your legal concerns and provide guidance on how to approach them. Every step of the way, we make sure to make dealing with legal concerns easier for you!
+</li>
+
+
+
+    </ul>
+    </p>
+    `,
+  },
+  {
     id: 69,
     title: "cheque-bounce",
     heading: "Connect with Best Cheque Bounce Lawyers / Advocates in India",
@@ -803,6 +945,69 @@ Charting a clear course forward in light of the numerous issues facing the armed
   },
   {
     id: 89,
+    title: "divorce-notice",
+    heading: "Connect with Best divorce Lawyers / Advocates in India",
+    content: `
+    <p>
+    <h3>Divorce notice</h3>
+A divorce notice is a formal document that any spouse in a marriage can use to dissolve their union. A legal notice of divorce makes it very obvious that the divorcing spouse does not intend to keep the marriage going and instead wants to end it.
+    <br/>
+    <br/>
+    <h3>
+How to send a divorce notice legally?
+    </h3>
+    <br/>
+The steps for delivering a divorce legal notification are as follows:
+    <br/>
+    <br/>
+    <ul>
+<li>•		First, speak with a divorce lawyer who has a strong background in drafting and legal knowledge
+</li>
+<li>•		Names, addresses, obstacles and issues encountered, etc., together with all the pertinent information should be explained in detail to the lawyer.
+<li>•		Your attorney will carefully review the details you have provided and take the necessary notes during the conversation with you.
+</li>
+<li>•		The notice will then be drafted by the attorney and formally signed.
+</li>
+<li>•		The notice is then delivered to the parties by courier, registered mail, or speed mail.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+What assistance may a lawyer provide with the divorce notice?
+    </h3>
+    <br/>
+    <br/>
+Everyone involved experiences stress throughout a divorce. The best approach to lessen the stress of a divorce is to hire an attorney to handle it. The lawyer will take care of all the paperwork on the issue. You can get professional advise on how to handle your divorce from a seasoned divorce lawyer of Just Nyay. With our divorce attorneys, who are knowledgeable about divorce laws, you can discuss anything pertaining to your case.
+  <br/>
+    <br/>
+    <h3>
+What divorce-related services does Just Nyay provide?
+    </h3>
+    <br/>
+    <br/>
+    You can access discovering competent attorneys who are specialists in legal notice for divorce with Just Nyay. The following is a list of our whole range of end-to-end solutions:
+     <br/>
+    <br/>
+    <ul>
+<li>•	You can seek expert advice on sending legal divorce notice.
+</li>
+<li>•	Our attorneys are qualified to advise you on any divorce-related matters.
+</li>
+<li>•	For your divorce dispute, our attorneys offer individualised legal advice.
+</li>
+<li>•	We give one-on-one counselling on situations and preserve complete secrecy for all parties.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    Contact us if you have any questions about divorce or sending divorce notice. Please get in touch with us by leaving comments on our site.
+    </p>
+    `,
+  },
+  {
+    id: 88,
     title: "marriage-registration",
     heading:
       "Connect with Best marriage-regisration Lawyers / Advocates in India",
@@ -858,11 +1063,244 @@ A marriage registration certificate brings in several benefits such as:
     `,
   },
   {
+    id: 90,
+    title: "faulty-product-notice",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+You have the right to replace or return a product and request a refund if you received one that is faulty, defective, or otherwise damaged. The Consumer Protection Act 1986 deals with consumer complaints and finds solutions for faulty or damaged goods. The Act shields consumers from unfair and aggressive commercial activities.
+    <br/>
+    <br/>
+    <h3>
+When is a faulty product notice filed?
+    </h3>
+    <br/>
+ Under several conditions, including the following, a consumer may submit a notice of a defective product:
+    <br/>
+    <br/>
+    <ul>
+<li>•	You can file a notice against the seller to receive a refund and compensation if your consumer rights have been violated and you have received faulty goods.
+</li>
+<li>•	If there is a quality or standard issue with the goods you got, you may file a faulty product notice.
+</li>
+<li>•	To get a refund in the event that a trader or service provider charged a surplus amount, a notice may be sent.
+</li>
+<li>•	You can file a legal complaint if a company gives you a dangerous product that endangers public safety and lives.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+How can Just Nyay help you with faulty product notice?
+    </h3>
+    <br/>
+    <br/>
+Just Nyay is the best platform for you if you're looking for the top attorneys who can provide you with faulty product notice counsel. Our lawyers handle a wide range of issues including product liability, reimbursement, consumer scam, deceptive advertising, and other business frauds. We can help you choose the top attorney to handle all of your consumer-related legal matters.
+    <br/>
+    <br/>
+    <ul>
+<li>•	We have well regarded attorneys who specialise in this area. We put you in touch with trustworthy lawyers so you can go over all of your legal needs.
+</li>
+<li>•	You can have a secure, private online consultation with one of our attorneys. We provide individualised situational counselling while maintaining your privacy.
+</li>
+<li>•	Our experienced lawyers will provide you with important information on everything pertaining to the refund and reimbursement of products.
+</li>
+
+    </ul>
+    <br/>
+    So, if you are facing the issue of faulty products and want to serve a legal notice, please contact us. We will do everything possible to offer you great help.
+    </p>
+    `,
+  },
+  {
     id: 87,
     title: "international-law",
     heading: "Connect with Best International Law Lawyers / Advocates in India",
     content:
       "Setting up a business from India to another country is a complicated process. Also, you will need an experienced international affairs lawyer to understand the law of other countries and to deal with the legal problem that arises.Connect with Just Nyay  to hire a top international lawyer in India for issues like International Commercial and Contract disputes, Cross Border disputes, Litigation Before Courts of Law Globally, International Mediation & Arbitration, Shipping Arbitration and disputes, Enforcement of international judgments in India and abroad, Personal injury claims after an accident outside of India and Family law disputes involving overseas property. ",
+  },
+  {
+    id: 90,
+    title: "international-law",
+    heading: "Connect with Best RecoveryLawyers / Advocates in India",
+    content: `
+    <p>
+A defaulter party who borrows money from the lender party and is unable to return it or repay it within the specified period is sent a recovery notice. Anybody, including individuals, banks, companies, financial institutions, partnership firms, sole proprietorship firms, traders, etc., may launch a case for recovery.
+    <br/>
+    <br/>
+    A lawsuit for the recovery of money under Order IV of the Code of Civil Procedure is one of the legal steps one might take to reclaim money. In this scenario, the lender party notifies the party in default in writing of the required payment amount. If the debtor doesn't reply to the notice, the lender party may file a claim against them.
+    <br/>
+    <br/>
+    <h3>
+What assistance may a lawyer provide with the recovery notice?
+    </h3>
+    <br/>
+Throughout a money recovery case, tensions prevail for all parties concerned. Hiring an attorney to handle a recovery issue is the best way to reduce its stress, in cases like these. People confronting recovery cases will benefit highly from the services of Just Nyay. One can talk about everything relating to their case with our recovery attorneys that are well-versed with recovery laws.
+    <br/>
+    <br/>
+
+    <h3>
+    Services provided by Just Nyay lawyers in issues of recovery notice?
+    </h3>
+    <br/>
+    <br/>
+    People look for recovery attorneys since these problems are complicated and challenging to comprehend. Just Nyay provides capable legal assistance in recovery cases through attorneys and counsellors with experience in this field. We match clients with attorneys who can quickly and effectively handle recovery issues and help them recover the money well on time. 
+    <br/>
+    <ul>
+<li>•	Recovery notices are skillfully crafted by our attorneys.
+</li>
+<li>•	Our experienced attorneys will give you important information about everything related to the recovery notice.
+</li>
+<li>•	Our counsellors make sure you are following the right procedures in order to receive justice and your payment on time.
+</li>
+<li>•	As a kind of legal concierge, we provide you with access to lawyers with experience in this field as well as their contact details.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+So, if you have any inquiries concerning issuing recovery notice, get in touch with us. 
+    </p>
+    `,
+  },
+  {
+    id: 91,
+    title: "refund-of-security-notice",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+A security deposit is money that is deposited with another party and is repaid after the agreement period is over, subject to the terms and conditions outlined in the parties' agreement.
+    <br/>
+    <br/>
+  A formal notification to recover money from the second party who owes money to the first party is known as a refund of security notice. Anyone can file a legal notice for a money refund from a landlord, dealer, business, bank, etc.
+    <br/>
+    <br/>
+    <h3>
+When can you send a refund of security notice?
+    </h3>
+    <br/>
+Under the following conditions, you may send a notice of refund of security for the security amount:
+    <br/>
+    <br/>
+
+
+    <ul>
+<li>•	In the event that the landlord, dealer, business, bank, etc. declines to return the security deposit.
+</li>
+<li>•	In cases when the second party makes a threat to keep a particular portion of the security deposit paid by the first party.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+    How can a lawyer help you with refund of security notice?
+    <h3/>
+     <br/>
+    <br/>
+    Your issue will be handled more quickly if you send a well-written and legally solid legal notice prepared by a qualified attorney. A lawyer will create the legal notification for the reimbursement of security money and include all the pertinent information. To guarantee that your legal notice for recovery is sent appropriately and that you receive the money on time, it is crucial to hire a skilled recovery lawyer.
+    <br/>
+    <br/>
+    <h3>
+    How can Just Nyay help you with refund of security notice?
+    <h3/>
+    <br/>
+    <br/>
+    Because these issues are complex and difficult to understand, people seek recovery attorneys. Through lawyers and counsellors with expertise in recovery matters, Just Nyay offers competent legal support in recovery cases. We connect clients with lawyers who can resolve recovery matters in a timely and efficient manner. You should avail of our services for the following reasons:
+    <br/>
+    <br/>
+    <ul>
+    <li>
+    •	Refund of security notices are drafted with expertise, thanks to our attorneys.
+    </li>
+    <li>
+    •	Important information on everything relating to the refund of security notice will be communicated to you by our knowledgeable lawyers.
+    </li>
+    <li>
+   •	Our counsellors make sure you are taking the proper steps to receive justice and receive your security deposit on schedule.
+    </li>
+    </ul>
+
+    </p>
+    `,
+  },
+  {
+    id: 92,
+    title: "tenant-eviction-notice",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+A tenant eviction notice is a formal letter that the landlord sends to the tenant outlining the rental agreement's termination or breach and requesting that the tenant vacate the property within a specified time.
+    <br/>
+    <br/>
+
+    <h3>
+What are the justifications for evicting a tenant?
+    </h3>
+    <br/>
+The following situations allow the landlord to issue a valid tenant eviction notice:
+    <br/>
+    <br/>
+
+
+    <ul>
+<li>•	The tenant stays on the premises even after the renting time has ended.
+</li>
+<li>•	If the renter has seriously damaged the landlord's property, the latter may issue a notice.
+</li>
+<li>•	The landlord has the right to ask the renter to leave the property if they need it for personal reasons.
+</li>
+<li>•	The tenant may be asked to leave if the landlord needs to demolish the current building to build a new one.
+</li>
+<li>•	The landlord may issue a notice if the tenant has used the rental property for illegal purposes.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Eviction procedure for a tenant
+    </h3>
+     <br/>
+    <br/>
+After determining the basis for the eviction, the tenant can be removed using the procedure described below:
+  
+    <br/>
+    <br/>
+
+    <ul>
+    <li>
+   •	A tenant must be served with an eviction notice after it has been filed in a court with appropriate jurisdiction.
+    </li>
+    <li>
+   •	If the tenant objects to the eviction, the landlord must launch a lawsuit against them.
+    </li>
+    <li>
+•	The tenant must vacate the rental property after the court hears from both parties and issues a final legal notice of eviction.
+    </li>
+    </ul>
+    <h3>
+    How can Just Nyay assist you with a tenant eviction notice?
+    </h3>
+    <br/>
+    Just Nyay offers skilled legal advice from attorneys with years of knowledge in the tenancy laws. We are the best platform to provide you with all the legal answers if you want to issue a legitimate tenant eviction notice.
+    <ul>
+    <li>
+    •	We have skilled lawyers to draft tenant eviction notice, who will also walk you through the process.
+    </li>
+    <li>
+•	We make communication with lawyers as easy as possible for you. 
+    </li>
+    <li>
+•	We connect you with reputable attorneys to discuss all your legal requirements.
+    </li>
+    </ul>
+
+So join us and discover how simple and convenient it is to handle all legal issues!
+
+    </p>
+    `,
   },
 ];
 

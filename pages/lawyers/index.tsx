@@ -7,6 +7,7 @@ import PricingSection from "components/Pricing";
 import Head from "next/head";
 import FAQs from "components/home/Faqs";
 import Services from "components/home/Services";
+import Hero from "components/home/Hero";
 
 const faqs = [
   {
@@ -50,6 +51,7 @@ const index: React.FC<Props> = () => {
         />
         <meta name="keywords" content={`legal, reporter, case, court`}></meta>
       </Head>
+      <Hero />
       <PageHeading title="Book Consultation" />
 
       <PricingSection />

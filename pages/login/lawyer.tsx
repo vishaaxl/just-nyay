@@ -4,6 +4,7 @@ import LawyerLogin from "components/forms/LawyerLogin";
 import { useEffect } from "react";
 import { useAuth } from "context/User";
 import { useRouter } from "next/router";
+import Hero from "components/home/Hero";
 
 const Lawyer: NextPage = () => {
   const { user } = useAuth();
@@ -15,16 +16,19 @@ const Lawyer: NextPage = () => {
     }
   }, [user, router]);
   return (
-    <section style={{ position: "relative" }} className="page-padding">
-      <Image
-        alt=""
-        src="/images/hero.jpg"
-        layout="fill"
-        objectFit="cover"
-        style={{ zIndex: "-1" }}
-      />
-      <LawyerLogin />
-    </section>
+    <>
+      <Hero />
+      <section style={{ position: "relative" }} className="page-padding">
+        <Image
+          alt=""
+          src="/images/hero.jpg"
+          layout="fill"
+          objectFit="cover"
+          style={{ zIndex: "-1" }}
+        />
+        <LawyerLogin />
+      </section>
+    </>
   );
 };
 

@@ -33,6 +33,7 @@ import UserProfile from "components/forms/UserProfile";
 import Image from "next/image";
 import { BsCart2, BsFolderX } from "react-icons/bs";
 import { signOut } from "firebase/auth";
+import Hero from "components/home/Hero";
 
 const User: NextPage = ({}) => {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -149,63 +150,65 @@ const User: NextPage = ({}) => {
       });
 
     return (
-      <div style={{ overflow: "scroll" }}>
-        <table
-          {...getTableProps()}
-          style={{
-            width: "100%",
-            textAlign: "left",
-          }}
-        >
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-                {headerGroup.headers.map((column) => {
-                  const { key, ...restColumn } = column.getHeaderProps();
-                  return (
-                    <th
-                      key={key}
-                      {...restColumn}
-                      style={{
-                        fontWeight: "600",
-                        padding: "1rem .75rem",
-                        background: "rgba(0,0,0,0.1)",
-                      }}
-                    >
-                      {column.render("Header")}
-                    </th>
-                  );
-                })}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
-              prepareRow(row);
-              const { key, ...restRowProps } = row.getRowProps();
-              return (
-                <tr key={key} {...restRowProps}>
-                  {row.cells.map((cell) => {
-                    const { key, ...restCellProps } = cell.getCellProps();
+      <>
+        <div style={{ overflow: "scroll" }}>
+          <table
+            {...getTableProps()}
+            style={{
+              width: "100%",
+              textAlign: "left",
+            }}
+          >
+            <thead>
+              {headerGroups.map((headerGroup) => (
+                <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+                  {headerGroup.headers.map((column) => {
+                    const { key, ...restColumn } = column.getHeaderProps();
                     return (
-                      <td
+                      <th
                         key={key}
-                        {...restCellProps}
+                        {...restColumn}
                         style={{
-                          padding: "1.75rem .75rem",
-                          borderBottom: "1px solid rgba(0,0,0,0.1)",
+                          fontWeight: "600",
+                          padding: "1rem .75rem",
+                          background: "rgba(0,0,0,0.1)",
                         }}
                       >
-                        {cell.render("Cell")}
-                      </td>
+                        {column.render("Header")}
+                      </th>
                     );
                   })}
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+              ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+              {rows.map((row) => {
+                prepareRow(row);
+                const { key, ...restRowProps } = row.getRowProps();
+                return (
+                  <tr key={key} {...restRowProps}>
+                    {row.cells.map((cell) => {
+                      const { key, ...restCellProps } = cell.getCellProps();
+                      return (
+                        <td
+                          key={key}
+                          {...restCellProps}
+                          style={{
+                            padding: "1.75rem .75rem",
+                            borderBottom: "1px solid rgba(0,0,0,0.1)",
+                          }}
+                        >
+                          {cell.render("Cell")}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </>
     );
   };
 
@@ -222,6 +225,7 @@ const User: NextPage = ({}) => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+      <Hero />
 
       {currentPage == "profile" && (
         <section className="container" style={{ padding: " 2em 0" }}>

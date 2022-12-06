@@ -1,3 +1,4 @@
+import Hero from "components/home/Hero";
 import PageHeading from "components/PageHeading";
 import VideoGrid from "components/pages/VideoGrid";
 import type { GetServerSideProps, NextPage } from "next";
@@ -27,6 +28,7 @@ const LeagalReporter: NextPage = ({ data, dataTwo, dataThree }: any) => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+      <Hero />
       <PageHeading title="Legal Repoter TV" />
       <div
         id="player"

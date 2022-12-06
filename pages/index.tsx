@@ -7,6 +7,7 @@ import FAQs from "components/home/Faqs";
 import Marquee from "components/home/Marquee";
 import PriceChart from "components/Pricing";
 import Head from "next/head";
+import Navigation from "components/home/Nav";
 
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -56,6 +57,9 @@ const Home: NextPage = ({ data }: any) => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+
+      <Navigation />
+
       <Cases />
       <PriceChart />
       {data && <Marquee data={data} />}

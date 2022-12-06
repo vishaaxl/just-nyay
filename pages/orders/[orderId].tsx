@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import moment from "moment";
 import { useState, useEffect } from "react";
 import { useAuth } from "context/User";
+import Hero from "components/home/Hero";
 
 interface Props {
   order: string;
@@ -173,85 +174,90 @@ const OrderDetails: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
   };
 
   return (
-    <div style={{ background: "rgba(0,0,0,0.0225)", padding: "2rem 0" }}>
-      <Main>
-        <GoBack onClick={() => router.back()}>
-          <BsCaretLeftFill className="icon" />
-          Go Back
-        </GoBack>
-        <Header
-          onClick={() =>
-            closeCase(
-              JSON.parse(order).id,
-              JSON.parse(order).status == "closed" ? "assigned" : "closed"
-            )
-          }
-        >
-          <span>Status</span>
-          <div style={{ color: "#FF8F00", background: "#FFF8F0" }}>
-            <BsDot style={{ fontSize: "2rem" }} /> {JSON.parse(order).status}
-          </div>
-        </Header>
+    <>
+      <Hero />
+      <div style={{ background: "rgba(0,0,0,0.0225)", padding: "2rem 0" }}>
+        <Main>
+          <GoBack onClick={() => router.back()}>
+            <BsCaretLeftFill className="icon" />
+            Go Back
+          </GoBack>
+          <Header
+            onClick={() =>
+              closeCase(
+                JSON.parse(order).id,
+                JSON.parse(order).status == "closed" ? "assigned" : "closed"
+              )
+            }
+          >
+            <span>Status</span>
+            <div style={{ color: "#FF8F00", background: "#FFF8F0" }}>
+              <BsDot style={{ fontSize: "2rem" }} /> {JSON.parse(order).status}
+            </div>
+          </Header>
 
-        <Content>
-          <div className="block-one">
-            <span className="id">{JSON.parse(order).id}</span>
-            <span className="problemType">{JSON.parse(order).problemType}</span>
-          </div>
+          <Content>
+            <div className="block-one">
+              <span className="id">{JSON.parse(order).id}</span>
+              <span className="problemType">
+                {JSON.parse(order).problemType}
+              </span>
+            </div>
 
-          <div className="block-two">
-            <span>Language: {JSON.parse(order).language}</span>
+            <div className="block-two">
+              <span>Language: {JSON.parse(order).language}</span>
+              <span>{JSON.parse(order).plan} minutes</span>
+              <span>
+                Due at: {moment(JSON.parse(order).date).format("MMM Do YY")}
+              </span>
+            </div>
+
+            <InvoiceDetails>
+              <div className="invoice-details">
+                <span className="small">Invoice Date:</span>
+                <span className="big">
+                  {moment(JSON.parse(order).createdAt.seconds * 1000).format(
+                    "MMM Do YY"
+                  )}
+                </span>
+              </div>
+              <div className="user-details">
+                <div className="small">Bill to</div>
+                <div className="big">
+                  {JSON.parse(user).firstname} {JSON.parse(user).lastname}
+                </div>
+                <span>{JSON.parse(user).city}</span>
+                <span>{JSON.parse(user).email}</span>
+                <span>{JSON.parse(user).phoneNumber}</span>
+              </div>
+            </InvoiceDetails>
+            <InvoiceDetails>
+              <div className="invoice-details">
+                <span className="small">Assigned Date:</span>
+                <span className="big">
+                  {moment(
+                    JSON.parse(order).lawyerAssignedAt.seconds * 1000
+                  ).format("MMM Do YY")}
+                </span>
+              </div>
+              <div className="user-details">
+                <div className="small">Lawyer</div>
+                <div className="big">
+                  {JSON.parse(lawyer).firstname} {JSON.parse(lawyer).lastname}
+                </div>
+                <span>{JSON.parse(lawyer).city}</span>
+                <span>{JSON.parse(lawyer).email}</span>
+                <span>{JSON.parse(lawyer).phoneNumber}</span>
+              </div>
+            </InvoiceDetails>
+          </Content>
+          <Total>
+            <span>Plan Minutes</span>
             <span>{JSON.parse(order).plan} minutes</span>
-            <span>
-              Due at: {moment(JSON.parse(order).date).format("MMM Do YY")}
-            </span>
-          </div>
-
-          <InvoiceDetails>
-            <div className="invoice-details">
-              <span className="small">Invoice Date:</span>
-              <span className="big">
-                {moment(JSON.parse(order).createdAt.seconds * 1000).format(
-                  "MMM Do YY"
-                )}
-              </span>
-            </div>
-            <div className="user-details">
-              <div className="small">Bill to</div>
-              <div className="big">
-                {JSON.parse(user).firstname} {JSON.parse(user).lastname}
-              </div>
-              <span>{JSON.parse(user).city}</span>
-              <span>{JSON.parse(user).email}</span>
-              <span>{JSON.parse(user).phoneNumber}</span>
-            </div>
-          </InvoiceDetails>
-          <InvoiceDetails>
-            <div className="invoice-details">
-              <span className="small">Assigned Date:</span>
-              <span className="big">
-                {moment(
-                  JSON.parse(order).lawyerAssignedAt.seconds * 1000
-                ).format("MMM Do YY")}
-              </span>
-            </div>
-            <div className="user-details">
-              <div className="small">Lawyer</div>
-              <div className="big">
-                {JSON.parse(lawyer).firstname} {JSON.parse(lawyer).lastname}
-              </div>
-              <span>{JSON.parse(lawyer).city}</span>
-              <span>{JSON.parse(lawyer).email}</span>
-              <span>{JSON.parse(lawyer).phoneNumber}</span>
-            </div>
-          </InvoiceDetails>
-        </Content>
-        <Total>
-          <span>Plan Minutes</span>
-          <span>{JSON.parse(order).plan} minutes</span>
-        </Total>
-      </Main>
-    </div>
+          </Total>
+        </Main>
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import Hero from "components/home/Hero";
 import PageHeading from "components/PageHeading";
 import Head from "next/head";
 import Image from "next/image";
@@ -21,6 +22,7 @@ const About: React.FC<Props> = () => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+      <Hero />
       <PageHeading title="About us" />
       <div className="container">
         <h3 className={styles.main_heading}>About JustNyay</h3>

@@ -7,6 +7,7 @@ import PricingSection from "components/Pricing";
 import Head from "next/head";
 import FAQs from "components/home/Faqs";
 import Services from "components/home/Services";
+import Hero from "components/home/Hero";
 
 const faqs = [
   {
@@ -51,13 +52,14 @@ const Page: React.FC<Props> = ({ title, pageContent }) => {
   return (
     <>
       <Head>
-        <title>Just Nyay | {title}</title>
+        <title>Just Nyay | Connect</title>
         <meta
           name="description"
           content="One stop solution to all your legal proplems"
         />
         <meta name="keywords" content={`legal, reporter, case, court`}></meta>
       </Head>
+      <Hero />
       <PageHeading title={title} />
       <section className="container">
         {pageContent[0] && (

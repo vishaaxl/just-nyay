@@ -1,4 +1,5 @@
 import FAQs from "components/home/Faqs";
+import Hero from "components/home/Hero";
 import Head from "next/head";
 
 import {
@@ -26,6 +27,7 @@ const Faqs: React.FC<Props> = () => {
           content="legal, reporter, case, court, solutions"
         ></meta>
       </Head>
+      <Hero />
       <FAQs questionsList={marriageFaqs} title="Family Law" />
       <FAQs questionsList={domesticViolence} title="Domestic Violence" />
       <FAQs questionsList={distributionOfProperty} title="Property" />
