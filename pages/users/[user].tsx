@@ -34,11 +34,13 @@ import Image from "next/image";
 import { BsCart2, BsFolderX } from "react-icons/bs";
 import { signOut } from "firebase/auth";
 import Hero from "components/home/Hero";
+import OrdersTable from "components/dashboard/Table";
+import { generateUid } from "utils/customId";
 
 const User: NextPage = ({}) => {
   const [currentPage, setCurrentPage] = useState("dashboard");
   const [sideMenu, setSideMenu] = useState(true);
-  const [orders, setOrders] = useState<DocumentData>([]);
+  const [orders, setOrders] = useState<any[]>([]);
 
   const { user, userInfo, updateUser } = useAuth();
   const router = useRouter();
@@ -60,7 +62,9 @@ const User: NextPage = ({}) => {
               }
 
               // update user globally
-              snapshot.forEach((doc) => updateUser(doc.data()));
+              snapshot.forEach((doc) =>
+                updateUser({ id: doc.id, ...doc.data() })
+              );
             }
           )
         : console.log("No User found"),
@@ -77,7 +81,11 @@ const User: NextPage = ({}) => {
               where("payment", "==", true)
             ),
             async (snapshot) => {
-              setOrders(snapshot.docs);
+              if (orders.length == 0) {
+                snapshot.forEach((doc) => {
+                  setOrders((prev) => [...prev, { id: doc.id, ...doc.data() }]);
+                });
+              }
             }
           )
         : console.log("No User found"),
@@ -109,7 +117,7 @@ const User: NextPage = ({}) => {
 
   const minutes = () => {
     let mins = orders.reduce(
-      (a: number, c: DocumentData) => a + Number(c.data().plan),
+      (a: number, c: DocumentData) => a + Number(c.plan),
       0
     );
 
@@ -124,90 +132,43 @@ const User: NextPage = ({}) => {
   };
 
   const Transactions = () => {
-    const data = useMemo(() => orders.map((e: DocumentData) => e.data()), []);
-    const columns = useMemo(
-      () => [
-        {
-          Header: "Plan",
-          accessor: "plan",
-        },
-        {
-          Header: "Language",
-          accessor: "language",
-        },
-        {
-          Header: "Phone No.",
-          accessor: "phoneNumber",
-        },
-        { Header: "UserID", accessor: "user" },
-      ],
-      []
-    );
-    const { getTableProps, getTableBodyProps, rows, prepareRow, headerGroups } =
-      useTable({
-        columns,
-        data,
-      });
+    const orderColumn = [
+      {
+        Header: "Order ID",
+        accessor: "uid" as const, // accessor is the "key" in the data
+      },
+      {
+        Header: "Plan",
+        accessor: "plan" as const, // accessor is the "key" in the data
+      },
+      {
+        Header: "Language",
+        accessor: "language" as const,
+      },
+      {
+        Header: "Type",
+        accessor: "problemType" as const,
+      },
+      {
+        Header: "Status",
+        accessor: "status" as const,
+      },
+    ];
 
     return (
       <>
-        <div style={{ overflow: "scroll" }}>
-          <table
-            {...getTableProps()}
-            style={{
-              width: "100%",
-              textAlign: "left",
-            }}
-          >
-            <thead>
-              {headerGroups.map((headerGroup) => (
-                <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-                  {headerGroup.headers.map((column) => {
-                    const { key, ...restColumn } = column.getHeaderProps();
-                    return (
-                      <th
-                        key={key}
-                        {...restColumn}
-                        style={{
-                          fontWeight: "600",
-                          padding: "1rem .75rem",
-                          background: "rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        {column.render("Header")}
-                      </th>
-                    );
-                  })}
-                </tr>
-              ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-              {rows.map((row) => {
-                prepareRow(row);
-                const { key, ...restRowProps } = row.getRowProps();
-                return (
-                  <tr key={key} {...restRowProps}>
-                    {row.cells.map((cell) => {
-                      const { key, ...restCellProps } = cell.getCellProps();
-                      return (
-                        <td
-                          key={key}
-                          {...restCellProps}
-                          style={{
-                            padding: "1.75rem .75rem",
-                            borderBottom: "1px solid rgba(0,0,0,0.1)",
-                          }}
-                        >
-                          {cell.render("Cell")}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+        {orders && (
+          <OrdersTable
+            tableData={orders.map((order) => ({
+              ...order,
+              uid: generateUid(order.createdAt?.seconds * 1000, order.id),
+            }))}
+            tableColumns={orderColumn}
+            tableName="Booked Cases"
+            path="invoice"
+            lawyerId={userInfo.id}
+          />
+        )}
       </>
     );
   };
@@ -270,12 +231,7 @@ const User: NextPage = ({}) => {
               </div>
 
               {/* transactions */}
-              <div className={styles.white_wrapper}>
-                <div style={{ marginTop: "1rem" }} className={styles.header}>
-                  <h2 className="header">Purchases</h2>
-                </div>
-                <Transactions />
-              </div>
+              <Transactions />
             </div>
           </div>
         </section>

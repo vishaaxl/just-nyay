@@ -8,6 +8,7 @@ import Marquee from "components/home/Marquee";
 import PriceChart from "components/Pricing";
 import Head from "next/head";
 import Navigation from "components/home/Nav";
+import Invoice from "components/Invoice";
 
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";

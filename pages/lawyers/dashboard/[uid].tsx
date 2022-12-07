@@ -31,6 +31,7 @@ import LawyerProfile from "components/forms/LawyerProfile";
 import Stats from "components/dashboard/Stats";
 import OrdersTable from "components/dashboard/Table";
 import Hero from "components/home/Hero";
+import { generateUid } from "utils/customId";
 
 const LawyerDashboard: NextPage = () => {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -108,7 +109,7 @@ const LawyerDashboard: NextPage = () => {
   const orderColumn = [
     {
       Header: "Order ID",
-      accessor: "id" as const, // accessor is the "key" in the data
+      accessor: "uid" as const, // accessor is the "key" in the data
     },
     {
       Header: "Plan",
@@ -149,7 +150,13 @@ const LawyerDashboard: NextPage = () => {
               </div> */}
                 {orders && (
                   <OrdersTable
-                    tableData={orders}
+                    tableData={orders.map((order) => ({
+                      ...order,
+                      uid: generateUid(
+                        order.createdAt?.seconds * 1000,
+                        order.id
+                      ),
+                    }))}
                     tableColumns={orderColumn}
                     tableName="Assigned Cases"
                     path="orders"

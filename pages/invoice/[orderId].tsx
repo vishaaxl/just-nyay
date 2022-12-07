@@ -20,6 +20,7 @@ import moment from "moment";
 import { useState, useEffect } from "react";
 import { useAuth } from "context/User";
 import Hero from "components/home/Hero";
+import Invoice from "components/Invoice";
 
 interface Props {
   order: string;
@@ -148,7 +149,7 @@ const Main = styled.div`
   margin: 0 auto;
 `;
 
-const OrderDetails: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
+const InvoicePage: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -176,93 +177,9 @@ const OrderDetails: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
   return (
     <>
       <Hero />
-      <div
-        style={{
-          background: "rgba(0,0,0,0.0225)",
-          padding: "2rem 0",
-          overflow: "hidden",
-        }}
-      >
-        <Main>
-          <GoBack onClick={() => router.back()}>
-            <BsCaretLeftFill className="icon" />
-            Go Back
-          </GoBack>
-          <Header
-            onClick={() =>
-              closeCase(
-                JSON.parse(order).id,
-                JSON.parse(order).status == "closed" ? "assigned" : "closed"
-              )
-            }
-          >
-            <span>Status</span>
-            <div style={{ color: "#FF8F00", background: "#FFF8F0" }}>
-              <BsDot style={{ fontSize: "2rem" }} /> {JSON.parse(order).status}
-            </div>
-          </Header>
-
-          <Content>
-            <div className="block-one">
-              <span className="id">{JSON.parse(order).id}</span>
-              <span className="problemType">
-                {JSON.parse(order).problemType}
-              </span>
-            </div>
-
-            <div className="block-two">
-              <span>Language: {JSON.parse(order).language}</span>
-              <span>{JSON.parse(order).plan} minutes</span>
-              <span>
-                Due at: {moment(JSON.parse(order).date).format("MMM Do YY")}
-              </span>
-            </div>
-
-            <InvoiceDetails>
-              <div className="invoice-details">
-                <span className="small">Invoice Date:</span>
-                <span className="big">
-                  {moment(JSON.parse(order).createdAt.seconds * 1000).format(
-                    "MMM Do YY"
-                  )}
-                </span>
-              </div>
-              <div className="user-details">
-                <div className="small">Bill to</div>
-                <div className="big">
-                  {JSON.parse(user).firstname} {JSON.parse(user).lastname}
-                </div>
-                <span>{JSON.parse(user).city}</span>
-                <span>{JSON.parse(user).email}</span>
-                <span>{JSON.parse(user).phoneNumber}</span>
-              </div>
-            </InvoiceDetails>
-            <InvoiceDetails>
-              <div className="invoice-details">
-                <span className="small">Assigned Date:</span>
-                <span className="big">
-                  {moment(
-                    JSON.parse(order).lawyerAssignedAt.seconds * 1000
-                  ).format("MMM Do YY")}
-                </span>
-              </div>
-              <div className="user-details">
-                <div className="small">Lawyer</div>
-                <div className="big">
-                  {JSON.parse(lawyer).firstname} {JSON.parse(lawyer).lastname}
-                </div>
-                <span>{JSON.parse(lawyer).city}</span>
-                <span>{JSON.parse(lawyer).email}</span>
-                <span>{JSON.parse(lawyer).phoneNumber}</span>
-              </div>
-            </InvoiceDetails>
-          </Content>
-          <Total>
-            <span>Plan Minutes</span>
-            <span>{JSON.parse(order).plan} minutes</span>
-          </Total>
-        </Main>
-      </div>
+      {order && user && (
+        <Invoice user={JSON.parse(user)} order={JSON.parse(order)} />
+      )}
     </>
   );
 };
@@ -277,15 +194,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const userRef = doc(db, "users", orderSnap.data()?.user as string);
   const userSnap = await getDoc(userRef);
 
-  // get the assigned Lawyer
-  const lawyerRef = doc(db, "lawyers", orderSnap.data()?.lawyer);
-  const lawyerSnap = await getDoc(lawyerRef);
-
-  if (orderSnap?.data()?.lawyer != lawyerId) {
+  if (orderSnap.data()?.user != lawyerId) {
     return {
       redirect: {
         permanent: false,
-        destination: "/login/lawyer",
+        destination: "/login/user",
       },
       props: {},
     };
@@ -295,10 +208,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       order: JSON.stringify({ ...orderSnap.data(), id: orderSnap.id }),
       user: JSON.stringify({ ...userSnap.data(), id: userSnap.id }),
-      lawyer: JSON.stringify({ ...lawyerSnap.data(), id: lawyerSnap.id }),
       lawyerId,
     },
   };
 };
 
-export default OrderDetails;
+export default InvoicePage;
