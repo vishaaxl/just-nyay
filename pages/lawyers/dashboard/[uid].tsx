@@ -4,11 +4,13 @@ import { useAuth } from "context/User";
 import { auth, db } from "firebase.config";
 import {
   collection,
+  doc,
   DocumentData,
   getDocs,
   limit,
   onSnapshot,
   query,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import type { NextPage } from "next";
@@ -32,14 +34,102 @@ import Stats from "components/dashboard/Stats";
 import OrdersTable from "components/dashboard/Table";
 import Hero from "components/home/Hero";
 import { generateUid } from "utils/customId";
+import { toast } from "react-toastify";
 
 const LawyerDashboard: NextPage = () => {
   const [currentPage, setCurrentPage] = useState("dashboard");
   const [sideMenu, setSideMenu] = useState(true);
+  const [payment, setPayment] = useState(true);
   const [orders, setOrders] = useState<DocumentData[]>([]);
 
   const { user, userInfo, updateUser } = useAuth();
   const router = useRouter();
+
+  // razorpay related stuff
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const makePayment = async (docId: string, values: any) => {
+    const res = await initializeRazorpay();
+
+    if (!res) {
+      alert("Razorpay SDK Failed to load");
+      return;
+    }
+
+    // Make API call to the serverless API
+    const data = await fetch("/api/user-payment", { method: "POST" }).then(
+      (res) => res.json()
+    );
+
+    let options = {
+      key: process.env.NEXT_PUBLIC_RAZOR_PAY_ID,
+      name: "Just-nyay Pvt Ltd",
+      order_id: data.id,
+      currnecy: data.currency,
+      amount: 699,
+      description: "Payment for just-nyay",
+      image:
+        "https://justnyay.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      handler: async function (response: any) {
+        // Validate payment at server - using webhooks is a better idea.
+        const razorpayResponse = {
+          orderCreationId: data.order_id,
+          razorpayPaymentId: response.razorpay_payment_id,
+          razorpayOrderId: response.razorpay_order_id,
+          razorpaySignature: response.razorpay_signature,
+        };
+
+        const success = await fetch("/api/success", {
+          method: "POST",
+          mode: "cors",
+          credentials: "same-origin",
+          referrerPolicy: "no-referrer",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(razorpayResponse),
+        }).then((res) => res.json());
+
+        if (success.msg == "success") {
+          toast("Payment Successful", {
+            type: "success",
+          });
+
+          setPayment(true);
+
+          const docRef = doc(db, "lawyers", docId);
+          await updateDoc(docRef, {
+            payment: true,
+          }).then(() => router.push("/login/lawyer"));
+        }
+      },
+      prefill: {
+        name: values.firstname + " " + values.lastname,
+        email: values.email,
+        contact: `+91${values.phoneNumber.substr(
+          values.phoneNumber.length - 10
+        )}`,
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
 
   useEffect(
     () =>
@@ -57,6 +147,13 @@ const LawyerDashboard: NextPage = () => {
                 router.push("/");
                 return;
               }
+
+              snapshot.forEach((doc) => {
+                if (!doc.data().payment) {
+                  makePayment(doc.id, doc.data());
+                }
+                setPayment(doc.data().payment);
+              });
 
               // update user globally
               snapshot.forEach(async (doc) => {
@@ -158,7 +255,11 @@ const LawyerDashboard: NextPage = () => {
                       ),
                     }))}
                     tableColumns={orderColumn}
-                    tableName="Assigned Cases"
+                    tableName={
+                      payment
+                        ? "Assigned Cases"
+                        : "Continue payment to get cases"
+                    }
                     path="orders"
                     lawyerId={userInfo.id}
                   />

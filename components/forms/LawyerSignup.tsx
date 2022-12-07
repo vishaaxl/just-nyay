@@ -201,6 +201,7 @@ const LawyerSignup: React.FC<Props> = () => {
 
           await addDoc(docRef, {
             ...values,
+            payment: false,
             verified: false,
             createdAt: serverTimestamp(),
             phoneNumber: `+91${values.phoneNumber.substr(
