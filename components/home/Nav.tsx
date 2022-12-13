@@ -69,10 +69,10 @@ const Navigation: React.FC<Props> = () => {
             no issue
           </motion.h1>
           <motion.p variants={listItem} className={styles.sub_heading}>
-            When Experience Matters
+            When Experience Matters.
             <br />
-            India&rsquo;s First Online Legal Advice Website With More Than 10000
-            Expert Lawyers Group
+            India&rsquo;s First Online Legal Consulting Platform With More Than
+            10,000+ Expert Lawyers.
           </motion.p>
           <motion.div variants={listItem} className={styles.line_three}>
             <div

@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 
-import { MdGavel, MdTraffic } from "react-icons/md";
+import { MdGavel, MdHomeWork, MdTraffic } from "react-icons/md";
 import { GiChestnutLeaf, GiHandcuffs } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -28,15 +28,15 @@ const cases = [
   },
   {
     id: 3,
-    title: "Startup",
-    description: "Are you going to start your own startup by forming a company",
-    icon: <GiHandcuffs />,
-    link: "/lawyers/startup",
+    title: "Land Acquisition",
+    description: "Are you trying to buy land and having troubles?",
+    icon: <MdHomeWork />,
+    link: "/lawyers/property",
     image: "/images/case-1.jpeg",
   },
   {
     id: 4,
-    title: "Online Fraud ",
+    title: "Online Fraud",
     description: "Have you been scammed online in any purchase or service",
     icon: <MdTraffic />,
     link: "/lawyers/cyber-crime",

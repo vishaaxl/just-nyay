@@ -67,13 +67,13 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
       <div className={styles.content}>
         {/* heading and rating */}
         <div className={styles.main_heading}>
-          <div className={styles.rating_container}>
+          {/* <div className={styles.rating_container}>
             <div className={styles.star_container}>
               4.4 <AiFillStar />
             </div>
             <div className={styles.number_ratings}>1047 Ratings</div>
-          </div>
-          <h1>{heading ? heading : "Ask for Lawyer"}</h1>
+          </div> */}
+          <h1>{heading ? heading : "Get Legal Consultation"}</h1>
         </div>
         {/* content */}
         <span>Quick and Instant consultation</span>

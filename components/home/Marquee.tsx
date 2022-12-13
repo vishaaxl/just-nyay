@@ -40,6 +40,45 @@ const Marquee: React.FC<Props> = ({ data }) => {
     return () => clearInterval(marquee);
   }, [embla]);
 
+  const added = [
+    {
+      id: "E6h4xIwSTpk",
+      image: "/thumbnails/01.jpg",
+    },
+    {
+      id: "n-sUPCt3sXI",
+      image: "/thumbnails/02.jpg",
+    },
+    {
+      id: "2b1IHlBEiUY",
+      image: "/thumbnails/03.jpg",
+    },
+    {
+      id: "w80Cssp_edA",
+      image: "/thumbnails/04.jpg",
+    },
+    {
+      id: "SQ7wPsJ721k",
+      image: "/thumbnails/05.jpg",
+    },
+    {
+      id: "suBcx9nB97Q",
+      image: "/thumbnails/06.jpg",
+    },
+    {
+      id: "0-COTxURJ1s",
+      image: "/thumbnails/07.jpg",
+    },
+    {
+      id: "MAd2PnzTnNQ",
+      image: "/thumbnails/08.jpg",
+    },
+    {
+      id: "AuS2NejW5G4",
+      image: "/thumbnails/09.jpg",
+    },
+  ];
+
   return (
     <>
       <AnimatePresence exitBeforeEnter>
@@ -51,6 +90,18 @@ const Marquee: React.FC<Props> = ({ data }) => {
         <div className="embla">
           <div className="embla__viewport" ref={viewportRef}>
             <div className="embla__container">
+              {added.map((e) => (
+                <div
+                  key={e.id}
+                  className="embla__slide"
+                  onClick={() => {
+                    setPlayerVideo(e.id);
+                    setIsModalOpen(true);
+                  }}
+                >
+                  <img className="embla__slide__img" src={e.image} alt="" />
+                </div>
+              ))}
               {data.items.map((item: any) => {
                 const { id, snippet = {} } = item;
                 const { thumbnails = {}, resourceId = {} } = snippet;
