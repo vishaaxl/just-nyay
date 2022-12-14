@@ -4,6 +4,7 @@ import {
   AiOutlineTwitter,
   AiOutlineYoutube,
   AiOutlineFacebook,
+  AiOutlineInstagram,
 } from "react-icons/ai";
 import { Router, useRouter } from "next/router";
 import { auth } from "firebase.config";
@@ -128,9 +129,21 @@ const Footer: React.FC<Props> = () => {
               </li>
             )}
             <li className={styles.icon_wrapper}>
-              <AiOutlineTwitter className={styles.icon} />
-              <AiOutlineYoutube className={styles.icon} />
-              <AiOutlineFacebook className={styles.icon} />
+              <AiOutlineInstagram className={styles.icon} />
+              <a
+                href="https://www.youtube.com/@LegalReporter/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineYoutube className={styles.icon} />
+              </a>
+              <a
+                href="https://www.facebook.com/legalreporter"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineFacebook className={styles.icon} />
+              </a>
             </li>
           </ul>
         </div>

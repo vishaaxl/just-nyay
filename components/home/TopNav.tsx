@@ -10,15 +10,24 @@ const TopNav: React.FC<Props> = () => {
   const router = useRouter();
   return (
     <>
-      <div className={styles.top_nav}>
-        Happy To Discuss About Your Requirement&nbsp;
-        <span
+      <div className={styles.top_nav} style={{ lineHeight: 1.4 }}>
+        E-mail:{" "}
+        <a
+          href="mailto: info@justnyay.com"
           className={styles.accent_underline}
           style={{ cursor: "pointer" }}
-          onClick={() => router.push("/buy-now")}
         >
-          Get a Quote
-        </span>
+          info@justnyay.com
+        </a>
+        <br />
+        Toll Free no.&nbsp;
+        <a
+          href="tel: 9318428656"
+          className={styles.accent_underline}
+          style={{ cursor: "pointer" }}
+        >
+          +91 9318428656
+        </a>
       </div>
       <div className="container">
         <div className={styles.quick_info}>

@@ -17,21 +17,25 @@ const price_array = [
     id: 1,
     title: "15",
     price: "599",
+    valid: 30,
   },
   {
     id: 2,
     title: "30",
     price: "1099",
+    valid: 60,
   },
   {
     id: 3,
     title: "45",
     price: "1599",
+    valid: 90,
   },
   {
     id: 4,
     title: "60",
     price: "2099",
+    valid: 120,
   },
 ];
 
@@ -147,7 +151,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
               </div>
               <div className={styles.line_four}>
                 <GoVerified className={styles.icon} />
-                <span>valid for 30 days</span>
+                <span>valid for {elem.valid} days</span>
               </div>
             </div>
           ))}

@@ -196,7 +196,13 @@ const Hero: React.FC<Props> = () => {
               )}
             </AnimatePresence>
           </motion.li>
-          <li onClick={() => router.push("/second-opinion")}>Second Opinion</li>
+          <motion.li
+            style={{ fontWeight: 700, color: "#b68c5a" }}
+            onClick={() => router.push("/second-opinion")}
+            className={styles.attention}
+          >
+            Second Opinion
+          </motion.li>
           <motion.li
             onHoverStart={() => setShowDropdown("services")}
             onHoverEnd={() => setShowDropdown("")}

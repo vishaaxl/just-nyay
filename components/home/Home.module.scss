@@ -12,6 +12,10 @@
       display: inline-block;
     }
   }
+
+  @media (min-width: 767px) {
+    display: none;
+  }
 }
 
 .quick_info {
@@ -447,7 +451,7 @@
 
 .services {
   background-color: var(--background-light);
-  padding: 5rem 0;
+  padding: 5rem 0 2rem 0;
 
   .main_heading {
     font-family: var(--font-accent);

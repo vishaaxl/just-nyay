@@ -5,7 +5,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 
-import styles from "../components/VideoModal.module.scss";
+import styles from "components/VideoModal.module.scss";
 
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -13,7 +13,7 @@ const YOUTUBE_PLAYLIST_API =
 const PLAYLIST_ID = "PLPWEDbk41oFUYtDTf2_CFFPmj9pvrPCMV";
 
 const LeagalReporter: NextPage = ({ data, dataTwo, dataThree }: any) => {
-  const [playerVideo, setPlayerVideo] = useState("wVwe7TgJYq0");
+  const [playerVideo, setPlayerVideo] = useState("CFTrpPp1eu4");
   return (
     <>
       <Head>
@@ -49,6 +49,9 @@ const LeagalReporter: NextPage = ({ data, dataTwo, dataThree }: any) => {
           className={styles.player}
           style={{ marginBottom: "0rem" }}
         />
+      </div>
+      <div className="container">
+        <h3 className={styles.playlist_heading}>Legal Legends</h3>
       </div>
       <VideoGrid>
         {data.items.slice(1).map((item: any) => {

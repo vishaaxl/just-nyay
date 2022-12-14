@@ -11,6 +11,14 @@ interface Props {}
 
 const cases = [
   {
+    id: 3,
+    title: "Land Acquisition",
+    description: "Are you trying to buy land and having troubles?",
+    icon: <MdHomeWork />,
+    link: "/lawyers/property",
+    image: "/images/case-1.jpeg",
+  },
+  {
     id: 1,
     title: "Criminal",
     description: "If you need the best criminal lawyer for your criminial case",
@@ -26,14 +34,7 @@ const cases = [
     link: "/lawyers/divorce",
     image: "/images/case-2.jpeg",
   },
-  {
-    id: 3,
-    title: "Land Acquisition",
-    description: "Are you trying to buy land and having troubles?",
-    icon: <MdHomeWork />,
-    link: "/lawyers/property",
-    image: "/images/case-1.jpeg",
-  },
+
   {
     id: 4,
     title: "Online Fraud",
