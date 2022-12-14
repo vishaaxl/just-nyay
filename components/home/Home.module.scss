@@ -18,6 +18,22 @@
   }
 }
 
+.attention {
+  text-decoration: underline;
+  animation: blink 0.8s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .quick_info {
   background-color: var(--primary);
   padding: 1em 0;
@@ -107,6 +123,10 @@
   }
 
   li {
+    &:hover {
+      text-decoration: underline;
+      color: var(--accent-primary);
+    }
     cursor: pointer;
     margin-left: 2rem;
     font-weight: 500;

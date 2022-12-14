@@ -1,5 +1,5 @@
 import styles from "./Menu.module.scss";
-import { AiFillCloseSquare, AiFillCaretDown } from "react-icons/ai";
+import { AiFillCloseSquare, AiFillCaretDown, AiFillStar } from "react-icons/ai";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -209,9 +209,12 @@ const Menu: React.FC<Props> = ({ setMobileMenu }) => {
             }}
             style={{
               color: router.asPath.includes("second-opinion") ? "#b68c5a" : "",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
             }}
           >
-            Second Opinion
+            <span>Second Opinion</span> <AiFillStar style={{ opacity: 0.8 }} />
           </span>
           <div className={styles.link}>
             <span

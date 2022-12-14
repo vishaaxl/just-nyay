@@ -11,9 +11,24 @@
   color: var(--background-dark);
 
   max-width: 50rem;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto;
 
   li {
     margin-bottom: 1rem;
+  }
+}
+
+.player {
+  margin: 2rem 0;
+  height: 190px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 3rem;
+
+  @media (min-width: 425px) {
+    height: 390px;
+  }
+  @media (min-width: 767px) {
+    height: 420px;
   }
 }

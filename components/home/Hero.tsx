@@ -7,6 +7,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "components/Menu";
 import { useRouter } from "next/router";
+import { AiFillStar } from "react-icons/ai";
 
 interface Props {}
 
@@ -197,11 +198,10 @@ const Hero: React.FC<Props> = () => {
             </AnimatePresence>
           </motion.li>
           <motion.li
-            style={{ fontWeight: 700, color: "#b68c5a" }}
             onClick={() => router.push("/second-opinion")}
-            className={styles.attention}
+            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
           >
-            Second Opinion
+            <span>Second Opinion</span> <AiFillStar style={{ opacity: 0.8 }} />
           </motion.li>
           <motion.li
             onHoverStart={() => setShowDropdown("services")}

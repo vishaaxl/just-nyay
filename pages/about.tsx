@@ -39,6 +39,14 @@ const About: React.FC<Props> = () => {
           senior lawyers of the Supreme Court to know their views on different
           legal subjects.
           <br />
+          <iframe
+            src={`https://www.youtube.com/embed/hWvEmFk07bE?autoplay=1&mute=1`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Legal Reporter"
+            className={styles.player}
+          />
           <br /> Just Nyay is the first such platform in the country which will
           not only provide you the best lawyer for your legal matter but will
           also get you the best opinion of the country&apos;s leading and
@@ -52,15 +60,17 @@ const About: React.FC<Props> = () => {
           owned, operated, managed and modified by Advozone India Private
           Limited.
         </p>
-        <div className="container" style={{ marginTop: "-5rem" }}>
-          <Image
-            src="/images/about-1.jpeg"
-            alt=""
-            height="80"
-            width="100%"
-            objectFit="contain"
-            layout="responsive"
-          />
+        <div className="container" style={{ marginTop: "0rem" }}>
+          <div className="container">
+            <Image
+              src="/images/about-1.jpeg"
+              alt=""
+              height="80"
+              width="100%"
+              objectFit="contain"
+              layout="responsive"
+            />
+          </div>
         </div>
       </div>
     </>
