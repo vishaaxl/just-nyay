@@ -38,7 +38,7 @@ const ContactUs: React.FC<Props> = () => {
                 <Input
                   name="Description"
                   placeholder="Any Query (*optional)"
-                  component="textArea"
+                  component="textarea"
                   rows="4"
                 />
               </div>
@@ -49,6 +49,18 @@ const ContactUs: React.FC<Props> = () => {
           </Form>
         )}
       </Formik>
+      <p style={{ lineHeight: 1.4 }}>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        Corporate Address * C-2/6, Gulmohar Vihar, Near lshwar Prem Aashram,
+        Kanpur-208014
+        <br />
+        <br /> Regional Office * 10060, Tower 1, Mahagun Mywood, Gaur City-2,
+        Greater Noida West- 201009
+      </p>
     </div>
   );
 };

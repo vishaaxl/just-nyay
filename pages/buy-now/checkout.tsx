@@ -1,5 +1,5 @@
 import styles from "../../styles/checkout.module.scss";
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import { useEffect, useState } from "react";
 
 import CheckoutForm from "components/forms/CheckoutForm";
@@ -24,6 +24,8 @@ import { db } from "firebase.config";
 import { useRouter } from "next/router";
 import Hero from "components/home/Hero";
 import axios from "axios";
+import Head from "next/head";
+import Script from "next/script";
 
 interface SummaryProps {
   title: string;
@@ -32,7 +34,7 @@ interface SummaryProps {
 
 declare global {
   interface Window {
-    Razorpay: any;
+    bolt: any;
   }
 }
 
@@ -63,12 +65,6 @@ const Login: NextPage = () => {
     return false;
   };
 
-  useEffect(() => {
-    if (!cart.plan && !cart.language && !cart.problemType) {
-      router.push("/buy-now");
-    }
-  }, []);
-
   // if (success.msg == "success") {
   //   toast("Payment Successful", {
   //     type: "success",
@@ -81,25 +77,42 @@ const Login: NextPage = () => {
   // }
 
   const makePayment = async (docId: string, values: any) => {
-    await axios
-      .post("/api/payment", {
+    // if problemtype is not selected
+    if (!values.problemType) {
+      toast("Please Select all fields before checking out", {
+        type: "warning",
+      });
+      router.push("/buy-now");
+      return;
+    }
+
+    await fetch("/api/payment", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         id: docId,
         ...values,
-      })
-      .then((res) => {
-        console.log(res);
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        router.push(data.url);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("hehe", err);
       });
   };
 
   const checkout = async () => {
     setSubmitting(true);
     toast("We'll be accepting payments soon", {
-      type: "error",
+      type: "success",
     });
-    // makePayment("JNY211120220CFX", cart);
+
+    // makePayment("JNY21112022TEST2", cart);
     setSubmitting(false);
     return;
 
@@ -207,15 +220,24 @@ const Login: NextPage = () => {
 
   const Header = () => {
     return (
-      <div className={styles.header}>
-        <div className={styles.header_section}>
-          <span>Ask for Lawyer</span>
-          <span>{cart.plan} minutes </span>
+      <>
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          ></meta>
+        </Head>
+
+        <div className={styles.header}>
+          <div className={styles.header_section}>
+            <span>Ask for Lawyer</span>
+            <span>{cart.plan} minutes </span>
+          </div>
+          <div className={styles.header_section}>
+            <em className={styles.header_price}> &#8377; {cart.price}.00</em>
+          </div>
         </div>
-        <div className={styles.header_section}>
-          <em className={styles.header_price}> &#8377; {cart.price}.00</em>
-        </div>
-      </div>
+      </>
     );
   };
 
@@ -304,6 +326,16 @@ const Login: NextPage = () => {
       </section>
     </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // ...
+  const q = context;
+  console.log(q);
+
+  return {
+    props: {},
+  };
 };
 
 export default Login;

@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
-var crypto = require("crypto");
+var jsSHA = require("jssha");
 
 export default async function handler(
   req: NextApiRequest,
@@ -8,39 +8,39 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const values = req.body;
+    // `${values.price}.00`;
 
-    const generated_signature = crypto
-      .createHmac("sha256", process.env.NEXT_PUBLIC_RAZOR_PAY_SECRET)
-      .update(
-        "wm5pTB" +
-          "|" +
-          "JNY14122022CVBN" +
-          "|" +
-          "599.0" +
-          "|" +
-          "Resgistration Fee" +
-          "|" +
-          values.firstname +
-          "|" +
-          values.email +
-          "|" +
-          values.phoneNumber +
-          "|" +
-          "m8HH0mKKUnaCbU19wM2XjMOhe9BRdV3y"
-      )
-      .digest("hex");
+    var hashString =
+      "" + // Merchant Key
+      "|" +
+      values.id +
+      "|" +
+      `10.00` +
+      "|" +
+      "Registration Fee" +
+      "|" +
+      values.firstname +
+      "|" +
+      values.email +
+      "|" +
+      "||||||||||" +
+      ""; // Your salt value
+
+    var sha = new jsSHA("SHA-512", "TEXT");
+    sha.update(hashString);
 
     const encodedParams = new URLSearchParams();
     encodedParams.set("key", "wm5pTB");
-    encodedParams.set("txnid", "JNY14122022CVBN");
+    encodedParams.set("txnid", values.id);
     encodedParams.set("firstname", values.firstname);
     encodedParams.set("phone", values.phoneNumber);
     encodedParams.set("email", values.email);
-    encodedParams.set("amount", "599.0");
+    encodedParams.set("amount", `10.00`);
     encodedParams.set("productinfo", "Registration Fee");
-    encodedParams.set("hash", generated_signature);
-    encodedParams.set("surl", "https://localhost:3000/buy-now/checkout");
-    encodedParams.set("furl", "https://localhost:3000/buy-now/checkout");
+    encodedParams.set("hash", sha.getHash("HEX"));
+
+    encodedParams.set("surl", "http://localhost:3000/buy-now/checkout");
+    encodedParams.set("furl", "http://localhost:3000/buy-now/checkout");
 
     const options = {
       method: "POST",
@@ -51,15 +51,25 @@ export default async function handler(
       body: encodedParams,
     };
 
-    const url = "https://test.payu.in/_payment";
+    const url = "https://secure.payu.in/_payment";
 
-    axios
-      .post(url, options)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => console.log(err));
-
-    return res.status(200).send("hello");
+    try {
+      await axios
+        .post(url, encodedParams)
+        .then((response: any) => {
+          if (response.status == 200) {
+            return res
+              .status(200)
+              .send({ url: response.request.res.responseUrl });
+          } else {
+            return res.status(200).send("Invalid request");
+          }
+        })
+        .catch((err) => {
+          return res.status(200).send("Something went wrong");
+        });
+    } catch (error) {
+      return res.status(500).send("Something went wrong");
+    }
   }
 }

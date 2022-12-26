@@ -185,6 +185,7 @@ const Hero: React.FC<Props> = () => {
                       </span>
                       {item.elems.map((e) => (
                         <span
+                          style={{ color: "#242424" }}
                           key={e}
                           onClick={() => router.push(`/lawyers/${kebab(e)}`)}
                         >
@@ -224,6 +225,7 @@ const Hero: React.FC<Props> = () => {
                       </span>
                       {item.elems.map((e) => (
                         <span
+                          style={{ color: "#242424" }}
                           key={e}
                           onClick={() => router.push(`/lawyers/${kebab(e)}`)}
                         >

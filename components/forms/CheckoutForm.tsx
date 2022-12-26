@@ -9,18 +9,19 @@ interface Props {}
 
 const CheckoutForm: React.FC<Props> = () => {
   const cart = useCartContext();
+
   return (
     <div className={styles.checkout_form}>
       <Formik
         enableReinitialize
         initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
-          city: "",
-          phoneNumber: "+91",
-          date: "",
-          time: "",
+          firstname: cart.firstname,
+          lastname: cart.lastname,
+          email: cart.email,
+          city: cart.city,
+          phoneNumber: cart.phoneNumber || "+91",
+          date: cart.date,
+          time: cart.time,
         }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string()
