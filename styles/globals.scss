@@ -549,3 +549,19 @@ img {
     padding: 0.25rem 0.75rem;
   }
 }
+
+.line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  .line-icon {
+    margin-right: 1rem;
+    font-size: 1.35rem;
+    color: var(--accent-blue);
+  }
+
+  span {
+    font-weight: 500;
+    opacity: 0.95;
+  }
+}

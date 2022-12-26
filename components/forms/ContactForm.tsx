@@ -2,6 +2,7 @@ import styles from "./ConsultationForm.module.scss";
 import { Field, Form, Formik } from "formik";
 
 import Input from "components/Input";
+import { MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
 
 interface Props {}
 
@@ -49,18 +50,70 @@ const ContactUs: React.FC<Props> = () => {
           </Form>
         )}
       </Formik>
-      <p style={{ lineHeight: 1.4 }}>
+      <p style={{ lineHeight: 1.4, marginTop: "4rem" }}>
+        <div className="line">
+          <MdLocationOn className="line-icon" />
+          <span>
+            C-2/6, Gulmohar Vihar, Near lshwar Prem Aashram, Kanpur-208014
+          </span>
+        </div>
+        <div className="line">
+          <MdLocationOn className="line-icon" />
+          <span>
+            10060, Tower 1, Mahagun Mywood, Gaur City-2, Greater Noida West-
+            201009
+          </span>
+        </div>
+        <div className="line">
+          <MdPhone className="line-icon" />
+          <span>
+            <a
+              href="tel: 9318428656"
+              className={styles.accent_underline}
+              style={{ cursor: "pointer" }}
+            >
+              +91 9318428656
+            </a>
+          </span>
+        </div>
+        <div className="line">
+          <MdOutlineEmail className="line-icon" />
+          <span>
+            <a
+              href="mailto: info@justnyay.com"
+              className={styles.accent_underline}
+              style={{ cursor: "pointer" }}
+            >
+              info@justnyay.com
+            </a>
+          </span>
+        </div>
+      </p>
+      {/* <p style={{ lineHeight: 1.4 }}>
         <br />
         <br />
         <br />
         <br />
         <br />
-        Corporate Address * C-2/6, Gulmohar Vihar, Near lshwar Prem Aashram,
+        Operating Address * C-2/6, Gulmohar Vihar, Near lshwar Prem Aashram,
         Kanpur-208014
         <br />
         <br /> Regional Office * 10060, Tower 1, Mahagun Mywood, Gaur City-2,
         Greater Noida West- 201009
-      </p>
+        <br />
+        <br />
+        E-mail *&nbsp;{" "}
+        <a
+          href="mailto: info@justnyay.com"
+          className={styles.accent_underline}
+          style={{ cursor: "pointer" }}
+        >
+          info@justnyay.com
+        </a>
+        <br />
+        <br />
+        Toll Free number / Contact number *&nbsp;+91 9318428656
+      </p> */}
     </div>
   );
 };
