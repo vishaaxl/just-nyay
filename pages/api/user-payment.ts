@@ -15,7 +15,7 @@ export default async function handler(
 
     // Create an order -> generate the OrderID -> Send it to the Front-end
     const options = {
-      amount: 499,
+      amount: Number(req.body.amount) * 100,
       payment_capture: 1,
       currency: "INR",
       receipt: shortid.generate(),

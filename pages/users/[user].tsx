@@ -281,7 +281,8 @@ const User: NextPage = ({}) => {
               </div>
 
               {/* recect calls */}
-              <div className={styles.white_wrapper}>
+              <Transactions />
+              {/* <div className={styles.white_wrapper}>
                 <div style={{ marginTop: "1rem" }} className={styles.header}>
                   <h2 className="header">Booked Appointments</h2>
                 </div>
@@ -311,7 +312,7 @@ const User: NextPage = ({}) => {
                     No record found
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
