@@ -18,6 +18,7 @@ import {
 } from "firebase/firestore";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import axios from "axios";
 
 interface Props {}
 
@@ -84,9 +85,7 @@ const LawyerSignup: React.FC<Props> = () => {
     }
 
     // Make API call to the serverless API
-    const data = await fetch("/api/user-payment", { method: "POST" }).then(
-      (res) => res.json()
-    );
+    const { data } = await axios.post("/api/user-payment", { amount: "999" });
 
     let options = {
       key: process.env.NEXT_PUBLIC_RAZOR_PAY_ID,
@@ -145,6 +144,7 @@ const LawyerSignup: React.FC<Props> = () => {
   return (
     <div className={styles.lawyer_signup_form}>
       <Formik
+        enableReinitialize
         initialValues={{
           firstname: "",
           lastname: "",
@@ -153,7 +153,7 @@ const LawyerSignup: React.FC<Props> = () => {
           state: "",
           city: "",
           barCouncilId: "",
-          specialization: "",
+          specialization: "Corporate Law",
           year: "",
           experience: "",
           phoneNumber: "",
@@ -169,6 +169,7 @@ const LawyerSignup: React.FC<Props> = () => {
           specialization: Yup.string().required("Required"),
           year: Yup.number().typeError("Invalid year").required("Required"),
           experience: Yup.number()
+            .max(40, "Enter valid experience")
             .typeError("Invalid year")
             .required("Required"),
           phoneNumber: Yup.number()
