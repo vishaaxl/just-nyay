@@ -21,7 +21,7 @@ const CheckoutForm: React.FC<Props> = () => {
           city: cart.city,
           phoneNumber: cart.phoneNumber || "+91",
           date: cart.date,
-          time: cart.time,
+          time: cart.time || "9-10",
         }}
         validationSchema={Yup.object().shape({
           firstname: Yup.string()
@@ -80,6 +80,7 @@ const CheckoutForm: React.FC<Props> = () => {
                   updateCart
                   component="select"
                 >
+                  <option disabled>Select Time Slot</option>
                   <option value="9-10">9 - 10</option>
                   <option value="10-11">10 - 11</option>
                   <option value="11-12">11 - 12</option>
