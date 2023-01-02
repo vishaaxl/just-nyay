@@ -5,7 +5,7 @@ import * as Yup from "yup";
 
 import Input from "components/Input";
 import { MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "firebase.config";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
@@ -34,7 +34,7 @@ const ContactUs: React.FC<Props> = () => {
           setLoading(true);
           const dbRef = collection(db, "inquiries");
 
-          addDoc(dbRef, { ...values })
+          addDoc(dbRef, { ...values, createdAt: serverTimestamp() })
             .then((docRef) => {
               toast(
                 "Your enquiry has been submitted. We will contact you shortly.",
