@@ -20,6 +20,7 @@ import moment from "moment";
 import { useState, useEffect } from "react";
 import { useAuth } from "context/User";
 import Hero from "components/home/Hero";
+import { generateUid } from "utils/customId";
 
 interface Props {
   order: string;
@@ -204,7 +205,12 @@ const OrderDetails: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
 
           <Content>
             <div className="block-one">
-              <span className="id">{JSON.parse(order).id}</span>
+              <span className="id">
+                {generateUid(
+                  JSON.parse(order).createdAt?.seconds * 1000,
+                  JSON.parse(order).id
+                )}
+              </span>
               <span className="problemType">
                 {JSON.parse(order).problemType}
               </span>

@@ -1,22 +1,57 @@
 import styles from "./ConsultationForm.module.scss";
 import { Field, Form, Formik } from "formik";
+import { useState } from "react";
+import * as Yup from "yup";
 
 import Input from "components/Input";
 import { MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "firebase.config";
+import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 interface Props {}
 
 const ContactUs: React.FC<Props> = () => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   return (
     <div className={styles.consultation_form}>
       <Formik
+        enableReinitialize
         initialValues={{
-          phoneNumber: "",
+          phoneNumber: "+91",
           email: "",
           description: "",
         }}
+        validationSchema={Yup.object().shape({
+          email: Yup.string().email().required("Required"),
+          phoneNumber: Yup.number().required("Required"),
+          description: Yup.string().required("Required"),
+        })}
         onSubmit={(values) => {
-          console.log(values);
+          setLoading(true);
+          const dbRef = collection(db, "inquiries");
+
+          addDoc(dbRef, { ...values })
+            .then((docRef) => {
+              toast(
+                "Your enquiry has been submitted. We will contact you shortly.",
+                {
+                  type: "success",
+                }
+              );
+              setLoading(false);
+
+              router.push("/");
+            })
+            .catch((error) => {
+              toast("Something went wrong please try again or call later.", {
+                type: "success",
+              });
+              setLoading(false);
+            });
         }}
       >
         {({ errors, touched }) => (
@@ -37,7 +72,7 @@ const ContactUs: React.FC<Props> = () => {
               </div>
               <div className={styles.input_block}>
                 <Input
-                  name="Description"
+                  name="description"
                   placeholder="Any Query (*optional)"
                   component="textarea"
                   rows="4"
@@ -46,7 +81,9 @@ const ContactUs: React.FC<Props> = () => {
             </div>
             {/* block three */}
 
-            <button className="primary-btn">Send query</button>
+            <button className="primary-btn" disabled={loading}>
+              Send query
+            </button>
           </Form>
         )}
       </Formik>

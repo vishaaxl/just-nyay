@@ -19,7 +19,11 @@ const sections = [
     title: "Lawyers in India",
     listElements: [
       { id: "10", title: "Divorce Lawyers", link: "/lawyers/divorce" },
-      { id: "11", title: "Property Lawyers", link: "/lawyers/property" },
+      {
+        id: "11",
+        title: "Property Lawyers",
+        link: "/lawyers/property-registration",
+      },
       { id: "12", title: "Civil Lawyers", link: "/lawyers/civil" },
       { id: "13", title: "Criminal Lawyers", link: "/lawyers/criminal" },
       { id: "14", title: "Family Lawyers", link: "/lawyers/family-disputes" },
@@ -47,7 +51,11 @@ const sections = [
     title: "LEGAL ADVICE",
     listElements: [
       { id: "20", title: "Divorce Legal Advice", link: "/lawyers/divorce" },
-      { id: "21", title: "Property Legal Advice", link: "/lawyers/propert" },
+      {
+        id: "21",
+        title: "Property Legal Advice",
+        link: "/lawyers/property-verification",
+      },
       { id: "22", title: "Criminal Legal Advice", link: "/lawyers/criminal" },
       { id: "23", title: "Recovery Legal Advice", link: "/lawyers/recovery" },
       {
@@ -60,10 +68,10 @@ const sections = [
         title: "Cheque Bounce Legal Advice",
         link: "/lawyers/cheque-bounce",
       },
-      { id: "26", title: "Indian Kanoon", link: "/lawyers/" },
+      { id: "26", title: "MoU", link: "/lawyers/mou" },
       { id: "27", title: "Legal Forms", link: "/lawyers/documentation" },
       { id: "28", title: "Legal Help Center", link: "/lawyers/" },
-      { id: "29", title: "Posh Training", link: "/lawyers/" },
+      { id: "29", title: "Name change", link: "/lawyers/name-change" },
     ],
   },
   {
@@ -129,7 +137,13 @@ const Footer: React.FC<Props> = () => {
               </li>
             )}
             <li className={styles.icon_wrapper}>
-              <AiOutlineInstagram className={styles.icon} />
+              <a
+                href="https://www.instagram.com/legal.reporter/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineInstagram className={styles.icon} />
+              </a>
               <a
                 href="https://www.youtube.com/@LegalReporter/videos"
                 target="_blank"

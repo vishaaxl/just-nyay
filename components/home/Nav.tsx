@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./Home.module.scss";
 import { useRouter } from "next/router";
 import Hero from "./Hero";
+import Link from "next/link";
 
 interface Props {}
 
@@ -74,16 +75,15 @@ const Navigation: React.FC<Props> = () => {
             India&rsquo;s First Online Legal Consulting Platform With More Than
             10,000+ Expert Lawyers.
           </motion.p>
-          <motion.div variants={listItem} className={styles.line_three}>
-            <div
-              className="btn-primary"
-              onClick={() => router.push("/buy-now")}
-            >
-              <a href="#">
-                <span>Book Consultation</span>
-              </a>
-            </div>
-          </motion.div>
+          <Link href="/buy-now">
+            <motion.div variants={listItem} className={styles.line_three}>
+              <div className="btn-primary">
+                <a href="#">
+                  <span>Book Consultation</span>
+                </a>
+              </div>
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
     </HeroWrapper>

@@ -72,7 +72,9 @@ const Page: React.FC<Props> = ({ title, pageContent }) => {
           </>
         )}
       </section>
-      <PricingSection />
+      <div style={{ marginTop: "1.5rem" }}>
+        <PricingSection />
+      </div>
       <FAQs questionsList={faqs} />
       <Services />
     </>

@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./Home.module.scss";
 
 interface Props {}
 
 const About: React.FC<Props> = () => {
+  const router = useRouter();
   return (
     <section className="container">
       <div className={styles.about}>
@@ -31,8 +33,8 @@ const About: React.FC<Props> = () => {
             different legal subjects.
           </p>
 
-          <div className="btn-primary">
-            <a href="#">
+          <div className="btn-primary" onClick={() => router.push("/buy-now")}>
+            <a>
               <span>Book Consulation</span>
             </a>
           </div>

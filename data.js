@@ -426,6 +426,109 @@ Just Nyay is the best place where you can easily consult some of India’s top l
     `,
   },
   {
+    id: 43,
+    title: "sale-deed-registration",
+    heading: "Connect with Best Property Lawyers / Advocates in India",
+    content: `
+    <p>
+Sale deed registration
+A sale deed is an important legal document that is required during the purchase or sale of a property. It is an essential document for both the buyer and the seller that contains all the necessary information about the buyer, seller, property location, area, and payment details. The purchase or sale of the property is legally incomplete until a sale deed is signed between the buyer and the seller. So, if you are looking for a lawyer who can help you with your sale deed registration process then Just Nyay is the right place for you. With Just Nyay, you can get in touch with the top lawyers who will take care of all your sale deed registration process.
+    <br/>
+    <br/>
+    <h3>
+Reasons to take our sale deed registration service
+    </h3>
+    <br/>
+Just Nyay is one of the leading legal service providers in India. We offer experienced legal assistance from some of India’s top lawyers. Take a look at the reasons why you should take our marriage sale deed registration service. 
+<br/>
+<br/>
+    <ul>
+   <li>•	Our lawyers are most knowledgeable and experienced in their respective fields.
+</li>
+<li>•	We offer fast and easy consultation services to our clients.
+</li>
+<li>•	Our online consultation fees are very minimal.
+</li>
+<li>•	Our expert lawyers offer you a secure one-to-one consultation.
+</li>
+<li>•	We offer personalized attention to our clients.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Learn why sale deed registration is important
+    </h3>
+ 
+    <br/>
+    <br/>
+    A sale deed registration is important due to various reasons such as: 
+    <br/>
+    <ul>
+<li>•	A sale deed is a legal document that is enforceable by law.
+</li>
+<li>•	Sale transactions can be carried out in a stable and comfortable way with a sale deed.
+</li>
+<li>•	The rights of both parties involved in the contract are protected.
+</li>
+<li>•	It mentions the rights and duties of the buyer and the seller.
+</li>
+<li>•	It clearly defines the entire process of the sale is now stamped and registered.
+</li>
+<li>•	It guarantees that your property is not taken for granted.
+</li>
+    </ul>
+    </p>
+    `,
+  },
+  {
+    id: 44,
+    title: "succession-certificate",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+A succession certificate is a legal document that authorises someone to collect debts and manage securities payable in the name of a deceased individual who died intestate (without a valid Will).<br/>
+A magistrate or a high court should be required to receive an application for a succession certificate. It confirms the heirs' legitimacy and gives them the power to transfer the deposits and other assets into their names. <br/>
+The certificate is essential for the heirs to use in order to lay a claim to the assets of a deceased relative when there is no Will in place. According to the numerous property laws in India, the certificate is necessary whenever someone inherits any moveable or immovable property.<br/>
+It should be noted however that if the decedent left a valid Will, the executor of the Will becomes the sole beneficiary of the estate, therefore a succession certificate cannot be issued in such circumstances.
+    <br/>
+    <br/>
+    <h3>
+Some key pointers of succession certificate
+    </h3>
+<br/>
+    <ul>
+   <li>•	Succession certificates act as the decedent's representative in obtaining any payment owing for securities and/or obligations.
+</li>
+<li>•	The successor may inherit the decedent's obligations through a succession certificate.
+</li>
+<li>•	The certificate bearer does not automatically become the legal heir or owner of these assets. The legal heir can be found through a different legal process.
+</li>
+<li>•	A succession certificate may be withdrawn or cancelled under certain circumstances, such as fraud or improper legal action.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why seek advice from Just Nyay regarding a succession certificate?
+    </h3>
+ 
+    <br/>
+    <br/>
+Many people look for lawyers who specialise in succession certificate cases due to the complexity of these issues. The attorneys at Just Nyay have the necessary expertise to provide appropriate legal representation in these situations. For a number of reasons, you should contact us:
+    <br/>
+    <ul>
+<li>•	Our succession certificate attorneys have a wealth of knowledge, and we will provide you with complete advice regarding your case.
+</li>
+<li>•	We would give you all the assistance you need with the paperwork required to obtain a court-issued succession certificate.
+</li>
+<li>•	Your legal concerns are all heard by our attorneys, who also offer advice on how to handle them. 
+</li>
+    </ul>
+    </p>
+    `,
+  },
+  {
     id: 45,
     title: "startup",
     heading: "Connect with Best Startup Lawyers / Advocates in India",
@@ -547,6 +650,64 @@ Given that people may not have the time to travel to courts and consult with att
       "Tax in India is a complicated subject and if you do not submit your tax in the right time and in the correct format, the tax authority can impose a heavy fine on you. Connect with Just Nyay to hire top tax advocates in India to get opinions on direct and indirect taxation law, tax liabilities of demonetisation, service tax matters and Income Tax Appellate Tribunal (ITAT) appeals. ",
   },
   {
+    id: 58,
+    title: "lease-agreement",
+    heading:
+      "Connect with the Best Lease Agreement Lawyers / Advocates in India",
+    content: `
+    <p>
+In a lease agreement, the landlord (lessor) and the tenant (lessee) agree to a length of time during which the lessee can use a property that the lessor owns in exchange for recurrent rental payments.<br/>
+However, the lease does not grant the tenant ownership rights. The lessor may give the lessee permission to alter the property to suit his purposes, but the lessee does not possess ownership of it. <br/>
+Lease contracts may be used to lease real estate, businesses, automobiles, home appliances, parking spots, and others.<br/>
+If any legal action is taken against either party, the court will refer to the lease agreement as a valid, legally-binding contract between the landlord and renter.
+
+    <br/>
+    <br/>
+    <h3>
+Things included in a lease agreement
+    </h3>
+    <br/>
+Depending on the type of lease and the particular requirements of the lessee and lessor, the terms of a lease might vary significantly. However, the agreement's fundamental elements include:
+<br/>
+<br/>
+    <ul>
+   <li>•	Information on the property, such as the square footage and amenities.
+</li>
+<li>•	The length of time that the lease agreement will be in force.
+</li>
+<li>•	The rent that the lessee pays to the lessor in return for using the leased property.
+</li>
+<li>•	Deposits and conditions governing their return when the lease period is finished.
+</li>
+<li>•	Utilities that the tenant is responsible for paying for and that are covered by the rent.
+</li>
+<li>•	As determined by the landlord, upkeep and repairs on the leased property
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+
+How can Just Nyay help you in property lease matters?
+
+    </h3>
+    <br/>
+    <br/>
+One must go through extensive documentation in order to lease a property. In this situation, Just Nyay can assist you. Our lawyers will answer all of your inquiries on any matter relating to leasing a property.
+    <br/>
+    <br/>
+    <ul>
+<li>•	Our property lawyers, who have a wealth of knowledge, will guide you if any issues arise with your property leasing affairs.
+</li>
+<li>•	Our attorneys can offer the crucial direction on creating lease contracts.
+</li>
+<li>•	We provide you with a fundamental understanding of what is contained in a lease agreement to save your time and money.
+</li>
+    </ul>
+    </p>
+    `,
+  },
+  {
     id: 60,
     title: "documentation",
     heading: "Connect with Best Documentation Lawyers / Advocates in India",
@@ -653,6 +814,58 @@ Just Nyay is the best place to connect with the top consumer court lawyers. You 
     </p>
     `,
   },
+  {
+    id: 64,
+    title: "gift-deed-registration",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+A gift deed is an agreement through which a person can gift a movable or immovable property to someone else. It minimizes the chances of disputes in property inheritance or succession cases. A registered gift deed is also proof in itself and unlike a will, the transfer of property is instant and one does not require a court to get it enforced. It is also an important document in succession matters as it is different from a ‘Will’ made by the property owner. A gift deed, just like a sale deed includes all the information regarding the property, the donor, and the donee. It does not deal with financial businesses as it only transfers ownership to the beneficiary. So, if you are looking for a lawyer who can help you with your gift deed registration process then Just Nyay is the right place for you. 
+    <br/>
+    <br/>
+    <h3>
+Know the reasons why to take our online gift deed registration service
+    </h3>
+    <br/>
+    
+Just Nyay is the best platform where you can get in touch with India’s top property lawyer. You can get legal counsel from the best lawyers who have vast experience in matters related to this field. You must take our gift deed registration service for the following reasons
+<br/>
+<br/>
+    <ul>
+   <li>•	We have profiles of many experienced and expert lawyers. 
+</li>
+<li>•	Our online services are affordable and cost-effective.
+</li>
+<li>•	We offer quick and instant consultation services.
+</li>
+<li>•	Our lawyers are highly reputed in their field.
+</li>
+<li>•	We offer you a secure one-to-one consultation service.
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+What are the advantages of a gift deed over a will?
+    </h3>
+    <br/>
+    <br/>
+There are certain advantages of a gift deed over a will which are as follows: 
+    <br/>
+    <br/>
+    <ul>
+<li>•	A gift deed is implemented once the beneficiary and the donor agree to transfer the property, while a Will is executed after the demise of the property owner.
+</li>
+<li>•	A gift deed that is registered is free from litigation, whereas a ‘will’ lets the owner take legal action in a matter of dispute
+</li>
+<li>•	There are no tax liabilities in case of property transfer under a gift deed. 
+</li>
+    </ul>
+    </p>
+    `,
+  },
+
   {
     id: 66,
     title: "civil",
@@ -937,11 +1150,303 @@ Charting a clear course forward in light of the numerous issues facing the armed
       "You insure your life, property, health, car, office etc. and pay a huge amount to the insurance companies on the instalment round of insurance. But if after an accident the insurance company does not give you the amount of insurance, then without delay you can contact Just Nyay. Just Nyay will get you straight to the country's best lawyers who have over 20-30 years of experience in Insurance Law.",
   },
   {
+    id: 82,
+    title: "mou",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+A Memorandum of Understanding (MOU) is an official document delineating an understanding between two or more parties. An MOU might not have a legal force, but it states the parties' desires to proceed with a valid contract.
+    <br/>
+    <br/>
+    <h3>
+Why is MOU made?
+    </h3>
+    <br/>
+MOUs are typically drafted early on in a partnership or project. The following justifications guide the drafting of these documents:
+<br/>
+<br/>
+    <ul>
+   <li>MOUs outline the expectations that the parties have of one another.
+</li>
+<li>•	An MOU enables the parties to express all of their goals in detail and to be on the same page with the agreements made.
+</li>
+<li>•	A MOU specifies the precise areas of understanding such as identifying the partners, outlining the project, and specifying the obligations.
+</li>
+<li>•	The document reduces ambiguity and stops unforeseen disputes from happening in the future.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why do you need a lawyer for MOU cases?
+    </h3>
+    <br/>
+    <br/>
+Despite the MOU's lack of legal force, violations are occasionally possible. Negotiation is the best course of action in cases of MOU breaches. However, if discussions are unsuccessful, consulting a lawyer for legal advice may be a wise course of action. Your MOU will have the same effects as a typical contract if it was converted into one. In this case, if there is a breach, you can seek legal advice. Consulting a lawyer will be extremely beneficial in cases of MOU breach.<br/>
+How can Just Nyay help you with MOU cases?<br/>
+Due to the complexity of these issues, many search for lawyers who handle documentation cases. Just Nyay has lawyers with relevant experience to give competent legal support in documentation cases. You should consult us for several reasons:
+ 
+    <br/>
+    <br/>
+    <ul>
+<li>•	If your MOU issues worsen than you had anticipated, Just Nyay will give you legal guidance.
+</li>
+<li>•	We provide you with assistance so that you can be proactive and understand your position before an issue develops.
+</li>
+<li>•	Our professional guidance will help you avoid MOU breaches and make you aware of the warning signs if one has occurred.
+</li>
+    </ul>
+    </p>
+    `,
+  },
+  {
+    id: 83,
+    title: "name-change",
+    heading: "Connect with Best Lawyers / Advocates in India",
+    content: `
+    <p>
+The legal process of changing one's name—whether by adding initials, a single letter, or anything else—is referred to as a name change. When a name is changed, the newly adopted name becomes the person's legal name.
+    <br/>
+    <br/>
+    You can choose whatever new name you choose, but only if you abide by a few rules and limitations, such as: 
+<br/>
+<br/>
+    <ul>
+   <li>•	You are not allowed to alter your name for dishonest reasons, such as to get out of debt.
+</li>
+<li>•	You cannot alter your name to one that would jeopardise the rights of someone else, such a famous person.
+</li>
+<li>•	The name you want to modify shouldn't be offensive or derogatory toward any individual or group of people.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why do people decide to change their names?
+    </h3>
+    <br/>
+    <br/>
+Anytime, for any reason, you are allowed to alter your name. However, there are some factors that might compel you to do so, like:
+    <br/>
+    <br/>
+    <ul>
+<li>•	Birth certificate mistake
+</li>
+<li>•	Marriage
+</li>
+<li>•	Spelling mistakes
+</li>
+<li>•	Religion change 
+</li>
+<li>•	Astrology or numerology
+</li>
+<li>•	Dislike the name
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Name-change procedure in India
+    </h3>
+    <br/>
+    <br/>
+Anyone in India, older than 18, can change their names by following the necessary formalities, which are:
+    <br/>
+    <br/>
+    <ul>
+<li>•	To change your name, you must first see a Notary Advocate and get an affidavit.
+</li>
+<li>•	The following stage entails publishing a notice of your name change in two publications (Vernacular and English).
+</li>
+<li>•	After that, you must get a notice of your name change published in the Indian Gazette.
+</li>
+<li>•	As soon as your application is processed, your notification will be printed.
+</li>
+<li•	Your name is legally altered once the Gazette is printed. 
+</li>
+
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why consult Just Nyay for name changes?
+    </h3>
+    <br/>
+    <br/>
+In name change matters, Just Nyay offers legal assistance with necessary expertise. For a number of reasons, you should contact us:
+    <br/>
+    <br/>
+    <ul>
+<li>•	Your name change affidavit would be prepared with the assistance of our lawyers.
+</li>
+<li>•	We will provide you with all the information to post the newspaper ad for your name change.
+</li>
+<li>•	We would provide you with all the support for name change documentation.
+</li>
+
+    </ul>
+    </p>
+    `,
+  },
+  {
     id: 84,
     title: "immigration",
     heading: "Connect with Best Immigration Lawyers / Advocates in India",
-    content:
-      "Immigration cases in India and their procedures are extremely complex which not every ordinary lawyer can deal with. If any immigration case is going on against you then Just Justice is there to help you. We can provide you with expert lawyers on top immigration matters in the country. Then what's the delay, contact us immediately  for US, UK, Canada and Dubai Immigration. ",
+    content: `
+    <p>
+Entering a country to stay and/or work there permanently is known as immigration. Countries maintain immigration laws to control both internal rights, such as the length of stay, freedom of movement, and the right to take part in government or commerce, as well as external rights of entry and exit.
+    <br/>
+    <br/>
+    <h3>
+How can an immigration attorney help clients?
+    </h3>
+    <br/>
+Immigration lawyers can assist individuals, families, and a business in navigating the immigration pathways of staying, working, and studying overseas. Immigration lawyers are helpful in situations where a person's immigration status may affect legal issues, such as family law, criminal law, business law, and tax law in foreign countries.
+<br/>
+<br/>
+    <ul>
+   <li>•	A qualified immigration attorney assists foreign clients in remaining in the nation following immigration law. They aid in obtaining a "Green Card," which is a legal status of permanent residence.
+</li>
+<li>•	An immigration lawyer can assist any foreign client looking for business opportunities by completing the necessary legal requirements for the issuance of work permits, business visas, etc.
+</li>
+<li>•	Immigration attorneys assist to those who wish to naturalize as citizens of a nation.  They offer useful information on the conditions for eligibility, the procedure for naturalization, the citizenship test, the advantages of citizenship, etc.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Benefits of consulting an immigration attorney of Just Nyay
+    </h3>
+    <br/>
+    <br/>
+People hire attorneys because immigration issues are complicated and not understandable by all. Just Nyay provides skilled legal assistance through attorneys and counselors who specialize in immigration cases. We put clients in touch with attorneys who can provide quick and effective resolution of immigration cases.  
+    <br/>
+    <br/>
+    <ul>
+<li>•	Our immigration attorneys offer guidance to people who wish to live, open a business, or find employment overseas.
+</li>
+<li>•	To ensure that your rights are fully evaluated and safeguarded, our immigration attorney will be by your side to advocate for your best interests and address your worries about living and working in a foreign country.
+</li>
+<li>•	Our attorneys have a thorough understanding of immigration law and provide discreet, and individualized counseling to clients.
+</li>
+    </ul>
+    </p>
+    `,
+  },
+  {
+    id: 85,
+    title: "property-registration",
+    heading: "Connect with Best Property Lawyers / Advocates in India",
+    content: `
+    <p>
+When you purchase a home, shop, or piece of land, registering your property should be your top priority because it establishes your authority to conduct any transaction. Only once you register the property in your name will you be regarded as the legal owner. Property registration guarantees title assurance, fraud avoidance, and evidence preservation. It is a criminal to not register your property.
+    <br/>
+    <br/>
+    <h3>
+Benefits of property registration
+    </h3>
+    <br/>
+Land and property registration in India are governed under Section 17 of the Registration Act, 1908. You should register your property since doing so will help you in a number of ways, including: 
+<br/>
+<br/>
+    <ul>
+   <li>•	If a property is registered, it will be easy to establish who the actual owners are because the government keeps a record of ownership.
+</li>
+<li>•	By registering your property, you can safeguard it from fraud and stop thieves from buying, selling, or securing a mortgage on it.
+</li>
+<li>•	Since all the information is maintained with the land registrar, registration makes it easier to acquire and sell the property.
+</li>
+<li>•	When the property is registered, all ownership-related problems can be quickly and easily resolved.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+
+How can Just Nyay help you in property registration matters?
+
+    </h3>
+    <br/>
+    <br/>
+Purchasing a property is easy, but the documentation required to register it in the public records is difficult and time-consuming. In this scenario, you can get support from Just Nyay. On all issues pertaining to registering your property, our lawyers will provide you with assistance and address all of your questions. 
+    <br/>
+    <br/>
+    <ul>
+<li>•	If any difficulty emerges in your property registration situations, our property lawyers with their vast experience will assist and direct you.
+</li>
+<li>•	Our lawyers will provide the essential guidance on drafting the different legal documents required for property registration.
+</li>
+<li>•	Our assistance with property registration will help with document verification, paperwork management, and other registration tasks. 
+</li>
+    </ul>
+    <br>
+    <br>
+    So do get in touch with us if you want to register your property and need guidance on your next steps. We shall use every effort to be of great assistance to you.
+    </p>
+    `,
+  },
+  {
+    id: 86,
+    title: "property-verification",
+    heading: "Connect with Best Property Lawyers / Advocates in India",
+    content: `
+    <p>
+To guarantee that the transaction is legitimate, whether you are a buyer buying a property, leasing a property, or taking out a mortgage against a property, you must have the property verified. This will guarantee that the property is legitimate and that all related documentation is accurate.
+    <br/>
+    <br/>
+    <h3>
+Why is the verification of properties so crucial?
+    </h3>
+
+<br/>
+<br/>
+    <ul>
+   <li>•	Prior to closing the sale, doing a legal verification of the property documents enables you to make an informed choice and prevent any potential legal issues.
+</li>
+<li>•	Property verification ensures that the transactions and purchases are free from controversies.
+</li>
+<li>•	A property check makes sure that no counterfeit or false documents were given during the transaction.
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Process involved in property verification
+    </h3>
+ 
+    <br/>
+    <br/>
+    <ul>
+<li>•	Request the title documents from the seller, then have the sub-office registrar's certify them.
+</li>
+<li>•	Obtain an encumbrance certificate from the sub-office registrar's that verifies the property is free of a mortgage or is subject to any outstanding debts.
+</li>
+<li>•	Verify if the property has any unpaid taxes.
+</li>
+<li>•	If you want to know if the property is being sold on behalf of the owner by a designated person, verify the Power of Attorney.
+</li>
+<li>•	The Sales Deed that is created for the transfer of ownership should be thoroughly verified. 
+</li>
+    </ul>
+    <br/>
+    <br/>
+    <h3>
+Why consult Just Nyay for property verification?
+    </h3>
+    <br/>
+    The process of verification is an essential step while purchasing and registering property. Even the most intelligent people become confused by all the paperwork and procedures involved in verifying a property. There comes the role of Just Nyay! With our online platform, you can speak with the best property lawyers in India and go through your case in detail.
+     <br/>
+    <br/>
+    <ul>
+<li>•	With their extensive experience and understanding, our property lawyers provide you with in-depth advice in instances involving property verification.
+</li>
+<li>•	Our professionals will provide you with the best consultation through their dedicated task of verifying paperwork related to property.
+</li>
+<li>•	Due to the complexity of property verification cases, we go out of our way to make dealing with them as easy as possible.
+</li>
+    </ul>  
+    </p>
+    `,
   },
   {
     id: 89,

@@ -186,12 +186,11 @@ const Login: NextPage = () => {
         createdAt: serverTimestamp(),
       })
         .then((doc) => {
+          makePayment(doc.id);
           // redirect to continue payment and set payment true on successfull transaction
           toast("Continue payment to proceed", {
             type: "success",
           });
-
-          makePayment(doc.id);
           setSubmitting(false);
         })
         .catch((err) => {
@@ -233,11 +232,11 @@ const Login: NextPage = () => {
           createdAt: serverTimestamp(),
         })
           .then((doc) => {
+            makePayment(doc.id);
             // redirect to continue payment and set payment true on successfull transaction
             toast("Continue payment to proceed", {
               type: "success",
             });
-            makePayment(doc.id);
             setSubmitting(false);
           })
           .catch((err) => {
