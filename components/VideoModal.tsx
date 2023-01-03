@@ -5,6 +5,7 @@ import {
   AiFillYoutube,
   AiFillFacebook,
   AiOutlineTwitter,
+  AiOutlineInstagram,
 } from "react-icons/ai";
 
 import { motion } from "framer-motion";
@@ -38,9 +39,27 @@ const Modal: React.FC<Props> = ({ embedId, setIsModalOpen }) => {
             className={styles.player}
           />
           <div className={styles.socials}>
-            <AiFillYoutube className={styles.youtube_icon} />
-            <AiFillFacebook className={styles.youtube_icon} />
-            <AiOutlineTwitter className={styles.youtube_icon} />
+            <a
+              href="https://www.youtube.com/@LegalReporter/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillYoutube className={styles.youtube_icon} />
+            </a>
+            <a
+              href="https://www.facebook.com/legalreporter"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillFacebook className={styles.youtube_icon} />
+            </a>
+            <a
+              href="https://www.instagram.com/legal.reporter/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiOutlineInstagram className={styles.youtube_icon} />
+            </a>
           </div>
         </div>
       </div>
