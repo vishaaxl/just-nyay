@@ -1,3 +1,4 @@
+import FloatingIcon from "./FloatingIcon";
 import Footer from "./Footer";
 import Hero from "./home/Hero";
 import TopNav from "./home/TopNav";
@@ -10,6 +11,8 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <TopNav />
+      <FloatingIcon />
+
       {children}
       <Footer />
     </>

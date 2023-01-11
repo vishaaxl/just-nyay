@@ -9,6 +9,7 @@ import PriceChart from "components/Pricing";
 import Head from "next/head";
 import Navigation from "components/home/Nav";
 import Invoice from "components/Invoice";
+import FloatingIcon from "components/FloatingIcon";
 
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";

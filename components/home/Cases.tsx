@@ -15,7 +15,7 @@ const cases = [
     title: "Land Acquisition",
     description: "Are you trying to buy land and having troubles?",
     icon: <MdHomeWork />,
-    link: "/lawyers/property-registration",
+    link: "/lawyers/land-acquisition",
     image: "/images/case-1.jpeg",
   },
   {

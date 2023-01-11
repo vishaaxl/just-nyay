@@ -1335,7 +1335,7 @@ People hire attorneys because immigration issues are complicated and not underst
   },
   {
     id: 85,
-    title: "property-registration",
+    title: "land-acquisition",
     heading: "Connect with Best Property Lawyers / Advocates in India",
     content: `
     <p>

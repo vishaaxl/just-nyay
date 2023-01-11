@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Faqs from "components/home/Faqs";
 import Services from "components/home/Services";
 import Hero from "components/home/Hero";
+import { useEffect } from "react";
 
 const faqs = [
   {
@@ -35,6 +36,14 @@ const faqs = [
 ];
 
 const Index: NextPage = () => {
+  useEffect(() => {
+    if (document) {
+      document.getElementById("price_chart")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   return (
     <>
       <Hero />

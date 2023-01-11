@@ -121,8 +121,8 @@ const services = [
     style: "nine",
     elems: [
       "Succession Certificate",
+      "Land Acquisition",
       "Property Verification",
-      "Property Registration",
       "Gift Deed",
       "Lease Agreement",
     ],

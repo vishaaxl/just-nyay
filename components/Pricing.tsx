@@ -67,7 +67,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
   };
 
   return (
-    <section className={styles.price_chart}>
+    <section className={styles.price_chart} id="price_chart">
       <div className={styles.content}>
         {/* heading and rating */}
         <div className={styles.main_heading}>
