@@ -172,6 +172,11 @@ const Login: NextPage = () => {
     if (!querySnapshot.empty) {
       addDoc(collection(db, "orders"), {
         user: querySnapshot.docs[0].id,
+
+        firstname: cart.firstname,
+        lastname: cart.lastname,
+        city: cart.city,
+
         phoneNumber: `+91${cart.phoneNumber.substr(
           cart.phoneNumber.length - 10
         )}`,
@@ -214,12 +219,17 @@ const Login: NextPage = () => {
       firstname: cart.firstname,
       lastname: cart.lastname,
       createdAt: serverTimestamp(),
-      time: cart.time,
-      date: cart.date,
     })
       .then((docRef) => {
         addDoc(collection(db, "orders"), {
           user: docRef.id,
+
+          firstname: cart.firstname,
+          lastname: cart.lastname,
+          city: cart.city,
+          time: cart.time,
+          date: cart.date,
+
           phoneNumber: `+91${cart.phoneNumber.substr(
             cart.phoneNumber.length - 10
           )}`,
