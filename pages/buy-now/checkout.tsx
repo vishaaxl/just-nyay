@@ -224,7 +224,7 @@ const Login: NextPage = () => {
       .then((docRef) => {
         addDoc(collection(db, "orders"), {
           user: {
-            uid: querySnapshot.docs[0].id,
+            uid: docRef.id,
             firstname: cart.firstname,
             lastname: cart.lastname,
             city: cart.city,
