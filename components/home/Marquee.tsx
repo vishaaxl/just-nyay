@@ -2,8 +2,10 @@ import styles from "./Home.module.scss";
 import VideoModal from "../VideoModal";
 
 import { AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import styled from "styled-components";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 interface Props {
   data: any;
@@ -20,6 +22,34 @@ const images = [
   "https://firebasestorage.googleapis.com/v0/b/eshop-a3b91.appspot.com/o/jn%2FSenior%20Advocate%20Colin%20Gonsalves-min.png?alt=media&token=a7d5241b-93ec-4273-a894-b5a69fa76a4c",
 ];
 
+const ButtonContainer = styled.div`
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+
+  .icons {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1.45rem;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.65rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #242424;
+    border-radius: 20%;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+
 const Marquee: React.FC<Props> = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [playerVideo, setPlayerVideo] = useState("wVwe7TgJYq0");
@@ -29,6 +59,14 @@ const Marquee: React.FC<Props> = ({ data }) => {
     loop: true,
     containScroll: "trimSnaps",
   });
+
+  const scrollPrev = useCallback(() => {
+    if (embla) embla.scrollPrev();
+  }, [embla]);
+
+  const scrollNext = useCallback(() => {
+    if (embla) embla.scrollNext();
+  }, [embla]);
 
   useEffect(() => {
     const marquee = setInterval(() => {
@@ -86,7 +124,11 @@ const Marquee: React.FC<Props> = ({ data }) => {
           <VideoModal setIsModalOpen={setIsModalOpen} embedId={playerVideo} />
         )}
       </AnimatePresence>
-      <section className={styles.marquee}>
+      <section className={styles.marquee} style={{ position: "relative" }}>
+        <ButtonContainer>
+          <BsChevronLeft className="icons" onClick={() => scrollPrev()} />
+          <BsChevronRight className="icons" onClick={() => scrollNext()} />
+        </ButtonContainer>
         <div className="embla">
           <div className="embla__viewport" ref={viewportRef}>
             <div className="embla__container">
