@@ -1856,13 +1856,13 @@ export const marriageFaqs = [
   {
     id: 9,
     question:
-      "Q.	Is registration of marriage a necessary ground for filing of divorce?",
+      "Is registration of marriage a necessary ground for filing of divorce?",
     ans: "No, registration of marriage is not necessary. But it is advisable that you get your marriage registered as your marriage certificate will be helpful and will add value to your divorce case as far as validity of your marriage is concerned.",
   },
 
   {
     id: 10,
-    question: "Q.	How long does it take to get divorce?",
+    question: "How long does it take to get divorce?",
     ans: "Divorce matters usually take alot of time. In case of a contested divorce that is where only one of the spouse wants divorce are usually very time taking and may take around 3-5 years.But in cases, where both you and your spouse mutually decide to take a divorce, such a proceed may take only 6-8 months",
   },
 ];
@@ -1987,7 +1987,7 @@ export const childCustody = [
   },
   {
     id: 4,
-    question: "6.	What are the rights of the parents over minor children?",
+    question: "What are the rights of the parents over minor children?",
     ans: "Both the parents have an equal right over the child. ",
   },
   {
