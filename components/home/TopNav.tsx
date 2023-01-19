@@ -3,6 +3,7 @@ import styles from "./Home.module.scss";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { MdEmail, MdGavel } from "react-icons/md";
+import Link from "next/link";
 
 interface Props {}
 
@@ -11,23 +12,31 @@ const TopNav: React.FC<Props> = () => {
   return (
     <>
       <div className={styles.top_nav} style={{ lineHeight: 1.4 }}>
-        E-mail:{" "}
-        <a
-          href="mailto: info@justnyay.com"
-          className={styles.accent_underline}
-          style={{ cursor: "pointer" }}
-        >
-          info@justnyay.com
-        </a>
-        <br />
-        Toll Free no.&nbsp;
-        <a
-          href="tel: 9318428656"
-          className={styles.accent_underline}
-          style={{ cursor: "pointer" }}
-        >
-          +91 9318428656
-        </a>
+        <div className={`container ${styles.wrapper}`}>
+          <div className={styles.contact}>
+            Toll Free no.&nbsp;
+            <a
+              href="tel: 9318428656"
+              className={styles.accent_underline}
+              style={{ cursor: "pointer" }}
+            >
+              +91 9318428656
+            </a>
+            <br />
+            E-mail:{" "}
+            <a
+              href="mailto: info@justnyay.com"
+              className={styles.accent_underline}
+              style={{ cursor: "pointer" }}
+            >
+              info@justnyay.com
+            </a>
+          </div>
+          <div className="redirects">
+            <Link href="/login/lawyer">Lawyer Login</Link> |{" "}
+            <Link href="/login/user">Login</Link>
+          </div>
+        </div>
       </div>
       <div className="container">
         <div className={styles.quick_info}>

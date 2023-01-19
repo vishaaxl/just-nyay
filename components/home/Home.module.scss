@@ -1,9 +1,24 @@
 .top_nav {
   background: var(--background-light);
   padding: 1em;
-  text-align: center;
+
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9125rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 767px) {
+    .contact {
+      display: none;
+    }
+
+    .wrapper {
+      justify-content: flex-end;
+    }
+  }
 
   span {
     display: block;
@@ -11,10 +26,6 @@
     @media (min-width: 425px) {
       display: inline-block;
     }
-  }
-
-  @media (min-width: 767px) {
-    display: none;
   }
 }
 

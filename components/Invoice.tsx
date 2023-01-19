@@ -146,11 +146,11 @@ const Invoice: React.FC<InvoiceProps> = ({ order, user }) => {
               <div className="block-one">
                 <span className="fade">Issued to:</span>
                 <span className="bold">
-                  {user?.firstname} {user?.lastname}
+                  {user?.firstname} {user?.lastname || ""}
                 </span>
                 <span className="bold">{user?.phoneNumber}</span>
                 <span className="bold" style={{ textTransform: "lowercase" }}>
-                  {user.email}
+                  {user.email || ""}
                 </span>
               </div>
               <div className="block-two">
@@ -173,17 +173,24 @@ const Invoice: React.FC<InvoiceProps> = ({ order, user }) => {
                 <span>Total</span>
               </div>
               <div className="row">
-                <span>Legal Consultation</span>
+                <span>{order.billDescription || "Legal Consultation"}</span>
                 <span>1</span>
-                <span>Rs. {prices[order.plan as keyof typeof prices]}</span>
-                <span>Rs. {prices[order.plan as keyof typeof prices]}</span>
+                <span>
+                  Rs.{" "}
+                  {order.billPrice || prices[order.plan as keyof typeof prices]}
+                </span>
+                <span>
+                  Rs.{" "}
+                  {order.billPrice || prices[order.plan as keyof typeof prices]}
+                </span>
               </div>
               <div className="summary">
                 <span></span>
                 <span></span>
                 <span className="bold">Total</span>
                 <span className="bold">
-                  Rs. {prices[order.plan as keyof typeof prices]}
+                  Rs.{" "}
+                  {order.billPrice || prices[order.plan as keyof typeof prices]}
                 </span>
               </div>
             </div>

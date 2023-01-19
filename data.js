@@ -17,8 +17,63 @@ export const pages = [
     id: 6,
     title: "landlord-tenant",
     heading: "Connect with Best Landlord/Tenant Lawyers / Advocates in India",
-    content:
-      "If you are going to rent your loved dream house to someone or you want to rent a house at a luxurious place, then know your rights and duties, what documents will be required and if any dispute arises then How do you defence your case before the court of Law? Use Just Nyay and connect top notch LandLord/Tenant Lawyers in India.",
+    content: `
+    <p>
+Landlord-tenant law covers all aspects of renting a property, both for residential and commercial purposes. The laws govern what a landlord can include in a lease, what rights a tenant has, and the many other legal issues that must be considered when negotiating, drafting, and enforcing leases.
+    <br/>
+    <br/>
+Attorneys can help landlords draft an enforceable lease, advise them on how to protect their property and income streams, and be an invaluable source of information when it comes to the laws governing security deposits, repairs and maintenance, and eviction.
+     <br/>
+    <br/>
+lease, such as failing to repair a broken electrical system. Many commercial tenants also enlist the help of a landlord-tenant attorney when negotiating a lease to ensure that none of the provisions are too one-sided.
+ <br/>
+    <br/>
+    JustNyay can help you find a suitable attorney in your city who can answer all of your landlord-tenant law questions and also show you how to resolve this matter with ease.
+     <br/>
+    <br/>
+    <h3>
+When should you hire a landlord-tenant law attorney?
+    </h3>
+    <br/>
+    <br/>
+    Now, let us talk about the reasons to hire a landlord-tenant law attorney.
+    <br/>
+There are some big, threatening reasons and some smaller, less stressful ones.
+But by and large, these are all scenarios where having a landlord-tenant law expert in your area can be a big help.
+You should consider hiring a landlord-tenant law attorney if:
+
+
+   
+ 
+    <ul>
+<li>•	Evicting a tenant
+</li>
+<li>•	If you are being sued for any damage of the property
+</li>
+<li>•	If you are being sued for illness, injury or illegal discrimination
+</li>
+<li>•	If you are being investigated by the IRS or a local government agency
+</li>
+    </ul>
+    <br/>
+    <h3>
+    Why to choose JustNyay
+    </h3>
+    <br/>
+    <br/>
+    JustNyay is one of the best platforms where you can be associated with India’s some of the best landlord-tenant lawyers.  Here’s a few reasons why you should opt for online or offline consultation with JustNyay.
+    
+    <ul>
+<li>•	Our landlord-tenant attorney will help you win an eviction case, stay out of liability, and collect or return your security deposit. Whether you are a landlord seeking a lease or a tenant trying to recover your security deposit, hire with JustNyay a top-rated landlord/tenant lawyer in India.
+</li>
+<li>•	An experienced landlord-tenant lawyer can help both a tenant and a landlord when problems arise. For tenants, landlord-tenant lawyers can help the tenant if they are being discriminated against, the landlord is evicting in an illegal manner, if your landlord would not make the necessary repairs for you to have a habitable place, the tenant has been injured because of the property, and if the landlord has broken the lease.
+</li>
+<li>•	For a landlord, a landlord-tenant attorney can be helpful if the tenant has broken the lease, is not paying the required rent, is using the property for illegal purposes, and has stayed beyond their lease without paying rent and has become a trespasser.
+</li>
+
+    </ul>
+    </p>
+    `,
   },
   {
     id: 9,
@@ -1335,7 +1390,7 @@ People hire attorneys because immigration issues are complicated and not underst
   },
   {
     id: 85,
-    title: "land-acquisition",
+    title: "property-registration",
     heading: "Connect with Best Property Lawyers / Advocates in India",
     content: `
     <p>
@@ -1382,6 +1437,50 @@ Purchasing a property is easy, but the documentation required to register it in 
     <br>
     <br>
     So do get in touch with us if you want to register your property and need guidance on your next steps. We shall use every effort to be of great assistance to you.
+    </p>
+    `,
+  },
+  {
+    id: 87,
+    title: "land-acquisition",
+    heading: "Connect with Best Property Lawyers / Advocates in India",
+    content: `
+    <p>
+In India, Land acquisition refers to the process whereby the Union Government or a State Government in India acquires private land for the purpose of industrialization, development of infrastructure facilities or urbanisation of the private land and pays compensation to the affected land owners and rehabilitates and resettles them.
+    <br/>
+    <br/>
+
+Land acquisition is the starting point for the purpose of public work building infrastructure, urbanisation, development and industrialisation, real estate project. At JustNyay, the integrated approach, which takes into account the technical and financial feasibility of assets, experience and expertise in executing transactions, enables all parties to create maximum value in even the most complicated transactions. Full transparency to all stakeholders, the right solutions and sustainable business models are the hallmarks of our success in meeting all our clients' objectives and helping them achieve their goals.
+
+    <br/>
+<br/>
+<h3>
+Our core functions include
+<br/>
+<br/>
+
+</h3>
+    <ul>
+   <li><h3>•	Strategic solutions</h3><br/>Land mapping and consulting, assistance in land identification, valuation and acquisition, customised solutions.
+</li>
+   <li><h3>•	Acquisition and divestiture</h3><br/>Outright sale, joint development, joint venture, profit sharing.
+</li>
+   <li><h3>•	Relationship management</h3><br/>Support of a project throughout its life cycle.
+</li>
+
+
+    </ul>
+
+    <br/>
+    <h2>
+Why should you choose us? 
+
+    </h2>
+    <br/>
+Acquisition services are at the heart of JustNyay's work. We believe that proper discussion and authentic negotiations are the best ways to benefit clients and property owners alike. There are many facets to this activity, but the most important one for us is personal contact, and that's what sets us apart from the crowd. Understanding the needs and concerns of property owners and clients, as well as budgets and timelines, are the most important steps in getting everything done in a timely manner. 
+    <br/>
+    <br/>
+    We pride ourselves on our ability to create sketches internally and use those sketches to begin acquiring easements from landowners. However, sometimes it is necessary to expropriate a particular property. JustNyay always tries to resolve issues with landowners, all the way through the stages of court before the process begins. Expropriation is usually the last resort, but unfortunately in recent years it is used more and more often to achieve project goals.
     </p>
     `,
   },

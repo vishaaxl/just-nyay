@@ -303,12 +303,12 @@ const Login: NextPage = () => {
 
         {/* summary section */}
         <div className={styles.checkout_summary}>
-          <div className="input-block custom-input">
+          {/* <div className="input-block custom-input">
             <label htmlFor="promo">Have a promocode?</label>
             <input id="promo" placeholder="Enter promocode" />
 
             <div className="error"></div>
-          </div>
+          </div> */}
 
           {/* summary */}
           <span className={styles.summary}>Summary</span>

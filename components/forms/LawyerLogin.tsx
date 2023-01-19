@@ -11,6 +11,7 @@ import { signInWithPhoneNumber, RecaptchaVerifier } from "firebase/auth";
 
 import { auth, db } from "firebase.config";
 import { collection, getDocs, limit, query, where } from "firebase/firestore";
+import Link from "next/link";
 
 interface Props {}
 
@@ -174,6 +175,12 @@ const LawyerLogin: React.FC<Props> = () => {
                 Log in
               </button>
             )}
+            <div style={{ marginTop: "1rem" }}>
+              Don&apos;t have an account?{" "}
+              <span style={{ textDecoration: "underline", color: "#624bd6" }}>
+                <Link href="/login/lawyer-signup">Sign-up</Link>
+              </span>{" "}
+            </div>
           </Form>
         )}
       </Formik>
