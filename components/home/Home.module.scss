@@ -1,6 +1,6 @@
 .top_nav {
   background: var(--background-light);
-  padding: 1em;
+  padding: 1em 0;
 
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9125rem;
@@ -8,6 +8,14 @@
   .wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .redirects {
+    font-size: 0.8rem;
+
+    @media (min-width: 425px) {
+      font-size: 1rem;
+    }
   }
 
   @media (min-width: 767px) {

@@ -31,7 +31,6 @@ interface Props {
 
 const Header = styled.div`
   margin-top: 1rem;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,7 +264,7 @@ const OrderDetails: React.FC<Props> = ({ order, user, lawyer, lawyerId }) => {
           </Content>
           <Total>
             <span>Plan Minutes</span>
-            <span>{JSON.parse(order).plan} minutes</span>
+            <span>{JSON.parse(order)?.plan || 0} minutes</span>
           </Total>
         </Main>
       </div>

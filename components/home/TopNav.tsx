@@ -14,15 +14,6 @@ const TopNav: React.FC<Props> = () => {
       <div className={styles.top_nav} style={{ lineHeight: 1.4 }}>
         <div className={`container ${styles.wrapper}`}>
           <div className={styles.contact}>
-            Toll Free no.&nbsp;
-            <a
-              href="tel: 9318428656"
-              className={styles.accent_underline}
-              style={{ cursor: "pointer" }}
-            >
-              +91 9318428656
-            </a>
-            <br />
             E-mail:{" "}
             <a
               href="mailto: info@justnyay.com"
@@ -31,8 +22,17 @@ const TopNav: React.FC<Props> = () => {
             >
               info@justnyay.com
             </a>
+            <br />
+            Toll Free no.&nbsp;
+            <a
+              href="tel: 9318428656"
+              className={styles.accent_underline}
+              style={{ cursor: "pointer" }}
+            >
+              +91 9318428656
+            </a>
           </div>
-          <div className="redirects">
+          <div className={styles.redirects}>
             <Link href="/login/lawyer">Lawyer Login</Link> |{" "}
             <Link href="/login/user">Login</Link>
           </div>
