@@ -1443,7 +1443,7 @@ Purchasing a property is easy, but the documentation required to register it in 
   {
     id: 87,
     title: "land-acquisition",
-    heading: "Connect with Best Property Lawyers / Advocates in India",
+    heading: "Connect with Best Land Acquisition Lawyers / Advocates in India",
     content: `
     <p>
 In India, Land acquisition refers to the process whereby the Union Government or a State Government in India acquires private land for the purpose of industrialization, development of infrastructure facilities or urbanisation of the private land and pays compensation to the affected land owners and rehabilitates and resettles them.
