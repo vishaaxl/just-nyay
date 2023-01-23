@@ -8,7 +8,7 @@ import { useState } from "react";
 import styles from "components/VideoModal.module.scss";
 
 const YOUTUBE_PLAYLIST_API =
-  "https://www.googleapis.com/youtube/v3/playlistItems";
+  "https://www.googleapis.com/youtube/v3/playlistItems/";
 
 const PLAYLIST_ID = "PLPWEDbk41oFUYtDTf2_CFFPmj9pvrPCMV";
 
@@ -212,19 +212,19 @@ const LeagalReporter: NextPage = ({ data, dataTwo, dataThree }: any) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const data = await fetch(
-    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=50&order=date&key=${process.env.YOUTUBE_API_KEY}`
   )
     .then((data) => data.json())
     .catch((err) => console.log(err));
 
   const dataThree = await fetch(
-    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=PLPWEDbk41oFXiLjG1LL-m_1jdIwYT1B9B&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=PLPWEDbk41oFXiLjG1LL-m_1jdIwYT1B9B&maxResults=50&order=date&key=${process.env.YOUTUBE_API_KEY}`
   )
     .then((data) => data.json())
     .catch((err) => console.log(err));
 
   const dataTwo = await fetch(
-    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=PLPWEDbk41oFWkFmwwzmCgtCRPK3VdAfha&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&playlistId=PLPWEDbk41oFWkFmwwzmCgtCRPK3VdAfha&maxResults=50&order=date&key=${process.env.YOUTUBE_API_KEY}`
   )
     .then((data) => data.json())
     .catch((err) => console.log(err));

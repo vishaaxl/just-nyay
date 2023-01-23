@@ -82,7 +82,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
         {/* content */}
         <span>Quick and Instant consultation</span>
         <p>
-          On Phone Instant Legal consultaion from
+          On Phone Instant Legal consultation from
           <br /> top lawyers
         </p>
 

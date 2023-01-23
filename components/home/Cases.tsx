@@ -13,7 +13,8 @@ const cases = [
   {
     id: 3,
     title: "Land Acquisition",
-    description: "Are you trying to buy land and having troubles?",
+    description:
+      "Get in touch with the best Land acquisition lawyers in India.",
     icon: <MdHomeWork />,
     link: "/lawyers/land-acquisition",
     image: "/images/case-1.jpeg",
