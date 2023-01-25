@@ -143,6 +143,45 @@ const Testimonials: React.FC<Props> = () => {
                       />
                     </div>
                     <p className="content">
+                      A discerning lawyer with a keen sense of what is
+                      newsworthy and sharp understanding of legal nuances,
+                      Vipalav’s take on law can not only not be ignored but is
+                      vital to understand all sides of the legal issue. A
+                      personable man himself, his presentation is as appealing
+                      he being able to break the complexity down to present the
+                      core of the controversies in readily understandable form.
+                      The epitome of an ideal reporter, the reporting would be
+                      forever deficient without his contributions!
+                    </p>
+                  </div>
+                  <div className="two">
+                    <span className="line"></span>
+
+                    <div className="info-wrapper">
+                      <div className="image">
+                        <img alt="" src="/testimonials/aman.jpeg" />
+                      </div>
+                      <div className="text">
+                        <h2>Sri Aman Lekhi Ji</h2>
+                        <span>
+                          Former Additional Solicitor General of India and
+                          Senior Advocate Supreme Court
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Wrapper>
+              </Slide>
+              <Slide>
+                <Wrapper>
+                  <div className="one">
+                    <div className="icon">
+                      <img
+                        src="https://annedece.sirv.com/Images/commos.png"
+                        alt=""
+                      />
+                    </div>
+                    <p className="content">
                       Viplava Awasthi whom I know for last two decades, very
                       energetic and talented in his field,a person with
                       effective communication skills from very beginning.
