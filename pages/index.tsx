@@ -14,7 +14,7 @@ import FloatingIcon from "components/FloatingIcon";
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
 
-const PLAYLIST_ID = "PLPWEDbk41oFUYtDTf2_CFFPmj9pvrPCMV";
+const PLAYLIST_ID = "PLPWEDbk41oFV0htY5WddFdVf_txCuC5IE";
 
 const faqs = [
   {
