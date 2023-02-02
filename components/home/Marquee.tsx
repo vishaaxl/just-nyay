@@ -22,7 +22,7 @@ const images = [
   "https://firebasestorage.googleapis.com/v0/b/eshop-a3b91.appspot.com/o/jn%2FSenior%20Advocate%20Colin%20Gonsalves-min.png?alt=media&token=a7d5241b-93ec-4273-a894-b5a69fa76a4c",
 ];
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   pointer-events: none;
   position: absolute;
   z-index: 5;

@@ -1,6 +1,8 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect } from "react";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import styled from "styled-components";
+import { ButtonContainer } from "./home/Marquee";
 
 interface Props {}
 
@@ -131,6 +133,10 @@ const Testimonials: React.FC<Props> = () => {
       <div className="container">
         <h1>Our Testimonials</h1>
       </div>
+      <ButtonContainer>
+        <div className=""></div>
+        <BsChevronRight className="icons" onClick={() => scrollNext()} />
+      </ButtonContainer>
       <Embla>
         <div className="embla__viewport" ref={viewportRef}>
           <EmblaContainer>
