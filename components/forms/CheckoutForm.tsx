@@ -9,6 +9,7 @@ interface Props {}
 
 const CheckoutForm: React.FC<Props> = () => {
   const cart = useCartContext();
+  console.log(cart);
 
   return (
     <div className={styles.checkout_form}>

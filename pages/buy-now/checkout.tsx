@@ -187,7 +187,7 @@ const Login: NextPage = () => {
         status: "pending",
         payment: false,
         plan: cart.plan,
-        time: cart.time,
+        time: cart.time || "9-10",
         date: cart.date,
         createdAt: serverTimestamp(),
       })
@@ -230,7 +230,7 @@ const Login: NextPage = () => {
             city: cart.city,
           },
 
-          time: cart.time,
+          time: cart.time || "9-10",
           date: cart.date,
 
           phoneNumber: `+91${cart.phoneNumber.substr(
