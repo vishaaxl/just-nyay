@@ -150,11 +150,6 @@ const Login: NextPage = () => {
 
   const checkout = async () => {
     setSubmitting(true);
-    if (!cart.problemType && !cart.language) {
-      alert("Select language and Problem before checking out");
-      router.push("/buy-now");
-      return;
-    }
 
     // check if the user is already registered
     const q = query(
@@ -272,10 +267,12 @@ const Login: NextPage = () => {
       <div className={styles.header}>
         <div className={styles.header_section}>
           <span>Ask for Lawyer</span>
-          <span>{cart.plan} minutes </span>
+          <span style={{ fontWeight: "bold", letterSpacing: 0 }}>
+            Registration Fee
+          </span>
         </div>
         <div className={styles.header_section}>
-          <em className={styles.header_price}> &#8377; {cart.price}.00</em>
+          <em className={styles.header_price}> &#8377; 599.00</em>
         </div>
       </div>
     );

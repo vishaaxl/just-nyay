@@ -10,6 +10,7 @@ import Head from "next/head";
 import Navigation from "components/home/Nav";
 import Invoice from "components/Invoice";
 import FloatingIcon from "components/FloatingIcon";
+import Process from "components/home/Process";
 
 const YOUTUBE_PLAYLIST_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -63,6 +64,7 @@ const Home: NextPage = ({ data }: any) => {
 
       <Cases />
       <PriceChart />
+      <Process />
       {data && <Marquee data={data} />}
       <About />
       <Services />

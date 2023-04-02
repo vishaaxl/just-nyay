@@ -265,7 +265,7 @@ const Hero: React.FC<Props> = () => {
           }
         >
           <a>
-            <span>Consult now</span>
+            <span>Register Now</span>
           </a>
         </div>
       </nav>

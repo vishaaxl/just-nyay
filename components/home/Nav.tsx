@@ -79,7 +79,7 @@ const Navigation: React.FC<Props> = () => {
             <motion.div variants={listItem} className={styles.line_three}>
               <div className="btn-primary">
                 <a href="#">
-                  <span>Book Consultation</span>
+                  <span>Register Now</span>
                 </a>
               </div>
             </motion.div>
