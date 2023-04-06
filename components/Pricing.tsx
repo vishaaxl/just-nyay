@@ -47,6 +47,7 @@ const PricingHeading = styled.div`
   font-weight: 800;
 
   max-width: 600px;
+  font-family: "Frank Ruhl Libre", serif;
 
   @media (min-width: 425px) {
     font-size: 2rem;
