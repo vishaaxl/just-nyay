@@ -150,6 +150,11 @@ const Login: NextPage = () => {
 
   const checkout = async () => {
     setSubmitting(true);
+    if (!cart.termsAgreement) {
+      alert("Agree to terms and conditions to continue");
+      setSubmitting(false);
+      return;
+    }
 
     // check if the user is already registered
     const q = query(

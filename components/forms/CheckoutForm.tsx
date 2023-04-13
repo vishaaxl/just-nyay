@@ -4,6 +4,7 @@ import * as Yup from "yup";
 
 import Input from "components/Input";
 import { useCartContext } from "context/Cart";
+import Link from "next/link";
 
 interface Props {}
 
@@ -95,6 +96,33 @@ const CheckoutForm: React.FC<Props> = () => {
                   <option value="19-20">19 - 20</option>
                   <option value="20-21">20 - 21</option>
                 </Input>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: ".5rem",
+                }}
+              >
+                <input
+                  name="termsAgreement"
+                  type="checkbox"
+                  onChange={(e) =>
+                    cart.updateCart("termsAgreement", e.target.checked)
+                  }
+                />
+                <p>
+                  {" "}
+                  I have read and agree to the{" "}
+                  <span
+                    style={{ textDecoration: "underline", color: "#715DDA" }}
+                  >
+                    <Link href="/terms-and-conditions">
+                      Terms and Conditions
+                    </Link>
+                  </span>
+                  .
+                </p>
               </div>
             </div>
           </Form>

@@ -91,12 +91,6 @@ const ContactUs: React.FC<Props> = () => {
         <div className="line">
           <MdLocationOn className="line-icon" />
           <span>
-            C-2/6, Gulmohar Vihar, Near lshwar Prem Aashram, Kanpur-208014
-          </span>
-        </div>
-        <div className="line">
-          <MdLocationOn className="line-icon" />
-          <span>
             10060, Tower 1, Mahagun Mywood, Gaur City-2, Greater Noida West-
             201009
           </span>
