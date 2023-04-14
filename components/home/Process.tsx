@@ -1,6 +1,7 @@
 import { BsBookmarkCheck, BsHeadset, BsReceipt } from "react-icons/bs";
 import { MdDocumentScanner, MdGavel, MdReceipt } from "react-icons/md";
 import styled from "styled-components";
+import { sendConfirmationMessage } from "utils/confirmationMessage";
 
 interface Props {}
 
@@ -98,7 +99,7 @@ const Process: React.FC<Props> = () => {
             from having legal issues to no issues in no time.
           </p>
         </Header>
-        <Wrapper>
+        <Wrapper onClick={() => sendConfirmationMessage("8318218163")}>
           <div className="column">
             <div className="icon-wrapper">
               <BsReceipt className="icon" />
