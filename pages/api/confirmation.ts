@@ -27,7 +27,7 @@ export default async function handler(
     try {
       await fetch(url)
         .then((response) => {
-          return res.status(200).send({ response, url });
+          return res.status(200).send({ response });
         })
         .catch((err) => {
           return res.status(500).send({ error: err.message });
