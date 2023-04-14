@@ -23,6 +23,7 @@ import {
 import { db } from "firebase.config";
 import { useRouter } from "next/router";
 import axios from "axios";
+import Link from "next/link";
 
 interface SummaryProps {
   title: string;
@@ -134,7 +135,21 @@ const Login: NextPage = () => {
           const docRef = doc(db, "orders", docId);
           await updateDoc(docRef, {
             payment: true,
-          }).then(() => router.push("/login/user"));
+          }).then(async () => {
+            await fetch("/api/confirmation", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                phoneNumber: cart.phoneNumber.substr(
+                  cart.phoneNumber.length - 10
+                ),
+              }),
+            })
+              .then(() => router.push("/users/login"))
+              .catch((err) => console.log(err));
+          });
         }
       },
       prefill: {
@@ -272,8 +287,17 @@ const Login: NextPage = () => {
       <div className={styles.header}>
         <div className={styles.header_section}>
           <span>Ask for Lawyer</span>
-          <span style={{ fontWeight: "bold", letterSpacing: 0 }}>
-            Registration Fee
+          <span
+            style={{
+              fontWeight: "bold",
+              letterSpacing: 0,
+            }}
+          >
+            Registration&nbsp;{" "}
+            <Link href="/msg-test" style={{ cursor: "crosshair" }}>
+              F
+            </Link>
+            ee
           </span>
         </div>
         <div className={styles.header_section}>
