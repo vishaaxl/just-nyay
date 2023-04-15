@@ -113,7 +113,7 @@ const CheckoutForm: React.FC<Props> = () => {
                 />
                 <p>
                   {" "}
-                  I have read and agree to the{" "}
+                  I agree to the{" "}
                   <span
                     style={{ textDecoration: "underline", color: "#715DDA" }}
                   >
