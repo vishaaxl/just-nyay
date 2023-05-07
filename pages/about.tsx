@@ -132,6 +132,14 @@ const About: React.FC<Props> = () => {
           owned, operated, managed and modified by Advozone India Private
           Limited.
         </p>
+        <iframe
+          src={`https://www.youtube.com/embed/P4jmDGprMBA?autoplay=1&mute=1`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Legal Reporter"
+          className={styles.player}
+        />
         <br />
         <br />
         <br />

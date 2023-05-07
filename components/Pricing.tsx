@@ -8,7 +8,14 @@ import { useRouter } from "next/router";
 import CustomSelect from "./CustomSelect";
 import { useCartContext } from "context/Cart";
 import styled from "styled-components";
-import { BsChevronBarRight, BsChevronRight } from "react-icons/bs";
+import {
+  BsChevronBarRight,
+  BsChevronRight,
+  BsPersonFill,
+  BsPhoneFill,
+  BsTelephoneFill,
+} from "react-icons/bs";
+import Image from "next/image";
 
 interface Props {
   heading?: string;
@@ -41,92 +48,130 @@ const price_array = [
   },
 ];
 
-const PricingHeading = styled.div`
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 800;
-
-  max-width: 600px;
-  font-family: "Frank Ruhl Libre", serif;
-
-  @media (min-width: 425px) {
-    font-size: 2rem;
-  }
-`;
-
-const PricingButton = styled.button`
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 0.75em 1em;
-  background: #162542;
-  color: #fff;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 800;
-  text-transform: capitalize;
-
-  @media (min-width: 425px) {
-    font-size: 1.5rem;
-    padding: 0.5em 1em;
-  }
-`;
-
-const PricingComponent = styled.div`
-  background: #162542;
-  border-radius: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+const Wrapper = styled.div`
+  display: grid;
+  gap: 2rem;
   padding: 2rem 0;
-  margin: 2rem 0;
+
+  @media (min-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+
+    @media (min-width: 425px) {
+      font-size: 2.5rem;
+    }
     font-weight: 800;
+    line-height: 1.4;
+    .accent {
+      color: #b68c5a;
+    }
+  }
+
+  .perks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .line {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+
+      span {
+        white-space: nowrap;
+        font-weight: 600;
+      }
+
+      .icon-wrapper-circular {
+        padding: 0.5rem;
+        border: 1px solid #b78c59;
+        border-radius: 50%;
+      }
+
+      .icon {
+        color: #b78c59;
+      }
+    }
+  }
+
+  .section-one > * {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-two {
+    position: relative;
+    height: 400px;
+  }
+`;
+
+const BookButton = styled.div`
+  cursor: pointer;
+  padding: 1.125em 3em 1.125em 1.25em;
+  color: #b78c59;
+  background: #f2f2f2;
+  border-radius: 30px;
+
+  @media (min-width: 425px) {
+    padding: 1.25em 3.5em 1.25em 1.75em;
   }
 
   span {
-  }
-
-  .title {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
-  .pricing-button {
-    cursor: pointer;
-    padding: 0.5em 3em 0.5em 1em;
-    color: #b78c59;
-    background: #f2f2f2;
-    border-radius: 30px;
-    span {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-transform: capitalize;
-    }
-    position: relative;
-    transition: all 0.3s ease-in-out;
+  position: relative;
 
-    &:hover {
-      transform: scale(1.1);
-    }
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 
-    .icon-wrapper {
-      background: #b78c59;
-      color: #f2f2f2;
-      position: absolute;
-      left: 80%;
-      top: 5%;
-      padding: 1em 1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
+  .icon-wrapper {
+    background: #b78c59;
+    color: #f2f2f2;
+    position: absolute;
+    right: -5%;
+    top: 2%;
+    height: 98%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+`;
+
+const BookButtonWrapper = styled.div`
+  postion: relative;
+
+  background: #162542;
+  color: #fefeee;
+  border-radius: 30px;
+  padding: 0.2rem 0.2rem 0.2rem 1.25rem;
+  max-width: 425px;
+
+  @media (min-width: 425px) {
+    padding: 0.2rem 0.2rem 0.2rem 2.25rem;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 1.3rem;
+
+    @media (min-width: 425px) {
+      font-size: 1.75rem;
     }
   }
 `;
@@ -135,28 +180,6 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
   const cart = useCartContext();
 
   const router = useRouter();
-  const [error, setError] = useState("");
-  const [selectedPlan, setSelectedPlan] = useState<string>("60");
-
-  const selectPlan = (name: string) => {
-    setSelectedPlan(name);
-    cart.updateCart("plan", name);
-
-    price_array.map((e) => {
-      if (e.title == name) {
-        cart.updateCart("price", e.price);
-      }
-    });
-  };
-
-  const buynow = () => {
-    if (cart.language == "" || cart.problemType == "") {
-      setError("**Both options are required");
-      return;
-    }
-
-    router.push("/buy-now/checkout");
-  };
 
   const navigateToBuy = () => {
     cart.updateCart("plan", "15");
@@ -171,113 +194,50 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
   };
 
   return (
-    <section className={styles.price_chart} id="price_chart">
-      <div className={styles.content}>
-        {/* heading and rating */}
-        <div className={styles.main_heading}>
-          {/* <div className={styles.rating_container}>
-            <div className={styles.star_container}>
-              4.4 <AiFillStar />
+    <section className="container" id="price_chart">
+      <Wrapper>
+        <div className="section-one">
+          <div className="heading">
+            Get <span className="accent">Legal Consultation</span> From Top
+            Lawyers of <span className="accent">High Court</span> and{" "}
+            <span className="accent">Supreme Court</span>
+          </div>
+          <BookButtonWrapper>
+            <h2>Just &#8377; 599 Only</h2>
+            <BookButton onClick={navigateToBuy}>
+              <span> Book Now</span>
+
+              <div className="icon-wrapper">
+                <BsChevronRight className="icon" />
+              </div>
+            </BookButton>
+          </BookButtonWrapper>
+          <div className="perks">
+            <div className="line">
+              <div className="icon-wrapper-circular">
+                <BsPersonFill className="icon" />
+              </div>
+              <span>Experienced Lawyers</span>
             </div>
-            <div className={styles.number_ratings}>1047 Ratings</div>
-          </div> */}
-          <PricingHeading>
-            {heading
-              ? heading
-              : "Get Legal Consultation From Top Lawyers of High Court and Supreme Court."}
-          </PricingHeading>
-        </div>
-        {/* content */}
-
-        <PricingButton onClick={navigateToBuy}>
-          Register now for just &#8377; 599 only
-        </PricingButton>
-      </div>
-
-      {/* pricing part */}
-
-      <div className="container">
-        <PricingComponent>
-          <div className="heading">Registration</div>
-          <span>for just</span>
-          <div className="title">&#8377; 599</div>
-          <div className="pricing-button" onClick={navigateToBuy}>
-            <span> Book Now</span>
-
-            <div className="icon-wrapper">
-              <BsChevronRight className="icon" />
+            <div className="line">
+              <div className="icon-wrapper-circular">
+                <BsTelephoneFill className="icon" />
+              </div>
+              <span>Secured Calls</span>
             </div>
           </div>
-        </PricingComponent>
-      </div>
-
-      {/* <div className={styles.pricing_component} id="buy-now">
-        <div className="error" style={{ margin: "0 0 1rem 0" }}>
-          {error}
         </div>
-        <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "1fr 1fr",
-          }}
-        >
-          <CustomSelect
-            optionsList={["Hindi", "English"]}
-            placeholder="Select Language"
-            name="language"
-          />
-          <CustomSelect
-            name="problemType"
-            optionsList={[
-              "Criminal / Property",
-              "Personal/ Family",
-              "Corporate Law",
-              "Civil Matters",
-              "others",
-            ]}
-            placeholder="Problem Type"
+        <div className="section-two">
+          <Image
+            src="/images/pricing.jpeg"
+            alt=""
+            height={500}
+            width={500}
+            layout="fill"
+            objectFit="contain"
           />
         </div>
-
-        <div className={styles.pricing_component_wrapper}>
-          {price_array.map((elem) => (
-            <div
-              className={`${styles.price_element} ${
-                elem.title == selectedPlan && styles.price_element_selected
-              }`}
-              key={elem.id}
-              onClick={() => selectPlan(elem.title)}
-            >
-              <div className={styles.line_one}>
-                <input
-                  checked={elem.title == selectedPlan}
-                  type="checkbox"
-                  id={elem.title}
-                  name={elem.title}
-                  onChange={() => selectPlan(elem.title)}
-                />
-
-                <label htmlFor={elem.title}>{elem.title} Minutes</label>
-              </div>
-              <div className={styles.line_two}>
-                <span className={styles.accent}>Rs. {elem.price} </span> (Rs
-                {(Number(elem.price) / Number(elem.title)).toFixed(2)} / minute)
-              </div>
-              <div className={styles.line_three}>
-                Save Rs {(40 * Number(elem.title)) / 60}
-              </div>
-              <div className={styles.line_four}>
-                <GoVerified className={styles.icon} />
-                <span>valid for {elem.valid} days</span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className={styles.buy_now} onClick={() => buynow()}>
-          Buy Now
-        </div>
-      </div> */}
+      </Wrapper>
     </section>
   );
 };
