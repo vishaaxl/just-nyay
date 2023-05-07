@@ -75,6 +75,10 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 1rem;
 
+    @media (min-width: 425px) {
+      gap: 4rem;
+    }
+
     .line {
       display: flex;
       gap: 0.45rem;
@@ -231,8 +235,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
           <Image
             src="/images/pricing.jpeg"
             alt=""
-            height={500}
-            width={500}
+            priority
             layout="fill"
             objectFit="contain"
           />
