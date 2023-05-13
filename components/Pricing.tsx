@@ -198,7 +198,11 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
   };
 
   return (
-    <section className="container" id="price_chart">
+    <section
+      className="container"
+      id="price_chart"
+      style={{ overflow: "hidden" }}
+    >
       <Wrapper>
         <div className="section-one">
           <div className="heading">
@@ -233,7 +237,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
         </div>
         <div className="section-two">
           <Image
-            src="/images/pricing.jpeg"
+            src="/images/call-center-working-24-hr.webp"
             alt=""
             priority
             layout="fill"
