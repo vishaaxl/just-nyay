@@ -159,7 +159,7 @@ const BookButtonWrapper = styled.div`
   color: #fefeee;
   border-radius: 30px;
   padding: 0.2rem 0.2rem 0.2rem 1.25rem;
-  max-width: 425px;
+  max-width: 450px;
 
   @media (min-width: 425px) {
     padding: 0.2rem 0.2rem 0.2rem 2.25rem;
@@ -172,7 +172,7 @@ const BookButtonWrapper = styled.div`
   h2 {
     white-space: nowrap;
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 
     @media (min-width: 425px) {
       font-size: 1.75rem;
@@ -213,7 +213,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
           <BookButtonWrapper>
             <h2>Just &#8377; 599 Only</h2>
             <BookButton onClick={navigateToBuy}>
-              <span> Book Now</span>
+              <span>Register Now</span>
 
               <div className="icon-wrapper">
                 <BsChevronRight className="icon" />

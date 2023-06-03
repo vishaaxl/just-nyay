@@ -138,7 +138,7 @@ const Footer: React.FC<Props> = () => {
             )}
             <li className={styles.icon_wrapper}>
               <a
-                href="https://www.instagram.com/legal.reporter/"
+                href="https://instagram.com/just_nyay"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -152,7 +152,7 @@ const Footer: React.FC<Props> = () => {
                 <AiOutlineYoutube className={styles.icon} />
               </a>
               <a
-                href="https://www.facebook.com/legalreporter"
+                href="https://m.facebook.com/JustNyay"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -47,14 +47,14 @@ const Modal: React.FC<Props> = ({ embedId, setIsModalOpen }) => {
               <AiFillYoutube className={styles.youtube_icon} />
             </a>
             <a
-              href="https://www.facebook.com/legalreporter"
+              href="https://m.facebook.com/JustNyay"
               target="_blank"
               rel="noreferrer"
             >
               <AiFillFacebook className={styles.youtube_icon} />
             </a>
             <a
-              href="https://www.instagram.com/legal.reporter/"
+              href="https://instagram.com/just_nyay"
               target="_blank"
               rel="noreferrer"
             >
