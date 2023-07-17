@@ -293,15 +293,11 @@ const Login: NextPage = () => {
               letterSpacing: 0,
             }}
           >
-            Registration&nbsp;{" "}
-            <Link href="/msg-test" style={{ cursor: "crosshair" }}>
-              F
-            </Link>
-            ee
+            Registration&nbsp; Fee
           </span>
         </div>
         <div className={styles.header_section}>
-          <em className={styles.header_price}> &#8377; 599.00</em>
+          <em className={styles.header_price}> &#8377; 1999.00</em>
         </div>
       </div>
     );
