@@ -122,7 +122,6 @@ const About: React.FC<Props> = () => {
           cases in his career span of 22 years.
         </p>
         <Gallery>
-          <img src="/images/about-3.jpeg" alt="" />
           <img src="/images/about-4.jpeg" alt="" />
         </Gallery>
 
