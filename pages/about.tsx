@@ -16,14 +16,14 @@ const Gallery = styled.div`
   gap: 1rem;
   align-items: center;
   @media (min-width: 767px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     height: 425px;
   }
 
   @media (min-width: 1024px) {
     max-width: 60rem;
     margin: 2rem auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     height: 425px;
   }
 
