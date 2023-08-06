@@ -21,7 +21,7 @@ const Gallery = styled.div`
   }
 
   @media (min-width: 1024px) {
-    max-width: 60rem;
+    max-width: 40rem;
     margin: 2rem auto;
     grid-template-columns: 1fr;
     height: 425px;
