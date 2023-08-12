@@ -85,7 +85,7 @@ const LawyerSignup: React.FC<Props> = () => {
     }
 
     // Make API call to the serverless API
-    const { data } = await axios.post("/api/user-payment", { amount: "999" });
+    const { data } = await axios.post("/api/user-payment", { amount: "4999" });
 
     let options = {
       key: process.env.NEXT_PUBLIC_RAZOR_PAY_ID,
