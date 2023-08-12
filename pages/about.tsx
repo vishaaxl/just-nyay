@@ -16,14 +16,14 @@ const Gallery = styled.div`
   gap: 1rem;
   align-items: center;
   @media (min-width: 767px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     height: 425px;
   }
 
   @media (min-width: 1024px) {
-    max-width: 60rem;
+    max-width: 40rem;
     margin: 2rem auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     height: 425px;
   }
 
@@ -122,7 +122,6 @@ const About: React.FC<Props> = () => {
           cases in his career span of 22 years.
         </p>
         <Gallery>
-          <img src="/images/about-3.jpeg" alt="" />
           <img src="/images/about-4.jpeg" alt="" />
         </Gallery>
 
