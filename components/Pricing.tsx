@@ -25,7 +25,7 @@ const price_array = [
   {
     id: 1,
     title: "15",
-    price: "1999",
+    price: "499",
     valid: 30,
   },
   {
@@ -211,7 +211,7 @@ const PriceChart: React.FC<Props> = ({ heading }) => {
             <span className="accent">Supreme Court</span>
           </div>
           <BookButtonWrapper>
-            <h2>Just &#8377; 1999 Only</h2>
+            <h2>Just &#8377; 499 Only</h2>
             <BookButton onClick={navigateToBuy}>
               <span>Register Now</span>
 

@@ -61,11 +61,11 @@ const Login: NextPage = () => {
     return false;
   };
 
-  useEffect(() => {
-    if (!cart.plan && !cart.language && !cart.problemType) {
-      router.push("/buy-now");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!cart.plan && !cart.language && !cart.problemType) {
+  //     router.push("/buy-now");
+  //   }
+  // }, []);
 
   // razorpay related stuff
   const initializeRazorpay = () => {
@@ -297,7 +297,7 @@ const Login: NextPage = () => {
           </span>
         </div>
         <div className={styles.header_section}>
-          <em className={styles.header_price}> &#8377; 1999.00</em>
+          <em className={styles.header_price}> &#8377; 499.00</em>
         </div>
       </div>
     );

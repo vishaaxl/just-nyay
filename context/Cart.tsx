@@ -13,8 +13,8 @@ const CartProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState({
     language: "",
     problemType: "",
-    plan: "60",
-    price: "2099",
+    plan: "15",
+    price: "499",
   });
 
   const updateCart = (name: string, value: string) => {
